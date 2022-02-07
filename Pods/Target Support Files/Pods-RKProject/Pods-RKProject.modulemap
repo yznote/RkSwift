@@ -1,0 +1,6 @@
+framework module Pods_RKProject {
+  umbrella header "Pods-RKProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

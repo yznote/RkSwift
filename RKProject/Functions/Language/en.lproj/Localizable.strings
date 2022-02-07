@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  RKProject
+
+  Created by YB007 on 2020/12/4.
+  
+*/
+
+"信息错误" = "Msg Error";
+
+"首页" = "Home";
+"首页%@数" = "%@ home";
+"地址" = "Address";
+"消息" = "Message";
+"发现" = "Discover";
+"我的" = "Mine";
+"设置" = "Set";
+"配置" = "Config";

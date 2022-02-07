@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C47B5560-55B5-47F0-8E48-FADF54F7A324"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF44F071-354A-4BA5-9F03-B61D0F3DBF20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RKProject/Tools/Network/RKNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "rkloadData(target:model:showHud:cache:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CF44F071-354A-4BA5-9F03-B61D0F3DBF20 - 3d385f710d4a404e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static RKProject.RKNetwork.rkloadData&lt;A, B where A: Moya.TargetType, B: Swift.Decodable&gt;(target: A, model: Swift.Optional&lt;B.Type&gt;, showHud: Swift.Optional&lt;Swift.Bool&gt;, cache: Swift.Optional&lt;(Swift.Optional&lt;B&gt;) -&gt; ()&gt;, success: (Swift.Optional&lt;B&gt;, Swift.Optional&lt;Foundation.Data&gt;) -&gt; (), failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Int&gt;, Swift.String) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "RKProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rookie/Desktop/RKSwift/RKProject/Tools/Network/RKNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "CF44F071-354A-4BA5-9F03-B61D0F3DBF20 - 5ec507e6cc3f965"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static RKProject.RKNetwork.rkloadData&lt;A, B where A: Moya.TargetType, B: Swift.Decodable&gt;(target: A, model: Swift.Optional&lt;B.Type&gt;, showHud: Swift.Optional&lt;Swift.Bool&gt;, cache: Swift.Optional&lt;(Swift.Optional&lt;B&gt;) -&gt; ()&gt;, success: (Swift.Optional&lt;B&gt;, Swift.Optional&lt;Foundation.Data&gt;) -&gt; (), failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Int&gt;, Swift.String) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "RKProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rookie/Desktop/RKSwift/RKProject/Tools/Network/RKNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "397">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

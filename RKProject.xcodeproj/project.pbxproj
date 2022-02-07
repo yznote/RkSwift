@@ -1,0 +1,931 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54431DB64C044954736BEC6 /* Pods_RKProject.framework */; };
+		9C03709A256912760004D613 /* RKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C037099256912760004D613 /* RKTabBarController.swift */; };
+		9C0370B22569132A0004D613 /* tabbar_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */; };
+		9C0370B32569132A0004D613 /* tabbar_home_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A3256913290004D613 /* tabbar_home_selected@3x.png */; };
+		9C0370B42569132A0004D613 /* tabbar_discover_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A4256913290004D613 /* tabbar_discover_selected@2x.png */; };
+		9C0370B52569132A0004D613 /* tabbar_message_center_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A5256913290004D613 /* tabbar_message_center_selected@2x.png */; };
+		9C0370B62569132A0004D613 /* tabbar_discover@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A6256913290004D613 /* tabbar_discover@3x.png */; };
+		9C0370B72569132A0004D613 /* tabbar_profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A7256913290004D613 /* tabbar_profile@2x.png */; };
+		9C0370B82569132A0004D613 /* tabbar_profile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A8256913290004D613 /* tabbar_profile@3x.png */; };
+		9C0370B92569132A0004D613 /* tabbar_discover_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A9256913290004D613 /* tabbar_discover_selected@3x.png */; };
+		9C0370BA2569132A0004D613 /* tabbar_message_center_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370AA256913290004D613 /* tabbar_message_center_selected@3x.png */; };
+		9C0370BB2569132A0004D613 /* tabbar_profile_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370AB256913290004D613 /* tabbar_profile_selected@2x.png */; };
+		9C0370BC2569132A0004D613 /* tabbar_message_center@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370AC256913290004D613 /* tabbar_message_center@3x.png */; };
+		9C0370BD2569132A0004D613 /* tabbar_discover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370AD256913290004D613 /* tabbar_discover@2x.png */; };
+		9C0370BE2569132A0004D613 /* tabbar_home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370AE256913290004D613 /* tabbar_home@3x.png */; };
+		9C0370BF2569132A0004D613 /* tabbar_message_center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370AF256913290004D613 /* tabbar_message_center@2x.png */; };
+		9C0370C02569132A0004D613 /* tabbar_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370B0256913290004D613 /* tabbar_home@2x.png */; };
+		9C0370C12569132A0004D613 /* tabbar_profile_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370B12569132A0004D613 /* tabbar_profile_selected@3x.png */; };
+		9C0370C5256913610004D613 /* RKBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0370C4256913610004D613 /* RKBaseVC.swift */; };
+		9C0370C9256913D10004D613 /* RKProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0370C8256913D10004D613 /* RKProperty.swift */; };
+		9C16C53C2580AEE3007B940A /* RKNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16C53B2580AEE3007B940A /* RKNetwork.swift */; };
+		9C16C5452580BAE9007B940A /* RKApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16C5442580BAE9007B940A /* RKApiConfig.swift */; };
+		9C16C5482580BAFE007B940A /* RKHomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16C5472580BAFE007B940A /* RKHomeApi.swift */; };
+		9C16C54B2580BB11007B940A /* RKHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16C54A2580BB11007B940A /* RKHomeModel.swift */; };
+		9C16C54E2580BC4E007B940A /* RKLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16C54D2580BC4E007B940A /* RKLinks.swift */; };
+		9C586B6425C0FCEA00F00B0D /* RKModelConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C586B6325C0FCEA00F00B0D /* RKModelConfig.swift */; };
+		9C611EC725B2B7B400CEDDC8 /* RKRxOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C611EC625B2B7B400CEDDC8 /* RKRxOperators.swift */; };
+		9C67A0E325C102680052889A /* RKLiveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67A0E225C102680052889A /* RKLiveApi.swift */; };
+		9C67A0E625C102780052889A /* RKLiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67A0E525C102780052889A /* RKLiveModel.swift */; };
+		9C6CC3FD257A5B8F00936284 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC3FF257A5B8F00936284 /* InfoPlist.strings */; };
+		9C6CC404257A5BC800936284 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC406257A5BC800936284 /* Localizable.strings */; };
+		9C6CC40A257A5DAB00936284 /* RKLanguageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CC409257A5DAB00936284 /* RKLanguageTool.swift */; };
+		9C6CC40F257B1EB500936284 /* RKMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CC40E257B1EB500936284 /* RKMineCell.swift */; };
+		9C6CC415257B1FFE00936284 /* RKBaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CC414257B1FFE00936284 /* RKBaseTableCell.swift */; };
+		9C6CC418257B2AB900936284 /* RKSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6CC417257B2AB900936284 /* RKSetVC.swift */; };
+		9C6CC41D257B79A800936284 /* refresh_discover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC41C257B79A800936284 /* refresh_discover@2x.png */; };
+		9C6CC420257B79B000936284 /* refresh_kiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC41F257B79B000936284 /* refresh_kiss@2x.png */; };
+		9C6CC423257B79BA00936284 /* refresh_loading_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC422257B79BA00936284 /* refresh_loading_1@2x.png */; };
+		9C6CC426257B79C200936284 /* refresh_loading_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC425257B79C200936284 /* refresh_loading_2@2x.png */; };
+		9C6CC429257B79CB00936284 /* refresh_loading_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC428257B79CB00936284 /* refresh_loading_3@2x.png */; };
+		9C6CC42C257B79D400936284 /* refresh_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC42B257B79D400936284 /* refresh_normal@2x.png */; };
+		9C6CC42F257B79DD00936284 /* refresh_will_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6CC42E257B79DD00936284 /* refresh_will_refresh@2x.png */; };
+		9C8492E525971A9D00321E9B /* RKMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8492E425971A9D00321E9B /* RKMessageCell.swift */; };
+		9C8DDBC82576486D00E000A8 /* RKPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DDBC72576486D00E000A8 /* RKPackage.swift */; };
+		9CB187782584666F000FF2C9 /* RKLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB187772584666E000FF2C9 /* RKLogs.swift */; };
+		9CE3657F256C98CF00E7BD6D /* RKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3657E256C98CF00E7BD6D /* RKExtension.swift */; };
+		9CE36582256CADCB00E7BD6D /* RkProjectTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE36581256CADCB00E7BD6D /* RkProjectTestVC.swift */; };
+		9CE36597256CD3AD00E7BD6D /* RKPlugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE36596256CD3AD00E7BD6D /* RKPlugins.swift */; };
+		9CE3659B256CE15700E7BD6D /* 导航-返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3659A256CE15700E7BD6D /* 导航-返回@3x.png */; };
+		9CE365A1256CEAFE00E7BD6D /* RKPublicFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365A0256CEAFE00E7BD6D /* RKPublicFunc.swift */; };
+		9CE365BF256DEF0200E7BD6D /* RKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365BE256DEF0200E7BD6D /* RKNavigationController.swift */; };
+		9CE365C2256DF01000E7BD6D /* RKWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365C1256DF01000E7BD6D /* RKWebVC.swift */; };
+		9CE365C8256E4EE700E7BD6D /* 导航-进度@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE365C7256E4EE700E7BD6D /* 导航-进度@2x.png */; };
+		9CE365CC256E592100E7BD6D /* RKHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365CB256E592100E7BD6D /* RKHomeVC.swift */; };
+		9CE365CF256E593700E7BD6D /* RKMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365CE256E593700E7BD6D /* RKMessageVC.swift */; };
+		9CE365D2256E595000E7BD6D /* RKDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365D1256E595000E7BD6D /* RKDiscoverVC.swift */; };
+		9CE365D5256E596100E7BD6D /* RKMineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365D4256E596100E7BD6D /* RKMineVC.swift */; };
+		9CE365DB256E642F00E7BD6D /* tabbar_compose_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE365D9256E642F00E7BD6D /* tabbar_compose_button@3x.png */; };
+		9CE365DC256E642F00E7BD6D /* tabbar_compose_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE365DA256E642F00E7BD6D /* tabbar_compose_button@2x.png */; };
+		9CE365E0256E646B00E7BD6D /* tabbar_compose_icon_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE365DE256E646B00E7BD6D /* tabbar_compose_icon_add@2x.png */; };
+		9CE365E1256E646B00E7BD6D /* tabbar_compose_icon_add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE365DF256E646B00E7BD6D /* tabbar_compose_icon_add@3x.png */; };
+		9CE365E7256F426D00E7BD6D /* RKAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE365E6256F426D00E7BD6D /* RKAlertView.swift */; };
+		9CFA03CB2568A6C3001FF834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA03CA2568A6C3001FF834 /* AppDelegate.swift */; };
+		9CFA03CD2568A6C3001FF834 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA03CC2568A6C3001FF834 /* SceneDelegate.swift */; };
+		9CFA03CF2568A6C3001FF834 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA03CE2568A6C3001FF834 /* ViewController.swift */; };
+		9CFA03D22568A6C3001FF834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA03D02568A6C3001FF834 /* Main.storyboard */; };
+		9CFA03D42568A6C6001FF834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA03D32568A6C6001FF834 /* Assets.xcassets */; };
+		9CFA03D72568A6C6001FF834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA03D52568A6C6001FF834 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9A7BC5A0AABE43C71C95A11A /* Pods-RKProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKProject.debug.xcconfig"; path = "Target Support Files/Pods-RKProject/Pods-RKProject.debug.xcconfig"; sourceTree = "<group>"; };
+		9C037099256912760004D613 /* RKTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTabBarController.swift; sourceTree = "<group>"; };
+		9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@2x.png"; sourceTree = "<group>"; };
+		9C0370A3256913290004D613 /* tabbar_home_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@3x.png"; sourceTree = "<group>"; };
+		9C0370A4256913290004D613 /* tabbar_discover_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover_selected@2x.png"; sourceTree = "<group>"; };
+		9C0370A5256913290004D613 /* tabbar_message_center_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_message_center_selected@2x.png"; sourceTree = "<group>"; };
+		9C0370A6256913290004D613 /* tabbar_discover@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover@3x.png"; sourceTree = "<group>"; };
+		9C0370A7256913290004D613 /* tabbar_profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile@2x.png"; sourceTree = "<group>"; };
+		9C0370A8256913290004D613 /* tabbar_profile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile@3x.png"; sourceTree = "<group>"; };
+		9C0370A9256913290004D613 /* tabbar_discover_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover_selected@3x.png"; sourceTree = "<group>"; };
+		9C0370AA256913290004D613 /* tabbar_message_center_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_message_center_selected@3x.png"; sourceTree = "<group>"; };
+		9C0370AB256913290004D613 /* tabbar_profile_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile_selected@2x.png"; sourceTree = "<group>"; };
+		9C0370AC256913290004D613 /* tabbar_message_center@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_message_center@3x.png"; sourceTree = "<group>"; };
+		9C0370AD256913290004D613 /* tabbar_discover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover@2x.png"; sourceTree = "<group>"; };
+		9C0370AE256913290004D613 /* tabbar_home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home@3x.png"; sourceTree = "<group>"; };
+		9C0370AF256913290004D613 /* tabbar_message_center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_message_center@2x.png"; sourceTree = "<group>"; };
+		9C0370B0256913290004D613 /* tabbar_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home@2x.png"; sourceTree = "<group>"; };
+		9C0370B12569132A0004D613 /* tabbar_profile_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile_selected@3x.png"; sourceTree = "<group>"; };
+		9C0370C4256913610004D613 /* RKBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKBaseVC.swift; sourceTree = "<group>"; };
+		9C0370C8256913D10004D613 /* RKProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKProperty.swift; sourceTree = "<group>"; };
+		9C16C53B2580AEE3007B940A /* RKNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKNetwork.swift; sourceTree = "<group>"; };
+		9C16C5442580BAE9007B940A /* RKApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKApiConfig.swift; sourceTree = "<group>"; };
+		9C16C5472580BAFE007B940A /* RKHomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKHomeApi.swift; sourceTree = "<group>"; };
+		9C16C54A2580BB11007B940A /* RKHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKHomeModel.swift; sourceTree = "<group>"; };
+		9C16C54D2580BC4E007B940A /* RKLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKLinks.swift; sourceTree = "<group>"; };
+		9C586B6325C0FCEA00F00B0D /* RKModelConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKModelConfig.swift; sourceTree = "<group>"; };
+		9C611EC625B2B7B400CEDDC8 /* RKRxOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKRxOperators.swift; sourceTree = "<group>"; };
+		9C67A0E225C102680052889A /* RKLiveApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKLiveApi.swift; sourceTree = "<group>"; };
+		9C67A0E525C102780052889A /* RKLiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKLiveModel.swift; sourceTree = "<group>"; };
+		9C6CC3F7257A5B3800936284 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		9C6CC3F8257A5B3800936284 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9C6CC3FE257A5B8F00936284 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		9C6CC400257A5B9600936284 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C6CC405257A5BC800936284 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9C6CC408257A5BCE00936284 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C6CC409257A5DAB00936284 /* RKLanguageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKLanguageTool.swift; sourceTree = "<group>"; };
+		9C6CC40E257B1EB500936284 /* RKMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMineCell.swift; sourceTree = "<group>"; };
+		9C6CC414257B1FFE00936284 /* RKBaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKBaseTableCell.swift; sourceTree = "<group>"; };
+		9C6CC417257B2AB900936284 /* RKSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKSetVC.swift; sourceTree = "<group>"; };
+		9C6CC41C257B79A800936284 /* refresh_discover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_discover@2x.png"; sourceTree = "<group>"; };
+		9C6CC41F257B79B000936284 /* refresh_kiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_kiss@2x.png"; sourceTree = "<group>"; };
+		9C6CC422257B79BA00936284 /* refresh_loading_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_loading_1@2x.png"; sourceTree = "<group>"; };
+		9C6CC425257B79C200936284 /* refresh_loading_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_loading_2@2x.png"; sourceTree = "<group>"; };
+		9C6CC428257B79CB00936284 /* refresh_loading_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_loading_3@2x.png"; sourceTree = "<group>"; };
+		9C6CC42B257B79D400936284 /* refresh_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_normal@2x.png"; sourceTree = "<group>"; };
+		9C6CC42E257B79DD00936284 /* refresh_will_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_will_refresh@2x.png"; sourceTree = "<group>"; };
+		9C8492E425971A9D00321E9B /* RKMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMessageCell.swift; sourceTree = "<group>"; };
+		9C8DDBC72576486D00E000A8 /* RKPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKPackage.swift; sourceTree = "<group>"; };
+		9CB187772584666E000FF2C9 /* RKLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKLogs.swift; sourceTree = "<group>"; };
+		9CE3657E256C98CF00E7BD6D /* RKExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKExtension.swift; sourceTree = "<group>"; };
+		9CE36581256CADCB00E7BD6D /* RkProjectTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RkProjectTestVC.swift; sourceTree = "<group>"; };
+		9CE36596256CD3AD00E7BD6D /* RKPlugins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKPlugins.swift; sourceTree = "<group>"; };
+		9CE3659A256CE15700E7BD6D /* 导航-返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航-返回@3x.png"; sourceTree = "<group>"; };
+		9CE365A0256CEAFE00E7BD6D /* RKPublicFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKPublicFunc.swift; sourceTree = "<group>"; };
+		9CE365BE256DEF0200E7BD6D /* RKNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKNavigationController.swift; sourceTree = "<group>"; };
+		9CE365C1256DF01000E7BD6D /* RKWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKWebVC.swift; sourceTree = "<group>"; };
+		9CE365C7256E4EE700E7BD6D /* 导航-进度@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航-进度@2x.png"; sourceTree = "<group>"; };
+		9CE365CB256E592100E7BD6D /* RKHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKHomeVC.swift; sourceTree = "<group>"; };
+		9CE365CE256E593700E7BD6D /* RKMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMessageVC.swift; sourceTree = "<group>"; };
+		9CE365D1256E595000E7BD6D /* RKDiscoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKDiscoverVC.swift; sourceTree = "<group>"; };
+		9CE365D4256E596100E7BD6D /* RKMineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMineVC.swift; sourceTree = "<group>"; };
+		9CE365D9256E642F00E7BD6D /* tabbar_compose_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_button@3x.png"; sourceTree = "<group>"; };
+		9CE365DA256E642F00E7BD6D /* tabbar_compose_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_button@2x.png"; sourceTree = "<group>"; };
+		9CE365DE256E646B00E7BD6D /* tabbar_compose_icon_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_icon_add@2x.png"; sourceTree = "<group>"; };
+		9CE365DF256E646B00E7BD6D /* tabbar_compose_icon_add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_icon_add@3x.png"; sourceTree = "<group>"; };
+		9CE365E6256F426D00E7BD6D /* RKAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKAlertView.swift; sourceTree = "<group>"; };
+		9CFA03C72568A6C3001FF834 /* RKProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RKProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFA03CA2568A6C3001FF834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CFA03CC2568A6C3001FF834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9CFA03CE2568A6C3001FF834 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CFA03D12568A6C3001FF834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CFA03D32568A6C6001FF834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CFA03D62568A6C6001FF834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CFA03D82568A6C6001FF834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D54431DB64C044954736BEC6 /* Pods_RKProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A84254E78685C80E2410D0 /* Pods-RKProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKProject.release.xcconfig"; path = "Target Support Files/Pods-RKProject/Pods-RKProject.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CFA03C42568A6C3001FF834 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06D1809541531CA9682B2B71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D54431DB64C044954736BEC6 /* Pods_RKProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C037095256910070004D613 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9CFA03D32568A6C6001FF834 /* Assets.xcassets */,
+				9CFA03D52568A6C6001FF834 /* LaunchScreen.storyboard */,
+				9CFA03D82568A6C6001FF834 /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9C037097256910210004D613 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9CFA03CA2568A6C3001FF834 /* AppDelegate.swift */,
+				9CFA03CC2568A6C3001FF834 /* SceneDelegate.swift */,
+				9CFA03CE2568A6C3001FF834 /* ViewController.swift */,
+				9CFA03D02568A6C3001FF834 /* Main.storyboard */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9C037098256910780004D613 /* RKTab */ = {
+			isa = PBXGroup;
+			children = (
+				9C0370A1256912F20004D613 /* 图片 */,
+				9C037099256912760004D613 /* RKTabBarController.swift */,
+			);
+			path = RKTab;
+			sourceTree = "<group>";
+		};
+		9C03709C256912950004D613 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				9C03709D256912A70004D613 /* Home */,
+				9C03709E256912B70004D613 /* Message */,
+				9C03709F256912C50004D613 /* Discover */,
+				9C0370A0256912D50004D613 /* Mine */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		9C03709D256912A70004D613 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365CB256E592100E7BD6D /* RKHomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9C03709E256912B70004D613 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				9C8492E325971A7100321E9B /* view */,
+				9CE365CE256E593700E7BD6D /* RKMessageVC.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		9C03709F256912C50004D613 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365D1256E595000E7BD6D /* RKDiscoverVC.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		9C0370A0256912D50004D613 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC40D257B1E9900936284 /* view */,
+				9CE365D4256E596100E7BD6D /* RKMineVC.swift */,
+				9C6CC417257B2AB900936284 /* RKSetVC.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		9C0370A1256912F20004D613 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365DE256E646B00E7BD6D /* tabbar_compose_icon_add@2x.png */,
+				9CE365DF256E646B00E7BD6D /* tabbar_compose_icon_add@3x.png */,
+				9CE365DA256E642F00E7BD6D /* tabbar_compose_button@2x.png */,
+				9CE365D9256E642F00E7BD6D /* tabbar_compose_button@3x.png */,
+				9C0370A4256913290004D613 /* tabbar_discover_selected@2x.png */,
+				9C0370A9256913290004D613 /* tabbar_discover_selected@3x.png */,
+				9C0370AD256913290004D613 /* tabbar_discover@2x.png */,
+				9C0370A6256913290004D613 /* tabbar_discover@3x.png */,
+				9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */,
+				9C0370A3256913290004D613 /* tabbar_home_selected@3x.png */,
+				9C0370B0256913290004D613 /* tabbar_home@2x.png */,
+				9C0370AE256913290004D613 /* tabbar_home@3x.png */,
+				9C0370A5256913290004D613 /* tabbar_message_center_selected@2x.png */,
+				9C0370AA256913290004D613 /* tabbar_message_center_selected@3x.png */,
+				9C0370AF256913290004D613 /* tabbar_message_center@2x.png */,
+				9C0370AC256913290004D613 /* tabbar_message_center@3x.png */,
+				9C0370AB256913290004D613 /* tabbar_profile_selected@2x.png */,
+				9C0370B12569132A0004D613 /* tabbar_profile_selected@3x.png */,
+				9C0370A7256913290004D613 /* tabbar_profile@2x.png */,
+				9C0370A8256913290004D613 /* tabbar_profile@3x.png */,
+			);
+			path = "图片";
+			sourceTree = "<group>";
+		};
+		9C0370C32569133F0004D613 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9CE36599256CE14900E7BD6D /* 图片 */,
+				9C6CC413257B1FAD00936284 /* View */,
+				9C6CC412257B1F9F00936284 /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9C16C5342580A07E007B940A /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				9CE36596256CD3AD00E7BD6D /* RKPlugins.swift */,
+				9CE36581256CADCB00E7BD6D /* RkProjectTestVC.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		9C16C5422580B896007B940A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9CB187772584666E000FF2C9 /* RKLogs.swift */,
+				9C16C53B2580AEE3007B940A /* RKNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9C16C55525823C91007B940A /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				9C0370C8256913D10004D613 /* RKProperty.swift */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
+		9C586B6025C0FBB500F00B0D /* Api+Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C16C54D2580BC4E007B940A /* RKLinks.swift */,
+				9C16C5442580BAE9007B940A /* RKApiConfig.swift */,
+				9C586B6325C0FCEA00F00B0D /* RKModelConfig.swift */,
+				9C67A0DC25C102100052889A /* live */,
+				9C586B6625C0FD4200F00B0D /* home */,
+			);
+			path = "Api+Model";
+			sourceTree = "<group>";
+		};
+		9C586B6625C0FD4200F00B0D /* home */ = {
+			isa = PBXGroup;
+			children = (
+				9C16C5472580BAFE007B940A /* RKHomeApi.swift */,
+				9C16C54A2580BB11007B940A /* RKHomeModel.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		9C67A0DC25C102100052889A /* live */ = {
+			isa = PBXGroup;
+			children = (
+				9C67A0E225C102680052889A /* RKLiveApi.swift */,
+				9C67A0E525C102780052889A /* RKLiveModel.swift */,
+			);
+			path = live;
+			sourceTree = "<group>";
+		};
+		9C6CC3F5257A5AB600936284 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC3F6257A5AEA00936284 /* Language */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		9C6CC3F6257A5AEA00936284 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC409257A5DAB00936284 /* RKLanguageTool.swift */,
+				9C6CC3FF257A5B8F00936284 /* InfoPlist.strings */,
+				9C6CC406257A5BC800936284 /* Localizable.strings */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		9C6CC40D257B1E9900936284 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC40E257B1EB500936284 /* RKMineCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9C6CC412257B1F9F00936284 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365BE256DEF0200E7BD6D /* RKNavigationController.swift */,
+				9C0370C4256913610004D613 /* RKBaseVC.swift */,
+				9CE365C1256DF01000E7BD6D /* RKWebVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C6CC413257B1FAD00936284 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC414257B1FFE00936284 /* RKBaseTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C6CC41A257B798A00936284 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC41B257B799600936284 /* 刷新 */,
+			);
+			path = "图片";
+			sourceTree = "<group>";
+		};
+		9C6CC41B257B799600936284 /* 刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC41C257B79A800936284 /* refresh_discover@2x.png */,
+				9C6CC41F257B79B000936284 /* refresh_kiss@2x.png */,
+				9C6CC422257B79BA00936284 /* refresh_loading_1@2x.png */,
+				9C6CC425257B79C200936284 /* refresh_loading_2@2x.png */,
+				9C6CC428257B79CB00936284 /* refresh_loading_3@2x.png */,
+				9C6CC42B257B79D400936284 /* refresh_normal@2x.png */,
+				9C6CC42E257B79DD00936284 /* refresh_will_refresh@2x.png */,
+			);
+			path = "刷新";
+			sourceTree = "<group>";
+		};
+		9C8492E325971A7100321E9B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9C8492E425971A9D00321E9B /* RKMessageCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9C8DDBC6257647F300E000A8 /* ThirdPackage */ = {
+			isa = PBXGroup;
+			children = (
+				9C6CC41A257B798A00936284 /* 图片 */,
+				9C8DDBC72576486D00E000A8 /* RKPackage.swift */,
+			);
+			path = ThirdPackage;
+			sourceTree = "<group>";
+		};
+		9CE36570256C974A00E7BD6D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9CE3657E256C98CF00E7BD6D /* RKExtension.swift */,
+				9C611EC625B2B7B400CEDDC8 /* RKRxOperators.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9CE36599256CE14900E7BD6D /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365C7256E4EE700E7BD6D /* 导航-进度@2x.png */,
+				9CE3659A256CE15700E7BD6D /* 导航-返回@3x.png */,
+			);
+			path = "图片";
+			sourceTree = "<group>";
+		};
+		9CE3659E256CEA6C00E7BD6D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365E4256F3D5100E7BD6D /* AlertAndSheet */,
+				9CE36570256C974A00E7BD6D /* Extension */,
+				9C16C5422580B896007B940A /* Network */,
+				9C16C55525823C91007B940A /* Property */,
+				9CE3659F256CEABB00E7BD6D /* PubMethod */,
+				9C8DDBC6257647F300E000A8 /* ThirdPackage */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9CE3659F256CEABB00E7BD6D /* PubMethod */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365A0256CEAFE00E7BD6D /* RKPublicFunc.swift */,
+			);
+			path = PubMethod;
+			sourceTree = "<group>";
+		};
+		9CE365E4256F3D5100E7BD6D /* AlertAndSheet */ = {
+			isa = PBXGroup;
+			children = (
+				9CE365E6256F426D00E7BD6D /* RKAlertView.swift */,
+			);
+			path = AlertAndSheet;
+			sourceTree = "<group>";
+		};
+		9CFA03BE2568A6C3001FF834 = {
+			isa = PBXGroup;
+			children = (
+				9CFA03C92568A6C3001FF834 /* RKProject */,
+				9CFA03C82568A6C3001FF834 /* Products */,
+				A62F14DDC3ACEFAB20777E71 /* Pods */,
+				06D1809541531CA9682B2B71 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9CFA03C82568A6C3001FF834 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CFA03C72568A6C3001FF834 /* RKProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CFA03C92568A6C3001FF834 /* RKProject */ = {
+			isa = PBXGroup;
+			children = (
+				9C16C5342580A07E007B940A /* Test */,
+				9C586B6025C0FBB500F00B0D /* Api+Model */,
+				9C037097256910210004D613 /* AppDelegate */,
+				9C0370C32569133F0004D613 /* Base */,
+				9C03709C256912950004D613 /* Class */,
+				9C6CC3F5257A5AB600936284 /* Functions */,
+				9C037095256910070004D613 /* Other */,
+				9C037098256910780004D613 /* RKTab */,
+				9CE3659E256CEA6C00E7BD6D /* Tools */,
+			);
+			path = RKProject;
+			sourceTree = "<group>";
+		};
+		A62F14DDC3ACEFAB20777E71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A7BC5A0AABE43C71C95A11A /* Pods-RKProject.debug.xcconfig */,
+				F6A84254E78685C80E2410D0 /* Pods-RKProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CFA03C62568A6C3001FF834 /* RKProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CFA03DB2568A6C6001FF834 /* Build configuration list for PBXNativeTarget "RKProject" */;
+			buildPhases = (
+				800472DA41A06A047C1CDAAE /* [CP] Check Pods Manifest.lock */,
+				9CFA03C32568A6C3001FF834 /* Sources */,
+				9CFA03C42568A6C3001FF834 /* Frameworks */,
+				9CFA03C52568A6C3001FF834 /* Resources */,
+				A67BC774BA504F7382287595 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RKProject;
+			productName = RKProject;
+			productReference = 9CFA03C72568A6C3001FF834 /* RKProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CFA03BF2568A6C3001FF834 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					9CFA03C62568A6C3001FF834 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 9CFA03C22568A6C3001FF834 /* Build configuration list for PBXProject "RKProject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 9CFA03BE2568A6C3001FF834;
+			productRefGroup = 9CFA03C82568A6C3001FF834 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CFA03C62568A6C3001FF834 /* RKProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CFA03C52568A6C3001FF834 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C0370B42569132A0004D613 /* tabbar_discover_selected@2x.png in Resources */,
+				9C0370B22569132A0004D613 /* tabbar_home_selected@2x.png in Resources */,
+				9C0370B52569132A0004D613 /* tabbar_message_center_selected@2x.png in Resources */,
+				9C6CC423257B79BA00936284 /* refresh_loading_1@2x.png in Resources */,
+				9C6CC42C257B79D400936284 /* refresh_normal@2x.png in Resources */,
+				9C6CC3FD257A5B8F00936284 /* InfoPlist.strings in Resources */,
+				9C6CC404257A5BC800936284 /* Localizable.strings in Resources */,
+				9C6CC41D257B79A800936284 /* refresh_discover@2x.png in Resources */,
+				9CFA03D72568A6C6001FF834 /* LaunchScreen.storyboard in Resources */,
+				9CE365E0256E646B00E7BD6D /* tabbar_compose_icon_add@2x.png in Resources */,
+				9CE365DB256E642F00E7BD6D /* tabbar_compose_button@3x.png in Resources */,
+				9C6CC420257B79B000936284 /* refresh_kiss@2x.png in Resources */,
+				9C6CC426257B79C200936284 /* refresh_loading_2@2x.png in Resources */,
+				9C0370BE2569132A0004D613 /* tabbar_home@3x.png in Resources */,
+				9C0370BF2569132A0004D613 /* tabbar_message_center@2x.png in Resources */,
+				9C0370BC2569132A0004D613 /* tabbar_message_center@3x.png in Resources */,
+				9C0370B72569132A0004D613 /* tabbar_profile@2x.png in Resources */,
+				9CE3659B256CE15700E7BD6D /* 导航-返回@3x.png in Resources */,
+				9C6CC42F257B79DD00936284 /* refresh_will_refresh@2x.png in Resources */,
+				9C0370B32569132A0004D613 /* tabbar_home_selected@3x.png in Resources */,
+				9CFA03D42568A6C6001FF834 /* Assets.xcassets in Resources */,
+				9C6CC429257B79CB00936284 /* refresh_loading_3@2x.png in Resources */,
+				9CE365DC256E642F00E7BD6D /* tabbar_compose_button@2x.png in Resources */,
+				9C0370B82569132A0004D613 /* tabbar_profile@3x.png in Resources */,
+				9C0370B62569132A0004D613 /* tabbar_discover@3x.png in Resources */,
+				9C0370BB2569132A0004D613 /* tabbar_profile_selected@2x.png in Resources */,
+				9C0370C02569132A0004D613 /* tabbar_home@2x.png in Resources */,
+				9CE365C8256E4EE700E7BD6D /* 导航-进度@2x.png in Resources */,
+				9C0370C12569132A0004D613 /* tabbar_profile_selected@3x.png in Resources */,
+				9C0370BD2569132A0004D613 /* tabbar_discover@2x.png in Resources */,
+				9CFA03D22568A6C3001FF834 /* Main.storyboard in Resources */,
+				9CE365E1256E646B00E7BD6D /* tabbar_compose_icon_add@3x.png in Resources */,
+				9C0370B92569132A0004D613 /* tabbar_discover_selected@3x.png in Resources */,
+				9C0370BA2569132A0004D613 /* tabbar_message_center_selected@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		800472DA41A06A047C1CDAAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RKProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A67BC774BA504F7382287595 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CFA03C32568A6C3001FF834 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C03709A256912760004D613 /* RKTabBarController.swift in Sources */,
+				9C67A0E625C102780052889A /* RKLiveModel.swift in Sources */,
+				9C6CC40A257A5DAB00936284 /* RKLanguageTool.swift in Sources */,
+				9CE365E7256F426D00E7BD6D /* RKAlertView.swift in Sources */,
+				9CE365A1256CEAFE00E7BD6D /* RKPublicFunc.swift in Sources */,
+				9C8DDBC82576486D00E000A8 /* RKPackage.swift in Sources */,
+				9CE36597256CD3AD00E7BD6D /* RKPlugins.swift in Sources */,
+				9C0370C9256913D10004D613 /* RKProperty.swift in Sources */,
+				9CFA03CF2568A6C3001FF834 /* ViewController.swift in Sources */,
+				9CE365BF256DEF0200E7BD6D /* RKNavigationController.swift in Sources */,
+				9CB187782584666F000FF2C9 /* RKLogs.swift in Sources */,
+				9C16C5452580BAE9007B940A /* RKApiConfig.swift in Sources */,
+				9C16C5482580BAFE007B940A /* RKHomeApi.swift in Sources */,
+				9C611EC725B2B7B400CEDDC8 /* RKRxOperators.swift in Sources */,
+				9C6CC40F257B1EB500936284 /* RKMineCell.swift in Sources */,
+				9CE365CC256E592100E7BD6D /* RKHomeVC.swift in Sources */,
+				9C586B6425C0FCEA00F00B0D /* RKModelConfig.swift in Sources */,
+				9CE3657F256C98CF00E7BD6D /* RKExtension.swift in Sources */,
+				9C67A0E325C102680052889A /* RKLiveApi.swift in Sources */,
+				9CE365D5256E596100E7BD6D /* RKMineVC.swift in Sources */,
+				9CFA03CB2568A6C3001FF834 /* AppDelegate.swift in Sources */,
+				9CE365CF256E593700E7BD6D /* RKMessageVC.swift in Sources */,
+				9CE365C2256DF01000E7BD6D /* RKWebVC.swift in Sources */,
+				9C8492E525971A9D00321E9B /* RKMessageCell.swift in Sources */,
+				9C6CC415257B1FFE00936284 /* RKBaseTableCell.swift in Sources */,
+				9C0370C5256913610004D613 /* RKBaseVC.swift in Sources */,
+				9CE365D2256E595000E7BD6D /* RKDiscoverVC.swift in Sources */,
+				9CE36582256CADCB00E7BD6D /* RkProjectTestVC.swift in Sources */,
+				9C16C54E2580BC4E007B940A /* RKLinks.swift in Sources */,
+				9C16C54B2580BB11007B940A /* RKHomeModel.swift in Sources */,
+				9C6CC418257B2AB900936284 /* RKSetVC.swift in Sources */,
+				9CFA03CD2568A6C3001FF834 /* SceneDelegate.swift in Sources */,
+				9C16C53C2580AEE3007B940A /* RKNetwork.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C6CC3FF257A5B8F00936284 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C6CC3FE257A5B8F00936284 /* zh-Hans */,
+				9C6CC400257A5B9600936284 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C6CC406257A5BC800936284 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C6CC405257A5BC800936284 /* zh-Hans */,
+				9C6CC408257A5BCE00936284 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9CFA03D02568A6C3001FF834 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CFA03D12568A6C3001FF834 /* Base */,
+				9C6CC3F7257A5B3800936284 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CFA03D52568A6C6001FF834 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CFA03D62568A6C6001FF834 /* Base */,
+				9C6CC3F8257A5B3800936284 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CFA03D92568A6C6001FF834 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CFA03DA2568A6C6001FF834 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CFA03DC2568A6C6001FF834 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A7BC5A0AABE43C71C95A11A /* Pods-RKProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = EP9U5BJZN9;
+				INFOPLIST_FILE = RKProject/Other/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunbao.123;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = hailongYB;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CFA03DD2568A6C6001FF834 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6A84254E78685C80E2410D0 /* Pods-RKProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = EP9U5BJZN9;
+				INFOPLIST_FILE = RKProject/Other/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunbao.123;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = hailongYB;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CFA03C22568A6C3001FF834 /* Build configuration list for PBXProject "RKProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CFA03D92568A6C6001FF834 /* Debug */,
+				9CFA03DA2568A6C6001FF834 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CFA03DB2568A6C6001FF834 /* Build configuration list for PBXNativeTarget "RKProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CFA03DC2568A6C6001FF834 /* Debug */,
+				9CFA03DD2568A6C6001FF834 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CFA03BF2568A6C3001FF834 /* Project object */;
+}
