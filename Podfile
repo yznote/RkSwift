@@ -25,7 +25,7 @@ pod 'UINavigation-SXFixSpace','1.2.4'
 pod 'RxSwift', '6.0.0'
 pod 'RxCocoa', '6.0.0'
 
-
+pod 'SwiftCharts', '0.6.5'
 
 
 post_install do |installer|

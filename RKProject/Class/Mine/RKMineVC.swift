@@ -86,9 +86,14 @@ extension RKMineVC: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let setVC = RKSetVC()
-        UIApplication.shared.pushViewController(setVC, animated: true)
-//        UIApplication.shared.present(setVC, animated: true, completion: nil)
+        if indexPath.row == 0 {
+            let chartVC = RKChartsVC()
+            UIApplication.shared.pushViewController(chartVC, animated: true)
+        }else{
+            let setVC = RKSetVC()
+            UIApplication.shared.pushViewController(setVC, animated: true)
+            //UIApplication.shared.present(setVC, animated: true, completion: nil)
+        }
     }
 
 }
