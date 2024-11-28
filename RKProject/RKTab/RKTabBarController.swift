@@ -8,15 +8,17 @@
 import UIKit
 
 class RKTabBarController: UITabBarController {
-
+    
+    var onlyTitle = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupChildrenControllers()
         setCenterButton()
         
-//        UITabBar.appearance().shadowImage = UIImage()
-//        UITabBar.appearance().backgroundImage = UIImage()
+        //  UITabBar.appearance().shadowImage = UIImage()
+        //  UITabBar.appearance().backgroundImage = UIImage()
         
         UITabBar.appearance().tintColor = .orange
         UITabBar.appearance().unselectedItemTintColor = .gray
@@ -51,28 +53,35 @@ class RKTabBarController: UITabBarController {
     
     private func setSubViewController(title: String, image: String, subVC: UIViewController) -> RKNavigationController{
         
-        let iconNor = "tabbar_" + image
-        let iconSel = iconNor + "_selected"
-        
-        var norImg = UIImage(named: iconNor)
-        norImg = norImg?.withRenderingMode(.alwaysOriginal)
-        subVC.tabBarItem.image = norImg
-        
-        var selImg = UIImage(named: iconSel)
-        selImg = selImg?.withRenderingMode(.alwaysOriginal)
-        subVC.tabBarItem.selectedImage = selImg
-        
-//        let attrNor = [
-//            NSAttributedString.Key.foregroundColor : UIColor.gray,
-//            NSAttributedString.Key.font : UIFont.rkFont(ofSize: 13)
-//        ]
-//        let attrSel = [
-//            NSAttributedString.Key.foregroundColor : UIColor.orange,
-//            NSAttributedString.Key.font : UIFont.rkFont(ofSize: 13)
-//        ]
+        // title
         subVC.tabBarItem.title = title
-//        subVC.tabBarItem.setTitleTextAttributes(attrNor, for: .normal)
-//        subVC.tabBarItem.setTitleTextAttributes(attrSel, for: .selected)
+        let attrNor = [
+            NSAttributedString.Key.foregroundColor : UIColor.gray,
+            NSAttributedString.Key.font : UIFont.rkFont(ofSize: 20)
+        ]
+        let attrSel = [
+            NSAttributedString.Key.foregroundColor : UIColor.orange,
+            NSAttributedString.Key.font : UIFont.rkFont(ofSize: 20)
+        ]
+        subVC.tabBarItem.setTitleTextAttributes(attrNor, for: .normal)
+        subVC.tabBarItem.setTitleTextAttributes(attrSel, for: .selected)
+        
+        if onlyTitle {
+            // 只显示文字
+            subVC.tabBarItem.image = UIImage();
+            subVC.tabBarItem.selectedImage = UIImage();
+            subVC.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -12);
+        }else{
+            // image
+            let iconNor = "tabbar_" + image
+            let iconSel = iconNor + "_selected"
+            var norImg = UIImage(named: iconNor)
+            norImg = norImg?.withRenderingMode(.alwaysOriginal)
+            subVC.tabBarItem.image = norImg
+            var selImg = UIImage(named: iconSel)
+            selImg = selImg?.withRenderingMode(.alwaysOriginal)
+            subVC.tabBarItem.selectedImage = selImg
+        }
         
         let navi = RKNavigationController(rootViewController: subVC)
         navi.navigationController?.isNavigationBarHidden = true
@@ -117,14 +126,14 @@ extension RKTabBarController : UITabBarControllerDelegate {
         if selectedIndex == 0 && index == 0{
             /*
             let navi = children[0] as! RKNavigationController
-            let vc = navi.children[0]
+            let vc = navi.children[0] as! RKHomeVC
             
             //scroll to top
             //vc.tableView?.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
             
             //FIXME: dispatch work around.(必须滚动完,再刷新)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                 vc.loadDatas()
+                 vc.clickNaviRightBtn()
             }
             
             //clear badgeNumber
