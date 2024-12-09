@@ -27,9 +27,19 @@ class RKHomeVC: RKBaseVC {
     }
     
     override func clickNaviRightBtn() {
+        // color
+        let _ = UIColor(hex: "#9")
+        let _ = UIColor(hex: "1")
+        let _ = UIColor(hex: "20")
+        let _ = UIColor(hex: "345")
+        let _ = UIColor(hex: "9876")
+        let _ = UIColor(hex: "98765")
+        let _ = UIColor(hex: "987654")
         
+        let la = UILabel()
+        la.textColor = .hex("#ff")
         //
-        print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
+        //print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
         
         /*
         var infoDic = Bundle.main.infoDictionary
@@ -46,7 +56,7 @@ class RKHomeVC: RKBaseVC {
         infoDic!["RKTestKey1"] = testDic
         rkprint("type2:\(infoDic!["RKTestKey1"] ?? "==")")
         */
-        
+        /*
         RKNetwork.rkloadData(target: RKHomeApi.homeConfig, model: HomeConfigData.self, showHud: true) { [self] (returnData, jsonData) in
             guard let info = returnData?.info , info.count > 0 else {
                 rkShowHud(title: rkLocalized(key: "信息错误"))
@@ -59,7 +69,7 @@ class RKHomeVC: RKBaseVC {
         } failure: { (stateCode, msg) in
 
         }
-        
+        */
         
         /*
         let cuss = RkProjectTestVC()

@@ -118,11 +118,37 @@ extension UIButton {
         self.imageEdgeInsets = imageEdgeInsets
     }
 }
+/// UIButton 扩展，添加属性
+//import ObjectiveC
+private var AssociatedObjectKey: UInt8 = 0
+extension UIButton {
+    var extParam: Any? {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedObjectKey) as Any?
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &AssociatedObjectKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
 
 // MARK: - 十六进制颜色转换
 extension UIColor {
-    convenience init(hexString: String, alpha: CGFloat = 1.0){
-        let rgbTuple = hexString.rkStringConvertRGB()
+    
+    /// 十六进制颜色：可以不带#，可以是一位【"1"=>"111111"】，两位【"20"=>"202020"】，三位【"123"=>"123123"】，四位、五位末尾拼接0
+    /// - Parameters:
+    ///   - hex: 字符串
+    ///   - alpha: 透明度
+    /// - Returns: UIColor
+    class func hex(_ hex:String,_ alpha:CGFloat? = 1.0) -> UIColor {
+        UIColor(hex: hex,alpha: alpha ?? 1)
+    }
+    /// 十六进制颜色：可以不带#，可以是一位【"1"=>"111111"】，两位【"20"=>"202020"】，三位【"123"=>"123123"】，四位、五位末尾拼接0
+    /// - Parameters:
+    ///   - hex: 字符串
+    ///   - alpha: 透明度
+    convenience init(hex: String, alpha: CGFloat = 1.0){
+        let rgbTuple = hex.rkStringConvertRGB()
         self.init(red: rgbTuple.cRed, green: rgbTuple.cGreen, blue: rgbTuple.cBlue, alpha: alpha)
     }
 }
@@ -140,7 +166,20 @@ extension String {
             hex = String(hex[hex.index(hex.startIndex, offsetBy: 1)...])
         }
         // 如果传入的字符数量不足6位按照后边都为0处理，当然你也可以进行其它操作
+        /*
         if hex.count < 6 {
+            for _ in 0..<6-hex.count {
+                hex += "0"
+            }
+        }
+        */
+        if hex.count == 1 || hex.count == 2 || hex.count == 3{
+            var res = ""
+            for _ in 0..<6/(hex.count) {
+                res += hex
+            }
+            hex = res;
+        }else{
             for _ in 0..<6-hex.count {
                 hex += "0"
             }
@@ -163,11 +202,26 @@ extension String {
         } else if hex.hasPrefix("#") {
             hex = String(hex[hex.index(hex.startIndex, offsetBy: 1)...])
         }
+        /*
         if hex.count < 6 {
             for _ in 0..<6-hex.count {
                 hex += "0"
             }
         }
+        */
+        // 如果传入的字符数量不足6位按照后边都为0处理，当然你也可以进行其它操作
+        if hex.count == 1 || hex.count == 2 || hex.count == 3{
+            var res = ""
+            for _ in 0..<6/(hex.count) {
+                res += hex
+            }
+            hex = res;
+        }else{
+            for _ in 0..<6-hex.count {
+                hex += "0"
+            }
+        }
+        // print("====>color:\(hex)")
         Scanner(string: String(hex[..<hex.index(hex.startIndex, offsetBy: 2)])).scanHexInt64(&red)
         Scanner(string: String(hex[hex.index(hex.startIndex, offsetBy: 2)..<hex.index(hex.startIndex, offsetBy: 4)])).scanHexInt64(&green)
         Scanner(string: String(hex[hex.index(startIndex, offsetBy: 4)...])).scanHexInt64(&blue)

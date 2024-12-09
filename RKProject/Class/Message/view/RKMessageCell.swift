@@ -19,7 +19,7 @@ class RKMessageCell: RKBaseTableCell {
     }()
     lazy var contentBtn: UIButton = {
         let btn = UIButton(type: .custom)
-        btn.setTitleColor(UIColor(hexString: "#f5f5f5"), for: .normal)
+        btn.setTitleColor(.hex("#f5f5f5"), for: .normal)
         btn.titleLabel?.font = UIFont.rkFont(ofSize: 15)
         btn.layer.cornerRadius = 3
         btn.layer.masksToBounds = true

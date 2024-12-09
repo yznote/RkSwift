@@ -103,7 +103,7 @@ class RKAlertView: UIView {
         }
         
         self.frame = alertSuperView.bounds
-        self.backgroundColor = UIColor(hexString: "#000000",alpha: 0.3)
+        self.backgroundColor = UIColor(hex: "#000000",alpha: 0.3)
         alertSuperView.addSubview(self)
         
         self.addSubview(bgView)
@@ -123,9 +123,9 @@ class RKAlertView: UIView {
                 
                 switch action.actionStyle {
                 case .cancel:
-                    btn.setTitleColor(UIColor(hexString: "#969696"), for: .normal)
+                    btn.setTitleColor(UIColor(hex: "#969696"), for: .normal)
                 case .normal:
-                    btn.setTitleColor(UIColor(hexString: "#323232"), for: .normal)
+                    btn.setTitleColor(UIColor(hex: "#323232"), for: .normal)
                 case .confirm:
                     btn.setTitleColor(rkMainCor, for: .normal)
                 default: break
@@ -230,9 +230,9 @@ class RKAlertView: UIView {
                 
                 switch action.actionStyle {
                 case .cancel:
-                    btn.setTitleColor(UIColor(hexString: "#969696"), for: .normal)
+                    btn.setTitleColor(UIColor(hex: "#969696"), for: .normal)
                 case .normal:
-                    btn.setTitleColor(UIColor(hexString: "#323232"), for: .normal)
+                    btn.setTitleColor(UIColor(hex: "#323232"), for: .normal)
                 case .confirm:
                     btn.setTitleColor(rkMainCor, for: .normal)
                 default: break

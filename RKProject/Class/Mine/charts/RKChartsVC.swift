@@ -25,8 +25,8 @@ class RKChartsVC: RKBaseVC {
     func showBar() {
         let chartConfig = BarsChartConfig(
             valsAxisConfig: ChartAxisConfig(from: 0, to: 8, by: 2),
-            xAxisLabelSettings:ChartLabelSettings(font: UIFont.rkFont(ofSize: 15), fontColor: UIColor(hexString: "#323232"), rotation: 10),
-            yAxisLabelSettings: ChartLabelSettings(font: UIFont.rkFont(ofSize: 15), fontColor: UIColor(hexString: "#323232"), rotation: 10)
+            xAxisLabelSettings:ChartLabelSettings(font: UIFont.rkFont(ofSize: 15), fontColor: UIColor(hex: "#323232"), rotation: 10),
+            yAxisLabelSettings: ChartLabelSettings(font: UIFont.rkFont(ofSize: 15), fontColor: UIColor(hex: "#323232"), rotation: 10)
         )
         let frame = CGRect(x: 0, y: 70, width: 300, height: 500)
                 

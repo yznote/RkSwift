@@ -20,7 +20,7 @@ class RKMineCell: RKBaseTableCell {
     
     lazy var contenL: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor(hexString: "#323232")
+        label.textColor = UIColor(hex: "#323232")
         label.font = UIFont.rkFont(ofSize: 15)
         return label
     }()
