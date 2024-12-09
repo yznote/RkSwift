@@ -27,6 +27,10 @@ class RKHomeVC: RKBaseVC {
     }
     
     override func clickNaviRightBtn() {
+        
+        //
+        print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
+        
         /*
         var infoDic = Bundle.main.infoDictionary
         rkprint("or:\(infoDic!["RKTestKey"] ?? "--")")

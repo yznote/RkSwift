@@ -49,7 +49,9 @@ var rkversion: String { return rkinfoDictionary!["CFBundleShortVersionString"] a
 var rkbuild: String {   return rkinfoDictionary!["CFBundleVersion"] as! String  }
 var rksystemName: String {  return UIDevice.current.systemName  }
 
-
+/// 安全距离
+var safeTop = UIApplication.shared.rkWindow?.safeAreaInsets.top ?? 0;
+var safeBot = UIApplication.shared.rkWindow?.safeAreaInsets.bottom ?? 0;
 
 
 
