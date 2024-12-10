@@ -27,6 +27,41 @@ class RKHomeVC: RKBaseVC {
     }
     
     override func clickNaviRightBtn() {
+        
+        // test-dic
+        /*
+        let dic = ["abc":123,"key":456]
+        print(isDic(dic))
+        
+        let dic2:[String : Any] = ["abc":123,"key":"222"]
+        print(isDic(dic2))
+        
+        let dic3:[String : Any] = [:]
+        print(isDic(dic3))
+        
+        let intArray: [Int] = [1, 2, 3]
+        print(isDic(intArray))
+        */
+        
+        // test-array
+        /*
+        let intArray: [Int] = [1, 2, 3]
+        print(isArray(intArray))  // 会返回 true
+
+        let stringArray: [String] = ["a", "b"]
+        print(isArray(stringArray))  // 会返回 true
+        
+        let emptyArray:Array<Any> = []
+        print(isArray(emptyArray))  // 会返回 true
+
+        let notArray: Int = 5
+        print(isArray(notArray))  // 会返回 false
+        
+        let dic = ["abc":123,"key":456]
+        print(isArray(dic))
+        */
+        
+        
         // test-color
         /*
         let _ = UIColor(hex: "#9")
@@ -42,10 +77,11 @@ class RKHomeVC: RKBaseVC {
         */
         
         // test-str
+        /*
         let a = strFormat(NSNull())
         let b = strFormat("你好")
         print("====>:\(a)===>:\(b)")
-        
+        */
         //
         //print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
         

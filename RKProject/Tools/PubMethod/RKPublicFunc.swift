@@ -132,3 +132,25 @@ func strFormat(_ origin:Any)->String {
     let str = String.strFormat(origin);
     return str
 }
+// MARK: - 数组
+func isArray(_ origin: Any) -> Bool {
+    let mirror = Mirror(reflecting: origin)
+    if mirror.displayStyle == .collection {
+        // 进一步通过类型转换判断是否为具体的数组类型
+        if let _ = origin as? [Any] {
+            return true
+        }
+    }
+    return false
+}
+// MARK: - 字典
+func isDic(_ origin: Any) -> Bool {
+    let mirror = Mirror(reflecting: origin)
+    if mirror.displayStyle == .dictionary {
+        // 进一步通过类型转换判断是否为具体的字典类型
+        if let _ = origin as? [String:Any] {
+            return true
+        }
+    }
+    return false
+}
