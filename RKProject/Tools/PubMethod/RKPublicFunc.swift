@@ -86,4 +86,43 @@ func rkImageFromColor(color: UIColor, viewSize: CGSize) -> UIImage{
     
 }
 
-    
+// MARK: - 获取 bundle 数据
+/*eg.
+ let jsonArray = readJosnArray("config")
+ debugPrint("get-data:\(jsonArray.count)")
+ 
+ let jsonDic = readJsonDic("config")
+ debugPrint("get-data:\(jsonDic.keys.count)")
+ */
+// get dic
+func readJsonDic(_ name:String)->Dictionary<String, Any> {
+    let path = Bundle.main.path(forResource: name, ofType: "json")
+    guard let path = path else { return [:] }
+    let fileUrl = URL(fileURLWithPath: path)
+    do {
+        let data = try Data(contentsOf: fileUrl)
+        let json = try JSONSerialization.jsonObject(with: data, options: [])
+        if let object = json as? [String: Any] {
+            return object
+        }
+        return [:]
+    } catch {
+        return [:]
+    }
+}
+// get array
+func readJosnArray(_ name:String)->Array<Any> {
+    let path = Bundle.main.path(forResource: name, ofType: "json")
+    guard let path = path else { return [] }
+    let fileUrl = URL(fileURLWithPath: path)
+    do {
+        let data = try Data(contentsOf: fileUrl)
+        let json = try JSONSerialization.jsonObject(with: data, options: [])
+        if let array = json as? [Any] {
+            return array
+        }
+        return []
+    } catch {
+        return []
+    }
+}
