@@ -28,6 +28,10 @@ class RKHomeVC: RKBaseVC {
     
     override func clickNaviRightBtn() {
         
+        // auto-show-hud-of-net
+        print("===>click\n")
+        LyNetwork.shared.test("http://soluvn.com/api/home/getConfig")
+        
         // test-dic
         /*
         let dic = ["abc":123,"key":456]

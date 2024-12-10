@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FACAF2D082FF100C3BB9D /* LyNetwork.swift */; };
 		939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54431DB64C044954736BEC6 /* Pods_RKProject.framework */; };
 		9C03709A256912760004D613 /* RKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C037099256912760004D613 /* RKTabBarController.swift */; };
 		9C0370B22569132A0004D613 /* tabbar_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */; };
@@ -79,6 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		547FACAF2D082FF100C3BB9D /* LyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyNetwork.swift; sourceTree = "<group>"; };
 		9A7BC5A0AABE43C71C95A11A /* Pods-RKProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKProject.debug.xcconfig"; path = "Target Support Files/Pods-RKProject/Pods-RKProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C037099256912760004D613 /* RKTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTabBarController.swift; sourceTree = "<group>"; };
 		9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@2x.png"; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				9CB187772584666E000FF2C9 /* RKLogs.swift */,
 				9C16C53B2580AEE3007B940A /* RKNetwork.swift */,
+				547FACAF2D082FF100C3BB9D /* LyNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				9CE36597256CD3AD00E7BD6D /* RKPlugins.swift in Sources */,
 				9C0370C9256913D10004D613 /* RKProperty.swift in Sources */,
 				9CFA03CF2568A6C3001FF834 /* ViewController.swift in Sources */,
+				547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */,
 				9CE365BF256DEF0200E7BD6D /* RKNavigationController.swift in Sources */,
 				9CB187782584666F000FF2C9 /* RKLogs.swift in Sources */,
 				9C16C5452580BAE9007B940A /* RKApiConfig.swift in Sources */,
