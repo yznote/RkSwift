@@ -126,3 +126,9 @@ func readJosnArray(_ name:String)->Array<Any> {
         return []
     }
 }
+
+// MARK: - 字符串
+func strFormat(_ origin:Any)->String {
+    let str = String.strFormat(origin);
+    return str
+}

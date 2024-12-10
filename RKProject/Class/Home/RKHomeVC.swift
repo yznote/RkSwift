@@ -21,13 +21,14 @@ class RKHomeVC: RKBaseVC {
         rightItem.setTitle(rkLocalized(key: "地址"), for: .normal)
         
         
-        
+        // print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
         
         
     }
     
     override func clickNaviRightBtn() {
-        // color
+        // test-color
+        /*
         let _ = UIColor(hex: "#9")
         let _ = UIColor(hex: "1")
         let _ = UIColor(hex: "20")
@@ -38,6 +39,13 @@ class RKHomeVC: RKBaseVC {
         
         let la = UILabel()
         la.textColor = .hex("#ff")
+        */
+        
+        // test-str
+        let a = strFormat(NSNull())
+        let b = strFormat("你好")
+        print("====>:\(a)===>:\(b)")
+        
         //
         //print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
         

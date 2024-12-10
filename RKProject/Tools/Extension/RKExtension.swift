@@ -41,6 +41,7 @@ extension UIFont {
 extension UIApplication {
     var rkWindow: UIWindow? {
         if #available(iOS 13.0, *) {
+            /*
             if let window = connectedScenes
                 .filter({$0.activationState == .foregroundActive})
                 .map({$0 as? UIWindowScene})
@@ -53,6 +54,10 @@ extension UIApplication {
             }else{
                 return (UIView() as! UIWindow)
             }
+            */
+            let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+            let window = scene?.windows.first
+            return window
         } else {
             if let window = UIApplication.shared.delegate?.window{
                 return window
