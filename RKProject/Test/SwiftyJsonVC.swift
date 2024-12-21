@@ -26,13 +26,15 @@ class SwiftyJsonVC: RKBaseVC {
     /// swifterswift
     func swifterTest(){
         
-        let str1:String = ""
-        let str2:String = "   "
+        // let str1:String = ""
+        // let str2:String = "   "
         
         // dic
+        /*
         let dic: [String:Any] = ["id":1,"name":"小明"]
         let res = dic.has(key: "id")
         print("===res:\(res)")
+        */
         
         //
         // let lab = UILabel()
@@ -41,6 +43,14 @@ class SwiftyJsonVC: RKBaseVC {
         // var tab = UITableView()
         // tab.register(cellWithClass: RKBaseTableCell.self)
        
+        // 时间戳
+        /*
+        let timestamp = Date().unixTimestamp
+        print("===>time1:\(timestamp)")
+        let intTime = Int(timestamp*1000)
+        print("===>time2:\(intTime)")
+        */
+        
     }
     
     /// swiftyjson
