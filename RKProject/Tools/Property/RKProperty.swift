@@ -28,7 +28,8 @@ let rkAlertContentCor = UIColor(hex: "#969696")
 
 /// 刘海屏
 let rkIsiPhoneX = (rkScreenHeight >= 812.0)
-
+// 44、48、47全面屏因机型不同有差异
+let rkAppStatus = UIApplication.shared.rkWindow?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
 let rkStatusBarHeight:CGFloat = rkIsiPhoneX ? 44 : 20
 let rkNaviContentHeight:CGFloat = 44.0
 let rkNaviHeight = rkStatusBarHeight + rkNaviContentHeight

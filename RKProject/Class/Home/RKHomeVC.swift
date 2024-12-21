@@ -24,14 +24,26 @@ class RKHomeVC: RKBaseVC {
         // print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
         
         
+        // SwiftyJSON
+        let sfjVC = SwiftyJsonVC()
+        UIApplication.shared.pushViewController(sfjVC, animated: true)
+        
+        
     }
     
     override func clickNaviRightBtn() {
         
-        // auto-show-hud-of-net
-        print("===>click\n")
-        LyNetwork.shared.test("http://soluvn.com/api/home/getConfig")
+        // status-bar-height
+        let val = rkAppStatus
+        let val2 = rkStatusBarHeight
+        print("====>1:\(val)=====2:\(val2)")
         
+        // auto-show-hud-of-net
+        /*
+        print("===>click\n")
+         // 网络延迟高自动出现 加载提示
+        LyNetwork.shared.test("http://soluvn.com/api/home/getConfig")
+        */
         // test-dic
         /*
         let dic = ["abc":123,"key":456]

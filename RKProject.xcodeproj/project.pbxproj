@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FACAF2D082FF100C3BB9D /* LyNetwork.swift */; };
+		549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69F72D16A26B004C7E8E /* SwifterSwift */; };
+		549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69FA2D16A28B004C7E8E /* SwiftyJSON */; };
+		549F69FD2D16A2F6004C7E8E /* SwiftyJsonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */; };
+		549F6A002D16A44E004C7E8E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69FF2D16A44E004C7E8E /* FlexLayout */; };
+		549F6A032D16A466004C7E8E /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 549F6A022D16A466004C7E8E /* PinLayout */; };
 		939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54431DB64C044954736BEC6 /* Pods_RKProject.framework */; };
 		9C03709A256912760004D613 /* RKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C037099256912760004D613 /* RKTabBarController.swift */; };
 		9C0370B22569132A0004D613 /* tabbar_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */; };
@@ -81,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		547FACAF2D082FF100C3BB9D /* LyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyNetwork.swift; sourceTree = "<group>"; };
+		549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJsonVC.swift; sourceTree = "<group>"; };
 		9A7BC5A0AABE43C71C95A11A /* Pods-RKProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKProject.debug.xcconfig"; path = "Target Support Files/Pods-RKProject/Pods-RKProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C037099256912760004D613 /* RKTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTabBarController.swift; sourceTree = "<group>"; };
 		9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@2x.png"; sourceTree = "<group>"; };
@@ -165,7 +171,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */,
+				549F6A032D16A466004C7E8E /* PinLayout in Frameworks */,
 				939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */,
+				549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */,
+				549F6A002D16A44E004C7E8E /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +309,7 @@
 			children = (
 				9CE36596256CD3AD00E7BD6D /* RKPlugins.swift */,
 				9CE36581256CADCB00E7BD6D /* RkProjectTestVC.swift */,
+				549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -578,6 +589,12 @@
 				"zh-Hans",
 			);
 			mainGroup = 9CFA03BE2568A6C3001FF834;
+			packageReferences = (
+				549F69F62D16A26B004C7E8E /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				549F69F92D16A28B004C7E8E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				549F69FE2D16A44E004C7E8E /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */,
+			);
 			productRefGroup = 9CFA03C82568A6C3001FF834 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -684,6 +701,7 @@
 				9C6CC40A257A5DAB00936284 /* RKLanguageTool.swift in Sources */,
 				9CE365E7256F426D00E7BD6D /* RKAlertView.swift in Sources */,
 				9CE365A1256CEAFE00E7BD6D /* RKPublicFunc.swift in Sources */,
+				549F69FD2D16A2F6004C7E8E /* SwiftyJsonVC.swift in Sources */,
 				9C8DDBC82576486D00E000A8 /* RKPackage.swift in Sources */,
 				9CE36597256CD3AD00E7BD6D /* RKPlugins.swift in Sources */,
 				9C0370C9256913D10004D613 /* RKProperty.swift in Sources */,
@@ -946,6 +964,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		549F69F62D16A26B004C7E8E /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		549F69F92D16A28B004C7E8E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		549F69FE2D16A44E004C7E8E /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		549F69F72D16A26B004C7E8E /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 549F69F62D16A26B004C7E8E /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+		549F69FA2D16A28B004C7E8E /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 549F69F92D16A28B004C7E8E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		549F69FF2D16A44E004C7E8E /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 549F69FE2D16A44E004C7E8E /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		549F6A022D16A466004C7E8E /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CFA03BF2568A6C3001FF834 /* Project object */;
 }
