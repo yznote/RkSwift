@@ -165,11 +165,17 @@ public func rkprint(_ items: Any..., separator: String = " ", terminator: String
             //print("\n---------- \(fileName) ----------\nDate:\(stringOfDate)\nLine:\(line) \nlog:")
             //print("\n---------- \(fileName)[\(line)] ----------\nDate:\(stringOfDate)\nlog:")
             //print("\n---------- RKCtrMsg ----------\nDate:\(stringOfDate)\nFile:\(fileName)\nLine:\(line)\nlog:\n-->")
-            print("\n\(stringOfDate) -> \(fileName): -> line: \(line) ↓\n")
+            print("\n\(stringOfDate) -> \(fileName): -> line: \(line) ↓")
         }
         i += 1
         print(a, terminator:i == j ? terminator: separator)
     }
 #endif
     
+}
+
+class debug {
+    static func log(_ items: Any..., separator: String = " ", terminator: String = "\n",file:String = #file ,_ line:Int = #line,time:Int = #line) {
+        rkprint(items)
+    }
 }
