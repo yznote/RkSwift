@@ -176,6 +176,29 @@ public func rkprint(_ items: Any..., separator: String = " ", terminator: String
 
 class debug {
     static func log(_ items: Any..., separator: String = " ", terminator: String = "\n",file:String = #file ,_ line:Int = #line,time:Int = #line) {
-        rkprint(items)
+        // rkprint(items,file:file,line)
+#if DEBUG
+        let dateFormate = DateFormatter()
+        dateFormate.dateFormat = "yy-MM-dd HH:mm:ss.SSS"
+        let curT = Date()
+        let stringOfDate = dateFormate.string(from: curT)
+        
+        var fileName = (file as NSString).lastPathComponent
+        fileName = fileName.replacingOccurrences(of: ".swift", with: "")
+        
+        //print("\n---------- \(fileName) ----------\nDate:\(stringOfDate)\nLine:\(line) \nlog:\n\(items)",terminator: separator)
+        var i = 0
+        let j = items.count
+        for a in items {
+            if i==0 {
+                //print("\n---------- \(fileName) ----------\nDate:\(stringOfDate)\nLine:\(line) \nlog:")
+                //print("\n---------- \(fileName)[\(line)] ----------\nDate:\(stringOfDate)\nlog:")
+                //print("\n---------- RKCtrMsg ----------\nDate:\(stringOfDate)\nFile:\(fileName)\nLine:\(line)\nlog:\n-->")
+                print("\n\(stringOfDate) -> \(fileName): -> line: \(line) ↓")
+            }
+            i += 1
+            print(a, terminator:i == j ? terminator: separator)
+        }
+#endif
     }
 }
