@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5440EE412D1BAF4F00B97ED5 /* Then */; };
 		547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FACAF2D082FF100C3BB9D /* LyNetwork.swift */; };
 		549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69F72D16A26B004C7E8E /* SwifterSwift */; };
 		549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69FA2D16A28B004C7E8E /* SwiftyJSON */; };
@@ -172,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */,
+				5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */,
 				549F6A032D16A466004C7E8E /* PinLayout in Frameworks */,
 				939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */,
 				549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */,
@@ -594,6 +596,7 @@
 				549F69F92D16A28B004C7E8E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				549F69FE2D16A44E004C7E8E /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */,
+				5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 9CFA03C82568A6C3001FF834 /* Products */;
 			projectDirPath = "";
@@ -966,6 +969,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		549F69F62D16A26B004C7E8E /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
@@ -1001,6 +1012,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5440EE412D1BAF4F00B97ED5 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
 		549F69F72D16A26B004C7E8E /* SwifterSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 549F69F62D16A26B004C7E8E /* XCRemoteSwiftPackageReference "SwifterSwift" */;

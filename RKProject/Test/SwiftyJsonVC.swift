@@ -2,15 +2,29 @@ import FlexLayout
 import PinLayout
 import SwifterSwift
 import SwiftyJSON
+import Then
 import UIKit
 
 class SwiftyJsonVC: RKBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        jsonTest()
+        // jsonTest()
         // pinTest()
         // swifterTest()
+        // testThen()
+    }
+
+    /// then
+    func testThen() {
+        let lab = UILabel().then { a in
+            a.text = "abc"
+        }
+
+        UserDefaults.standard.do { u in
+            u.set("123", forKey: "key")
+            u.synchronize()
+        }
     }
 
     /// swifterswift
