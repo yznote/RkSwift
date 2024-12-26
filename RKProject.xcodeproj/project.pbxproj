@@ -15,6 +15,7 @@
 		549F69FD2D16A2F6004C7E8E /* SwiftyJsonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */; };
 		549F6A002D16A44E004C7E8E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69FF2D16A44E004C7E8E /* FlexLayout */; };
 		549F6A032D16A466004C7E8E /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 549F6A022D16A466004C7E8E /* PinLayout */; };
+		54B769682D1D3AD000EE6402 /* ShotTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B769672D1D3AD000EE6402 /* ShotTestVC.swift */; };
 		939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54431DB64C044954736BEC6 /* Pods_RKProject.framework */; };
 		9C03709A256912760004D613 /* RKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C037099256912760004D613 /* RKTabBarController.swift */; };
 		9C0370B22569132A0004D613 /* tabbar_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */; };
@@ -89,6 +90,7 @@
 /* Begin PBXFileReference section */
 		547FACAF2D082FF100C3BB9D /* LyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyNetwork.swift; sourceTree = "<group>"; };
 		549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJsonVC.swift; sourceTree = "<group>"; };
+		54B769672D1D3AD000EE6402 /* ShotTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotTestVC.swift; sourceTree = "<group>"; };
 		9A7BC5A0AABE43C71C95A11A /* Pods-RKProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKProject.debug.xcconfig"; path = "Target Support Files/Pods-RKProject/Pods-RKProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C037099256912760004D613 /* RKTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTabBarController.swift; sourceTree = "<group>"; };
 		9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@2x.png"; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				9CE36596256CD3AD00E7BD6D /* RKPlugins.swift */,
 				9CE36581256CADCB00E7BD6D /* RkProjectTestVC.swift */,
 				549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */,
+				54B769672D1D3AD000EE6402 /* ShotTestVC.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				9C6CC418257B2AB900936284 /* RKSetVC.swift in Sources */,
 				9CFA03CD2568A6C3001FF834 /* SceneDelegate.swift in Sources */,
 				9C16C53C2580AEE3007B940A /* RKNetwork.swift in Sources */,
+				54B769682D1D3AD000EE6402 /* ShotTestVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
