@@ -31,7 +31,7 @@ class ShotTestVC: RKBaseVC {
         hideL.textColor = .hex("#ff0000")
         hideL.backgroundColor = .hex("#000000", 0.5)
         entryView.addSubview(hideL)
-//        hideL.pin.top(20%).width(200).height(30).hCenter()
+        hideL.pin.top(20%).width(200).height(30).hCenter()
     }
 }
 
