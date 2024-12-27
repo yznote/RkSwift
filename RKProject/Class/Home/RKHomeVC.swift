@@ -22,14 +22,14 @@ class RKHomeVC: RKBaseVC {
         // print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
 
         // SwiftyJSON
-        let sfjVC = SwiftyJsonVC()
-        UIApplication.shared.pushViewController(sfjVC, animated: true)
+        /*
+         let sfjVC = SwiftyJsonVC()
+         UIApplication.shared.pushViewController(sfjVC, animated: true)
+         */
 
         // 截屏、录屏测试
-        /*
-          let shotVC = ShotTestVC()
-          UIApplication.shared.pushViewController(shotVC, animated: true)
-         */
+        let shotVC = ShotTestVC()
+        UIApplication.shared.pushViewController(shotVC, animated: true)
     }
 
     override func clickNaviRightBtn() {
@@ -44,7 +44,7 @@ class RKHomeVC: RKBaseVC {
           // 网络延迟高自动出现 加载提示
          LyNetwork.shared.test("http://soluvn.com/api/home/getConfig")
          */
-        
+
         // test-dic
         /*
          let dic = ["abc":123,"key":456]
@@ -116,7 +116,7 @@ class RKHomeVC: RKBaseVC {
          infoDic!["RKTestKey1"] = testDic
          rkprint("type2:\(infoDic!["RKTestKey1"] ?? "==")")
          */
-        
+
         /*
          RKNetwork.rkloadData(
              target: RKHomeApi.homeConfig,
@@ -134,7 +134,7 @@ class RKHomeVC: RKBaseVC {
          } failure: { _, _ in
          }
          */
-        
+
         /*
          let cuss = RkProjectTestVC()
          navigationController?.pushViewController(cuss, animated: true)
