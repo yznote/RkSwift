@@ -1088,7 +1088,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunbao.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = hailongYB;
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "app-dev-any";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = dev_any;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1281,7 +1281,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunbao.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = hailongYB;
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "app-dev-any";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = dev_any;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

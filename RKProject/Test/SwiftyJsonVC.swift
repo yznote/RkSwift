@@ -13,11 +13,66 @@ class SwiftyJsonVC: RKBaseVC {
         // pinTest()
         // swifterTest()
         // testThen()
+        testGcd()
+    }
+
+    /// GCD
+    func testGcd() {
+        let group = DispatchGroup()
+        let queue = DispatchQueue.global()
+
+        group.enter()
+        queue.async(group: group) {
+            debug.log("Task 1 started")
+            sleep(2) // 模拟任务执行时间
+            debug.log("Task 1 finished")
+            group.leave()
+        }
+        group.enter()
+        queue.async(group: group) {
+            debug.log("Task 2 started")
+
+            sleep(1) // 模拟任务执行时间
+            debug.log("Task 2 finished")
+            group.leave()
+        }
+
+        group.notify(queue: DispatchQueue.main) {
+            debug.log("All tasks are completed")
+        }
+    }
+
+    func testGcd2() {
+        let group = DispatchGroup()
+        let queue = DispatchQueue.global()
+        let semaphore = DispatchSemaphore(value: 0)
+
+        queue.async(group: group) {
+            debug.log("Task 1 started")
+            sleep(2) // 模拟任务执行时间
+            debug.log("Task 1 finished")
+            semaphore.signal()
+        }
+
+        queue.async(group: group) {
+            debug.log("Task 2 started")
+            sleep(1) // 模拟任务执行时间
+            debug.log("Task 2 finished")
+            semaphore.signal()
+        }
+
+        group.notify(queue: DispatchQueue.main) {
+            debug.log("All tasks are completed")
+            // 释放信号量、与oc有区别
+            for _ in 0..<2 {
+                semaphore.wait()
+            }
+        }
     }
 
     /// then
     func testThen() {
-        let lab = UILabel().then { a in
+        let _ = UILabel().then { a in
             a.text = "abc"
         }
 
