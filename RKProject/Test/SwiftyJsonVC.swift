@@ -31,7 +31,7 @@ class SwiftyJsonVC: RKBaseVC {
             if testType is [String: Any] {
                 debug.log("is dic")
             } else {
-                debug.log("not's dic")
+                debug.log("isn't dic")
             }
         }
     }

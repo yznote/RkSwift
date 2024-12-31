@@ -21,16 +21,21 @@ class RKHomeVC: RKBaseVC {
 
         // print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
 
-        // SwiftyJSON
+        DispatchQueue.main.after(time: .now()+0.01) { [self] in
+            // goShot()
+            swiftJSON()
+        }
+    }
 
+    func swiftJSON() {
         let sfjVC = SwiftyJsonVC()
         UIApplication.shared.pushViewController(sfjVC, animated: true)
+    }
 
-        // 截屏、录屏测试
-        /*
-         let shotVC = ShotTestVC()
-         UIApplication.shared.pushViewController(shotVC, animated: true)
-         */
+    /// 截屏录屏
+    func goShot() {
+        let shotVC = ShotTestVC()
+        UIApplication.shared.pushViewController(shotVC, animated: true)
     }
 
     override func clickNaviRightBtn() {
