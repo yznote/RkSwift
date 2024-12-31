@@ -13,7 +13,27 @@ class SwiftyJsonVC: RKBaseVC {
         // pinTest()
         // swifterTest()
         // testThen()
-        testGcd()
+        // testGcd()
+        testType()
+    }
+
+    /// 类型判断
+    func testType() {
+        let array = [1, 2, 3]
+        debug.log("is-array:\(isArray(array))")
+        let dic: [String: Any] = ["id": 1, "name": "zhangsan"]
+
+        test(array)
+        test(dic)
+
+        //
+        func test(_ testType: Any) {
+            if testType is [String: Any] {
+                debug.log("is dic")
+            } else {
+                debug.log("not's dic")
+            }
+        }
     }
 
     /// GCD
