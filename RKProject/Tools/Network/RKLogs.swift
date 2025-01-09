@@ -166,7 +166,7 @@ extension RKRequestLogPlugin {
 // MARK: - 控制台输出
 
 public func rkprint(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, _ line: Int = #line, time: Int = #line) {
-    #if DEBUG
+#if DEBUG
     let dateFormate = DateFormatter()
     dateFormate.dateFormat = "yy-MM-dd HH:mm:ss.SSS"
     let curT = Date()
@@ -188,13 +188,13 @@ public func rkprint(_ items: Any..., separator: String = " ", terminator: String
         i += 1
         print(a, terminator: i == j ? terminator : separator)
     }
-    #endif
+#endif
 }
 
 class debug {
     static func log(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, _ line: Int = #line, time: Int = #line) {
         // rkprint(items,file:file,line)
-        #if DEBUG
+#if DEBUG
         let dateFormate = DateFormatter()
         dateFormate.dateFormat = "yy-MM-dd HH:mm:ss.SSS"
         let curT = Date()
@@ -216,7 +216,7 @@ class debug {
             i += 1
             print(a, terminator: i == j ? terminator : separator)
         }
-        #endif
+#endif
     }
 }
 
