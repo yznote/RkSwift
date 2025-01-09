@@ -36,8 +36,8 @@ class LogTestVC: RKBaseVC {
     /// raw
     func testlog() {
         let logger = Logger(
-            subsystem: "logger.onevcat.com",
-            category: "main"
+            subsystem: "com.log.test",
+            category: "class"
         )
 
         let flag: [String: Any] = ["key": 123, "id": "345"]
