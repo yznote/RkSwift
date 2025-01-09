@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5440EE412D1BAF4F00B97ED5 /* Then */; };
+		547763D92D2E75A4007A3D22 /* LogTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547763D82D2E75A4007A3D22 /* LogTestVC.swift */; };
 		547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FACAF2D082FF100C3BB9D /* LyNetwork.swift */; };
 		549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69F72D16A26B004C7E8E /* SwifterSwift */; };
 		549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69FA2D16A28B004C7E8E /* SwiftyJSON */; };
@@ -87,6 +88,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		547763D82D2E75A4007A3D22 /* LogTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTestVC.swift; sourceTree = "<group>"; };
 		547FACAF2D082FF100C3BB9D /* LyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyNetwork.swift; sourceTree = "<group>"; };
 		549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJsonVC.swift; sourceTree = "<group>"; };
 		54B769672D1D3AD000EE6402 /* ShotTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotTestVC.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				9CE36581256CADCB00E7BD6D /* RkProjectTestVC.swift */,
 				549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */,
 				54B769672D1D3AD000EE6402 /* ShotTestVC.swift */,
+				547763D82D2E75A4007A3D22 /* LogTestVC.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				9C03709A256912760004D613 /* RKTabBarController.swift in Sources */,
 				9C67A0E625C102780052889A /* RKLiveModel.swift in Sources */,
 				9C47977327E3127700375942 /* RKChartsVC.swift in Sources */,
+				547763D92D2E75A4007A3D22 /* LogTestVC.swift in Sources */,
 				9C6CC40A257A5DAB00936284 /* RKLanguageTool.swift in Sources */,
 				9CE365E7256F426D00E7BD6D /* RKAlertView.swift in Sources */,
 				9CE365A1256CEAFE00E7BD6D /* RKPublicFunc.swift in Sources */,

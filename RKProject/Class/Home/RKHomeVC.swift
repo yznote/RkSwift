@@ -21,12 +21,20 @@ class RKHomeVC: RKBaseVC {
 
         // print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
 
-        DispatchQueue.main.after(time: .now()+0.01) { [self] in
+        DispatchQueue.main.after(time: .now() + 0.01) { [self] in
             // goShot()
-            swiftJSON()
+            // swiftJSON()
+            oslog()
         }
     }
 
+    /// oslog
+    func oslog() {
+        let logVC = LogTestVC()
+        UIApplication.shared.pushViewController(logVC, animated: true)
+    }
+
+    /// swiftjson
     func swiftJSON() {
         let sfjVC = SwiftyJsonVC()
         UIApplication.shared.pushViewController(sfjVC, animated: true)
