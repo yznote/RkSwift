@@ -24,8 +24,15 @@ class RKHomeVC: RKBaseVC {
         DispatchQueue.main.after(time: .now() + 0.01) { [self] in
             // goShot()
             // swiftJSON()
-            oslog()
+            // oslog()
+            pinVC()
         }
+    }
+
+    /// pinlayout
+    func pinVC() {
+        let pinVC = PinTestVC()
+        UIApplication.shared.pushViewController(pinVC, animated: true)
     }
 
     /// oslog

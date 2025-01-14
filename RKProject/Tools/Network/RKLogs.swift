@@ -265,7 +265,7 @@ extension debug {
     static func log(_ items: Any..., type: OSLogType = .debug, file: String = #file, line: Int = #line) {
         //
         let dateFormate = DateFormatter()
-        dateFormate.dateFormat = "yy-MM-dd HH:mm:ss.SSS"
+        dateFormate.dateFormat = "yy/MM/dd HH:mm:ss.SSS"
         let curT = Date()
         let stringOfDate = dateFormate.string(from: curT)
         //
