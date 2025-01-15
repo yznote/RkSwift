@@ -65,7 +65,7 @@ extension WaterfallVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WaterfallCell.identifiers, for: indexPath) as! WaterfallCell
-        cell.testLab.text = " \(indexPath.section) section \(indexPath.row) item"
+        cell.nameL.text = " \(indexPath.section) section \(indexPath.row) item"
         return cell
     }
 
@@ -76,7 +76,7 @@ extension WaterfallVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 withReuseIdentifier: WaterfallReusableView.header,
                 for: indexPath
             ) as! WaterfallReusableView
-            header.testLab.text = "\(sectionName(section: indexPath.section)) header view"
+            header.nameL.text = "\(sectionName(section: indexPath.section)) header view"
             header.backgroundColor = .purple
             return header
         } else if kind == UICollectionView.elementKindSectionFooter {
@@ -85,7 +85,7 @@ extension WaterfallVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 withReuseIdentifier: WaterfallReusableView.footer,
                 for: indexPath
             ) as! WaterfallReusableView
-            footer.testLab.text = "\(sectionName(section: indexPath.section)) footer view"
+            footer.nameL.text = "\(sectionName(section: indexPath.section)) footer view"
             footer.backgroundColor = .systemBlue
             return footer
         }
@@ -157,21 +157,21 @@ class WaterfallCell: UICollectionViewCell {
 
     func configBaseView() {
         backgroundColor = .darkGray
-        addSubview(testLab)
+        addSubview(nameL)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        testLab.frame = bounds
+        nameL.frame = bounds
     }
 
-    lazy var testLab: UILabel = {
-        let tmp = UILabel()
-        tmp.textColor = .white
-        tmp.font = .systemFont(ofSize: 14)
-        tmp.textAlignment = .center
-        tmp.numberOfLines = 0
-        return tmp
+    lazy var nameL: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 14)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
     }()
 }
 
@@ -190,20 +190,20 @@ class WaterfallReusableView: UICollectionReusableView {
     }
 
     func configBaseView() {
-        addSubview(testLab)
+        addSubview(nameL)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        testLab.frame = bounds
+        nameL.frame = bounds
     }
 
-    lazy var testLab: UILabel = {
-        let tmp = UILabel()
-        tmp.textColor = .white
-        tmp.font = .systemFont(ofSize: 14)
-        tmp.textAlignment = .center
-        tmp.numberOfLines = 0
-        return tmp
+    lazy var nameL: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 14)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
     }()
 }
