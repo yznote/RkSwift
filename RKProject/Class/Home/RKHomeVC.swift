@@ -26,8 +26,15 @@ class RKHomeVC: RKBaseVC {
             // swiftJSON()
             // oslog()
             // pinVC()
-            coredata()
+            // coredata()
+            waterfall()
         }
+    }
+
+    /// waterfall
+    func waterfall() {
+        let wfVC = WaterfallVC()
+        UIApplication.shared.pushViewController(wfVC, animated: true)
     }
 
     /// coredata
