@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5440EE412D1BAF4F00B97ED5 /* Then */; };
+		5474B9412D3799390015F083 /* DbTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9402D3799390015F083 /* DbTestVC.swift */; };
+		5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */; };
 		547763D92D2E75A4007A3D22 /* LogTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547763D82D2E75A4007A3D22 /* LogTestVC.swift */; };
 		547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FACAF2D082FF100C3BB9D /* LyNetwork.swift */; };
 		549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69F72D16A26B004C7E8E /* SwifterSwift */; };
@@ -91,6 +93,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5474B9402D3799390015F083 /* DbTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbTestVC.swift; sourceTree = "<group>"; };
+		5474B9432D3799B80015F083 /* RKProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RKProject.xcdatamodel; sourceTree = "<group>"; };
 		547763D82D2E75A4007A3D22 /* LogTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTestVC.swift; sourceTree = "<group>"; };
 		547FACAF2D082FF100C3BB9D /* LyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyNetwork.swift; sourceTree = "<group>"; };
 		549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJsonVC.swift; sourceTree = "<group>"; };
@@ -335,6 +339,8 @@
 				547763D82D2E75A4007A3D22 /* LogTestVC.swift */,
 				54C83A972D36335700A6208C /* PinTestVC.swift */,
 				54C83A992D3637B000A6208C /* PinTestView.swift */,
+				5474B9402D3799390015F083 /* DbTestVC.swift */,
+				5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -751,6 +757,7 @@
 				9CE365CF256E593700E7BD6D /* RKMessageVC.swift in Sources */,
 				9CE365C2256DF01000E7BD6D /* RKWebVC.swift in Sources */,
 				9C8492E525971A9D00321E9B /* RKMessageCell.swift in Sources */,
+				5474B9412D3799390015F083 /* DbTestVC.swift in Sources */,
 				9C6CC415257B1FFE00936284 /* RKBaseTableCell.swift in Sources */,
 				9C0370C5256913610004D613 /* RKBaseVC.swift in Sources */,
 				9CE365D2256E595000E7BD6D /* RKDiscoverVC.swift in Sources */,
@@ -759,6 +766,7 @@
 				9C16C54B2580BB11007B940A /* RKHomeModel.swift in Sources */,
 				9C6CC418257B2AB900936284 /* RKSetVC.swift in Sources */,
 				9CFA03CD2568A6C3001FF834 /* SceneDelegate.swift in Sources */,
+				5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */,
 				9C16C53C2580AEE3007B940A /* RKNetwork.swift in Sources */,
 				54C83A9A2D3637B000A6208C /* PinTestView.swift in Sources */,
 				54B769682D1D3AD000EE6402 /* ShotTestVC.swift in Sources */,
@@ -1412,6 +1420,19 @@
 			productName = PinLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5474B9432D3799B80015F083 /* RKProject.xcdatamodel */,
+			);
+			currentVersion = 5474B9432D3799B80015F083 /* RKProject.xcdatamodel */;
+			path = RKProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9CFA03BF2568A6C3001FF834 /* Project object */;
 }

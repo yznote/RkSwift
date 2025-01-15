@@ -25,8 +25,15 @@ class RKHomeVC: RKBaseVC {
             // goShot()
             // swiftJSON()
             // oslog()
-            pinVC()
+            // pinVC()
+            coredata()
         }
+    }
+
+    /// coredata
+    func coredata() {
+        let cdVC = DbTestVC()
+        UIApplication.shared.pushViewController(cdVC, animated: true)
     }
 
     /// pinlayout
