@@ -18,13 +18,13 @@ class WaterfallVC: RKBaseVC {
     func setupUI() {
         let layout = RkWaterfallFlowLayout()
         layout.delegate = self
-        let collection = UICollectionView(frame: CGRect(x: 0, y: rkNaviHeight, width: rkScreenWidth, height: rkScreenHeight-rkNaviHeight), collectionViewLayout: layout)
+        let collection = UICollectionView(frame: CGRect(x: 0, y: rkNaviHeight, width: rkScreenWidth, height: rkScreenHeight - rkNaviHeight), collectionViewLayout: layout)
         collection.backgroundColor = .white
         collection.delegate = self
         collection.dataSource = self
-        collection.register(testCell.self, forCellWithReuseIdentifier: testCell.identifiers)
-        collection.register(testHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: testHeaderView.header)
-        collection.register(testHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: testHeaderView.footer)
+        collection.register(WaterfallCell.self, forCellWithReuseIdentifier: WaterfallCell.identifiers)
+        collection.register(WaterfallReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: WaterfallReusableView.header)
+        collection.register(WaterfallReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: WaterfallReusableView.footer)
         view.addSubview(collection)
     }
 
@@ -64,7 +64,7 @@ extension WaterfallVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: testCell.identifiers, for: indexPath) as! testCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WaterfallCell.identifiers, for: indexPath) as! WaterfallCell
         cell.testLab.text = " \(indexPath.section) section \(indexPath.row) item"
         return cell
     }
@@ -73,18 +73,18 @@ extension WaterfallVC: UICollectionViewDelegate, UICollectionViewDataSource {
         if kind == UICollectionView.elementKindSectionHeader {
             let header = collectionView.dequeueReusableSupplementaryView(
                 ofKind: UICollectionView.elementKindSectionHeader,
-                withReuseIdentifier: testHeaderView.header,
+                withReuseIdentifier: WaterfallReusableView.header,
                 for: indexPath
-            ) as! testHeaderView
+            ) as! WaterfallReusableView
             header.testLab.text = "\(sectionName(section: indexPath.section)) header view"
             header.backgroundColor = .purple
             return header
         } else if kind == UICollectionView.elementKindSectionFooter {
             let footer = collectionView.dequeueReusableSupplementaryView(
                 ofKind: UICollectionView.elementKindSectionFooter,
-                withReuseIdentifier: testHeaderView.footer,
+                withReuseIdentifier: WaterfallReusableView.footer,
                 for: indexPath
-            ) as! testHeaderView
+            ) as! WaterfallReusableView
             footer.testLab.text = "\(sectionName(section: indexPath.section)) footer view"
             footer.backgroundColor = .systemBlue
             return footer
@@ -143,8 +143,8 @@ extension WaterfallVC: RkWaterfallFlowDelegate {
 
 // MARK: - cell
 
-class testCell: UICollectionViewCell {
-    static let identifiers = "testcellssss"
+class WaterfallCell: UICollectionViewCell {
+    static let identifiers = "WaterfallCellIdentifiers"
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -177,9 +177,9 @@ class testCell: UICollectionViewCell {
 
 // MARK: - header
 
-class testHeaderView: UICollectionReusableView {
-    static let header = "testHeaderViewId"
-    static let footer = "testFooterViewId"
+class WaterfallReusableView: UICollectionReusableView {
+    static let header = "WaterfallHeader"
+    static let footer = "WaterfallFooter"
     override init(frame: CGRect) {
         super.init(frame: frame)
         configBaseView()
