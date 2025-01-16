@@ -27,8 +27,15 @@ class RKHomeVC: RKBaseVC {
             // oslog()
             // pinVC()
             // coredata()
-            waterfall()
+            // waterfall()
+            emitterable()
         }
+    }
+
+    /// emitter
+    func emitterable() {
+        let eVC = EmitterableVC()
+        UIApplication.shared.pushViewController(eVC, animated: true)
     }
 
     /// waterfall
