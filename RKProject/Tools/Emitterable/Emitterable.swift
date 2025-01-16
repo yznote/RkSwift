@@ -71,12 +71,21 @@ extension Emitterable where Self: UIViewController {
             // 6.将发射器的layer添加到父layer中
             view.layer.addSublayer(emitterLayer!)
         }
+
+        /// 日志log
         debug.log("start:\(emitterLayer!.birthRate),count:\(emitterLayer?.emitterCells?.count ?? 999)")
+        emitterLayer?.emitterCells?.forEach { cell in
+            debug.log("for:\(cell.birthRate)")
+        }
     }
 
     ///
     func stopEmittering() {
-        emitterLayer?.birthRate -= 1
+        // emitterLayer?.birthRate -= 1
+        if let birthRate = emitterLayer?.birthRate {
+            let newBirthRate = birthRate - 1
+            emitterLayer?.birthRate = max(0, newBirthRate)
+        }
         debug.log("stop")
     }
 
