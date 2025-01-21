@@ -22,13 +22,17 @@ class RKHomeVC: RKBaseVC {
         // print("===>safe-top:\(safeTop)===>safe-bot:\(safeBot)")
 
         DispatchQueue.main.after(time: .now() + 0.01) { [self] in
-            // goShot()
-            // swiftJSON()
-            // oslog()
-            // pinVC()
-            // coredata()
-            // waterfall()
-            emitterable()
+            Task {
+                await MainActor.run {
+                    // goShot()
+                    // swiftJSON()
+                    // oslog()
+                    // pinVC()
+                    // coredata()
+                    // waterfall()
+                    emitterable()
+                }
+            }
         }
     }
 

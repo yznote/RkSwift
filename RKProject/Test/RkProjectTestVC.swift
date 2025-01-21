@@ -503,11 +503,27 @@ extension UILabel{
 }
 */
 
+/// swift5
+/*
 extension Reactive where Base: UILabel {
     public var fontSize: Binder<CGFloat>{
         return Binder(self.base){(label,fontSize) in
             rkprint("sss:\(fontSize)")
             label.font = UIFont.rkFont(ofSize: fontSize)
+        }
+    }
+}
+*/
+/// swift6
+extension Reactive where Base: UILabel {
+    public var fontSize: Binder<CGFloat>{
+        return Binder(self.base){ label, fontSize in
+            Task {
+                await MainActor.run {
+                    rkprint("sss:\(fontSize)")
+                    label.font = UIFont.rkFont(ofSize: fontSize)
+                }
+            }
         }
     }
 }

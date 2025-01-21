@@ -189,4 +189,3 @@ class RkWaterfallFlowLayout: UICollectionViewFlowLayout {
         return CGSize(width: collectionView!.frame.size.width, height: contentHeight)
     }
 }
-

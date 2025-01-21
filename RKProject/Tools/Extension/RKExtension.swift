@@ -10,8 +10,8 @@ import UIKit
 
 // MARK: DispatchQueue 扩展 once 
 extension DispatchQueue {
-    private static var _onceTracker = [String]()
-    public class func once(token: String, block: () -> ()) {
+    @MainActor private static var _onceTracker = [String]()
+    @MainActor public class func once(token: String, block: () -> ()) {
            objc_sync_enter(self)
         defer {
             objc_sync_exit(self)
@@ -22,10 +22,10 @@ extension DispatchQueue {
         _onceTracker.append(token)
         block()
     }
-    func async(block: @escaping ()->()) {
+    func async(block: @Sendable @escaping ()->()) {
         self.async(execute: block)
     }
-    func after(time: DispatchTime, block: @escaping ()->()) {
+    func after(time: DispatchTime, block: @Sendable @escaping ()->()) {
         self.asyncAfter(deadline: time, execute: block)
     }
 }
@@ -125,7 +125,7 @@ extension UIButton {
 }
 /// UIButton 扩展，添加属性
 //import ObjectiveC
-private var AssociatedObjectKey: UInt8 = 0
+@MainActor private var AssociatedObjectKey: UInt8 = 0
 extension UIButton {
     var extParam: Any? {
         get {

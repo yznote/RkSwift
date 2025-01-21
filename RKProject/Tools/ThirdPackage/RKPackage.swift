@@ -43,7 +43,7 @@ extension Kingfisher where Base: UIButton {
 // MARK: -
 // MARK: - 提示框自定义
 //展示普通文本
-func rkShowHud(title:String){
+@MainActor func rkShowHud(title:String){
     let hud = MBProgressHUD.showAdded(to: UIApplication.shared.rkWindow!, animated: true)
     hud.label.text = title as String
     hud.label.font = UIFont.rkFont(ofSize: 15)
@@ -58,10 +58,10 @@ func rkShowHud(title:String){
     hud.hide(animated: false, afterDelay: 1.5)
 }
 //加载中
-func rkLoadingHud() {
+@MainActor func rkLoadingHud() {
     rkLoadingHud(title: "")
 }
-func rkLoadingHud(title: String) {
+@MainActor func rkLoadingHud(title: String) {
     rkHideHud()
     let hud = MBProgressHUD.showAdded(to: UIApplication.shared.rkWindow!, animated: true)
     hud.label.text = title as String
@@ -74,7 +74,7 @@ func rkLoadingHud(title: String) {
     hud.bezelView.blurEffectStyle = .dark
 }
 //隐藏
-func rkHideHud() {
+@MainActor func rkHideHud() {
     MBProgressHUD.hide(for: UIApplication.shared.rkWindow!, animated: false)
 }
 

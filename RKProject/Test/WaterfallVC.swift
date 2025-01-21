@@ -93,7 +93,7 @@ extension WaterfallVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-extension WaterfallVC: RkWaterfallFlowDelegate {
+extension WaterfallVC: @preconcurrency RkWaterfallFlowDelegate {
     func heightForRowAtIndexPath(collectionView collection: UICollectionView, layout: RkWaterfallFlowLayout, indexPath: IndexPath, itemWidth: CGFloat) -> CGFloat {
         switch indexPath.section {
         case 0:

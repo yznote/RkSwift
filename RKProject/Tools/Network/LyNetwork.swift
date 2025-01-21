@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LyNetwork {
+class LyNetwork: @unchecked Sendable {
     var isHUDShown:Bool = false
     
     static let shared: LyNetwork = {
@@ -56,14 +56,14 @@ class LyNetwork {
         }
     }
     
-    func hideHUD(){
+    @MainActor func hideHUD(){
         if self.isHUDShown {
             rkHideHud()
             self.isHUDShown = false
         }
     }
     
-    func showHUD(_ task:URLSessionTask) {
+    @MainActor func showHUD(_ task:URLSessionTask) {
         // print("====>[state]\(task.state)===>\(self.isHUDShown)")
         if task.state == .running && !self.isHUDShown {
             self.isHUDShown = true

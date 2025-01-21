@@ -9,10 +9,10 @@ import UIKit
 
 protocol Emitterable {}
 
-private var EmitterableKey: UInt8 = 0
+@MainActor private var EmitterableKey: UInt8 = 0
 extension Emitterable where Self: UIViewController {
     ///
-    private var emitterLayer: CAEmitterLayer? {
+    @MainActor private var emitterLayer: CAEmitterLayer? {
         get {
             return objc_getAssociatedObject(self, &EmitterableKey) as? CAEmitterLayer
         }
@@ -21,7 +21,7 @@ extension Emitterable where Self: UIViewController {
         }
     }
 
-    func startEmittering(_ point: CGPoint) {
+    @MainActor func startEmittering(_ point: CGPoint) {
         if let emitterLayer = emitterLayer {
             emitterLayer.birthRate += 1
         } else {
@@ -80,7 +80,7 @@ extension Emitterable where Self: UIViewController {
     }
 
     ///
-    func stopEmittering() {
+    @MainActor func stopEmittering() {
         // emitterLayer?.birthRate -= 1
         if let birthRate = emitterLayer?.birthRate {
             let newBirthRate = birthRate - 1
@@ -90,7 +90,7 @@ extension Emitterable where Self: UIViewController {
     }
 
     ///
-    func destroyEmitter() {
+    @MainActor func destroyEmitter() {
         // view.layer.sublayers?.filter { $0.isKind(of: CAEmitterLayer.self) }.first?.removeFromSuperlayer()
         emitterLayer?.removeAllAnimations()
         emitterLayer?.removeFromSuperlayer()

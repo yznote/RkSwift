@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // MARK: - 栈顶VC
-var rkTopVC: UIViewController? {
+@MainActor var rkTopVC: UIViewController? {
     var resultVC: UIViewController?
     resultVC = _rkTopVC(UIApplication.shared.rkWindow?.rootViewController)
     while resultVC?.presentedViewController != nil {
@@ -17,7 +17,7 @@ var rkTopVC: UIViewController? {
     }
     return resultVC
 }
-private  func _rkTopVC(_ vc: UIViewController?) -> UIViewController? {
+@MainActor private  func _rkTopVC(_ vc: UIViewController?) -> UIViewController? {
     if vc is UINavigationController {
         return _rkTopVC((vc as? UINavigationController)?.topViewController)
     } else if vc is UITabBarController {
@@ -28,7 +28,7 @@ private  func _rkTopVC(_ vc: UIViewController?) -> UIViewController? {
 }
 
 // MARK: - 根据view获取父类VC
-func rkNextResponsder(currentView: UIView) -> UIViewController {
+@MainActor func rkNextResponsder(currentView: UIView) -> UIViewController {
     var vc: UIResponder = currentView
     while vc.isKind(of: UIViewController.self) != true {
         vc = vc.next!
@@ -37,17 +37,17 @@ func rkNextResponsder(currentView: UIView) -> UIViewController {
 }
 
 // MARK: - 尺寸大小转换【以 375 为基准】
-func rklayout(_ originSize:CGFloat) -> CGFloat {
+@MainActor func rklayout(_ originSize:CGFloat) -> CGFloat {
     return RKLayout.layout(originSize)
 }
-private struct RKLayout {
+@MainActor private struct RKLayout {
     static let ratio:CGFloat = UIScreen.main.bounds.width / 375.0
     static func layout(_ number: CGFloat) -> CGFloat { return (number * ratio) }
 }
 
 // MARK: - 划线
 ///edge 左右边距
-func rkGetLine(edge: CGFloat,superView: UIView) -> UILabel {
+@MainActor func rkGetLine(edge: CGFloat,superView: UIView) -> UILabel {
     let line = UILabel()
     line.backgroundColor = rkLineCor
     superView.addSubview(line)
@@ -59,7 +59,7 @@ func rkGetLine(edge: CGFloat,superView: UIView) -> UILabel {
     }
     return line
 }
-func rkCreateLine(edge: CGFloat,superView: UIView){
+@MainActor func rkCreateLine(edge: CGFloat,superView: UIView){
     let line = UILabel()
     line.backgroundColor = rkLineCor
     superView.addSubview(line)

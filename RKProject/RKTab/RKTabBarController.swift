@@ -159,10 +159,10 @@ class RKTabBarController: UITabBarController, CAAnimationDelegate{
         */
     }
     // 动画监听
-    func animationDidStart(_ anim: CAAnimation) {
+    nonisolated func animationDidStart(_ anim: CAAnimation) {
         rkprint("====>ani-start\(anim)")
     }
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    nonisolated func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         rkprint("====>ani-stop\(anim)===>\(flag)")
     }
     

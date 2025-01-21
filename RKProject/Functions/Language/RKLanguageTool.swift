@@ -23,7 +23,7 @@ func rkLocalized(key:String) -> String {
 
 /// 初始化
 private let onceToken = "Method Swizzling"
-func rkLanguageInit() {
+@MainActor func rkLanguageInit() {
     if (UserDefaults.standard.object(forKey: rkLanguageKey) == nil) {
         let languageArray = NSLocale.preferredLanguages;
         let languageStr = languageArray[0]
@@ -48,7 +48,7 @@ func rkLanguageType() -> String {
 }
 
 /// 切换语言
-func rkSwitchLanguage() {
+@MainActor func rkSwitchLanguage() {
     let currentL = rkLanguageType()
     if currentL.isEqual(rkEn) {
         UserDefaults.standard.set(rkZhCn, forKey: rkLanguageKey)
@@ -99,7 +99,7 @@ class RKHook:NSObject {
         rkprint("property-end")
     }
     /// 动态设置MJ的国际化
-    @objc func mjLanguage() {
+    @MainActor @objc func mjLanguage() {
         DispatchQueue.once(token: onceToken) {
             let mj_selector = #selector(Bundle.mj_localizedString(forKey:value:))
             let hook_selector = #selector(self.hook_mj_localizedString(forKey:value:))

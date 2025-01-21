@@ -65,7 +65,7 @@ class ShotTestVC: RKBaseVC {
 }
 
 // 不希望被录屏的内容添加到此view上即可
-public func makeSecView() -> UIView {
+@MainActor public func makeSecView() -> UIView {
     let field = UITextField()
     field.isSecureTextEntry = true
     guard let view = field.subviews.first else {

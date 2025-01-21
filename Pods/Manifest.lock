@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.4.1)
-  - EmptyDataSet-Swift (4.2.0)
+  - EmptyDataSet-Swift (5.0.0)
   - HandyJSON (5.0.0)
   - HMSegmentedControl (1.5.5)
   - IQKeyboardManagerSwift (6.4.1)
@@ -32,7 +32,7 @@ PODS:
   - UINavigation-SXFixSpace (1.2.4)
 
 DEPENDENCIES:
-  - EmptyDataSet-Swift (= 4.2.0)
+  - EmptyDataSet-Swift (= 5.0.0)
   - HandyJSON (= 5.0.0)
   - HMSegmentedControl (= 1.5.5)
   - IQKeyboardManagerSwift (= 6.4.1)
@@ -73,7 +73,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   IQKeyboardManagerSwift: d2df660d0b8d64a15cb2537c9ff303213fa515b2
@@ -92,6 +92,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: 34f6a42221af086252ed5b17869ec63671dd3594
+PODFILE CHECKSUM: c0bd21dbebae631bfde61fe3fc04f89608a2df6a
 
 COCOAPODS: 1.16.2

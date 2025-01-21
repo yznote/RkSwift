@@ -25,7 +25,7 @@ public extension TargetType {
     }
 }
 // 公共参数
-extension URLRequest {
+@MainActor extension URLRequest {
     private var commonParams:[String: Any]?{
         return ["uid":"666",
                 "token":"token",
@@ -37,13 +37,13 @@ extension URLRequest {
 }
 
 // 拼接公共参数
-class RKReqCommonParamsPlugin: PluginType {
-    public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+@MainActor class RKReqCommonParamsPlugin: @preconcurrency PluginType {
+     public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         var mutatebleReq = request
         return mutatebleReq.appendCommonParams()
     }
 }
-extension URLRequest {
+@MainActor extension URLRequest {
     mutating func appendCommonParams() -> URLRequest {
         let request = try?rkencod(params: commonParams, paramsEncodeing: URLEncoding(destination: .queryString))
         assert(request != nil,"check common params value")
@@ -65,9 +65,9 @@ extension URLRequest {
 
 // 拼接接口名称
 
-class RKServicePlugin:PluginType {
+class RKServicePlugin:@preconcurrency PluginType {
     
-    public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+    @MainActor public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         var mutatebleReq = request
         var params: [String:Any] = [:]
         

@@ -11,7 +11,7 @@ import Moya
 //import Result
 import HandyJSON
 
-let timeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<RKHomeApi>.RequestResultClosure) -> Void in
+@MainActor let timeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<RKHomeApi>.RequestResultClosure) -> Void in
     if var urlRequest = try? endpoint.urlRequest() {
         urlRequest.timeoutInterval = 20
         closure(.success(urlRequest))
@@ -19,7 +19,7 @@ let timeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<RKHomeApi>.Requ
         closure(.failure(MoyaError.requestMapping(endpoint.url)))
     }
 }
-let rkprovider = MoyaProvider<RKHomeApi>(requestClosure: timeoutClosure,plugins:[
+@MainActor let rkprovider = MoyaProvider<RKHomeApi>(requestClosure: timeoutClosure,plugins:[
     RKServicePlugin(),          //接口
     RKReqCommonParamsPlugin(),  // 拼接公共参数
     RKNetwork.rklogPlugin,      // 日志控制
@@ -28,7 +28,14 @@ let rkprovider = MoyaProvider<RKHomeApi>(requestClosure: timeoutClosure,plugins:
 // MARK: - 
 public class RKNetwork {
 
-    public class func rkloadData<T: TargetType, H: HandyJSON>(target: T, model: H.Type?, showHud: Bool? = nil,cache:((H?) -> Void)? = nil, success: @escaping((H?,Dictionary<String, Any>?) -> Void), failure:((Int?,String) -> Void)?){
+    @MainActor public class func rkloadData<T: TargetType, H: HandyJSON>(
+        target: T,
+        model: H.Type?,
+        showHud: Bool? = nil,
+        cache:((H?) -> Void)? = nil,
+        success: @escaping((H?,Dictionary<String, Any>?) -> Void),
+        failure:((Int?,String) -> Void)?
+    ){
 
         if let isShow = showHud {
             if isShow {
@@ -133,7 +140,7 @@ public class RKNetwork {
         }
     }
     //打印控制
-    static let rklogPlugin = RKRequestLogPlugin(isSend: false, isReq: false, isResVerbose: false, isRes: true, requestDataFormatter: {data -> String in
+    @MainActor static let rklogPlugin = RKRequestLogPlugin(isSend: false, isReq: false, isResVerbose: false, isRes: true, requestDataFormatter: {data -> String in
         return String(data: data, encoding: .utf8) ?? ""
     }) { (data) -> (Data) in
         do {
