@@ -77,7 +77,9 @@ class CombineView: UIView {
         let itemHeight: CGFloat = 50
         let itemMT: CGFloat = 20
         containerView.flex.paddingHorizontal(16).define { flex in
-            flex.addItem(tipsL).marginTop(50)
+            flex.addItem().marginTop(50).alignItems(.center).define { flex in
+                flex.addItem(tipsL)
+            }
 
             flex.addItem().marginTop(itemMT).backgroundColor(.hex("#fff")).cornerRadius(itemHeight / 2).define { flex in
                 flex.addItem(phoneTF).marginHorizontal(15).height(itemHeight)
@@ -91,7 +93,7 @@ class CombineView: UIView {
 
             flex.addItem().marginTop(itemMT).direction(.row).alignItems(.center).define { flex in
                 flex.addItem(agreeSt)
-                flex.addItem(protocolL)
+                flex.addItem(protocolL).marginLeft(10)
             }
 
             flex.addItem().marginTop(itemMT * 2).define { flex in

@@ -25,6 +25,8 @@ class CombineVC: RKBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleL.text = "Flex&Combine"
+        naviSubView.backgroundColor = .clear
+        naviLineL.isHidden = true
         // comOne()
         // comTwo()
         // comThree()
