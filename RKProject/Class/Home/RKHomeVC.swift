@@ -28,8 +28,15 @@ class RKHomeVC: RKBaseVC {
             // pinVC()
             // coredata()
             // waterfall()
-            emitterable()
+            // emitterable()
+            combine()
         }
+    }
+
+    /// combine
+    func combine() {
+        let cVC = CombineVC()
+        UIApplication.shared.pushViewController(cVC, animated: true)
     }
 
     /// emitter

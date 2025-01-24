@@ -18,7 +18,7 @@ pod 'LLCycleScrollView','1.5.4'
 pod 'MJRefresh','3.5.0'
 pod 'MBProgressHUD','1.2.0'
 pod 'HMSegmentedControl','1.5.5'
-pod 'IQKeyboardManagerSwift','6.4.1'
+#pod 'IQKeyboardManagerSwift','6.4.1'
 pod 'EmptyDataSet-Swift','4.2.0'
 pod 'UINavigation-SXFixSpace','1.2.4'
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5429CDD72D421C2D0062F69A /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429CDD62D421C2D0062F69A /* CombineVC.swift */; };
+		5429CDDC2D431A040062F69A /* CombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429CDDB2D431A030062F69A /* CombineView.swift */; };
+		5429CDE22D432E3E0062F69A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5429CDE12D432E3E0062F69A /* IQKeyboardManagerSwift */; };
 		5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5440EE412D1BAF4F00B97ED5 /* Then */; };
 		5474B9412D3799390015F083 /* DbTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9402D3799390015F083 /* DbTestVC.swift */; };
 		5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */; };
@@ -115,6 +118,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5429CDD62D421C2D0062F69A /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
+		5429CDDB2D431A030062F69A /* CombineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineView.swift; sourceTree = "<group>"; };
 		5474B9402D3799390015F083 /* DbTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbTestVC.swift; sourceTree = "<group>"; };
 		5474B9432D3799B80015F083 /* RKProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RKProject.xcdatamodel; sourceTree = "<group>"; };
 		547763D82D2E75A4007A3D22 /* LogTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTestVC.swift; sourceTree = "<group>"; };
@@ -230,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5429CDE22D432E3E0062F69A /* IQKeyboardManagerSwift in Frameworks */,
 				549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */,
 				5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */,
 				549F6A032D16A466004C7E8E /* PinLayout in Frameworks */,
@@ -429,6 +435,8 @@
 				5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */,
 				548C99AB2D37B0CF00ACDF04 /* WaterfallVC.swift */,
 				548C99D52D38D67600ACDF04 /* EmitterableVC.swift */,
+				5429CDD62D421C2D0062F69A /* CombineVC.swift */,
+				5429CDDB2D431A030062F69A /* CombineView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -716,6 +724,7 @@
 				549F69FE2D16A44E004C7E8E /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */,
 				5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */,
+				5429CDE02D432E3E0062F69A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 9CFA03C82568A6C3001FF834 /* Products */;
 			projectDirPath = "";
@@ -840,6 +849,7 @@
 				9C67A0E625C102780052889A /* RKLiveModel.swift in Sources */,
 				9C47977327E3127700375942 /* RKChartsVC.swift in Sources */,
 				547763D92D2E75A4007A3D22 /* LogTestVC.swift in Sources */,
+				5429CDD72D421C2D0062F69A /* CombineVC.swift in Sources */,
 				54C83A982D36335700A6208C /* PinTestVC.swift in Sources */,
 				9C6CC40A257A5DAB00936284 /* RKLanguageTool.swift in Sources */,
 				9CE365E7256F426D00E7BD6D /* RKAlertView.swift in Sources */,
@@ -855,6 +865,7 @@
 				9CB187782584666F000FF2C9 /* RKLogs.swift in Sources */,
 				548C99D62D38D67600ACDF04 /* EmitterableVC.swift in Sources */,
 				9C16C5452580BAE9007B940A /* RKApiConfig.swift in Sources */,
+				5429CDDC2D431A040062F69A /* CombineView.swift in Sources */,
 				9C16C5482580BAFE007B940A /* RKHomeApi.swift in Sources */,
 				9C611EC725B2B7B400CEDDC8 /* RKRxOperators.swift in Sources */,
 				9C6CC40F257B1EB500936284 /* RKMineCell.swift in Sources */,
@@ -1060,7 +1071,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
@@ -1081,7 +1091,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl/HMSegmentedControl.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON/HandyJSON.framework/Headers\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView/LLCycleScrollView.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
@@ -1110,8 +1119,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl/HMSegmentedControl.framework/Headers\"",
 					"-isystem",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON/HandyJSON.framework/Headers\"",
-					"-isystem",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
 					"-isystem",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
 					"-isystem",
@@ -1194,8 +1201,6 @@
 					"-framework",
 					"\"HandyJSON\"",
 					"-framework",
-					"\"IQKeyboardManagerSwift\"",
-					"-framework",
 					"\"Kingfisher\"",
 					"-framework",
 					"\"LLCycleScrollView\"",
@@ -1228,7 +1233,7 @@
 					"-framework",
 					"\"UINavigation_SXFixSpace\"",
 				);
-				OTHER_MODULE_VERIFIER_FLAGS = "$(inherited) \"-F${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Moya\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Reusable\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKitExtend\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SwiftCharts\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Then\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/UINavigation-SXFixSpace\"";
+				OTHER_MODULE_VERIFIER_FLAGS = "$(inherited) \"-F${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Moya\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Reusable\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKitExtend\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SwiftCharts\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Then\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/UINavigation-SXFixSpace\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunbao.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = hailongYB;
@@ -1257,7 +1262,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
@@ -1278,7 +1282,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl/HMSegmentedControl.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON/HandyJSON.framework/Headers\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView/LLCycleScrollView.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
@@ -1307,8 +1310,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl/HMSegmentedControl.framework/Headers\"",
 					"-isystem",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON/HandyJSON.framework/Headers\"",
-					"-isystem",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
 					"-isystem",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
 					"-isystem",
@@ -1391,8 +1392,6 @@
 					"-framework",
 					"\"HandyJSON\"",
 					"-framework",
-					"\"IQKeyboardManagerSwift\"",
-					"-framework",
 					"\"Kingfisher\"",
 					"-framework",
 					"\"LLCycleScrollView\"",
@@ -1425,7 +1424,7 @@
 					"-framework",
 					"\"UINavigation_SXFixSpace\"",
 				);
-				OTHER_MODULE_VERIFIER_FLAGS = "$(inherited) \"-F${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Moya\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Reusable\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKitExtend\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SwiftCharts\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Then\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/UINavigation-SXFixSpace\"";
+				OTHER_MODULE_VERIFIER_FLAGS = "$(inherited) \"-F${PODS_CONFIGURATION_BUILD_DIR}/EmptyDataSet-Swift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HMSegmentedControl\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/LLCycleScrollView\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Moya\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Reusable\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SnapKitExtend\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/SwiftCharts\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/Then\" \"-F${PODS_CONFIGURATION_BUILD_DIR}/UINavigation-SXFixSpace\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunbao.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = hailongYB;
@@ -1463,6 +1462,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5429CDE02D432E3E0062F69A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -1506,6 +1513,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5429CDE12D432E3E0062F69A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5429CDE02D432E3E0062F69A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		5440EE412D1BAF4F00B97ED5 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */;

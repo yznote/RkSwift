@@ -193,7 +193,7 @@ public func rkprint(_ items: Any..., separator: String = " ", terminator: String
 
 class debug {
     static func log(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, _ line: Int = #line, time: Int = #line) {
-        // rkprint(items,file:file,line)
+// rkprint(items,file:file,line)
 #if DEBUG
         let dateFormate = DateFormatter()
         dateFormate.dateFormat = "yy-MM-dd HH:mm:ss.SSS"
@@ -272,18 +272,27 @@ extension debug {
         var fileName = (file as NSString).lastPathComponent
         fileName = fileName.replacingOccurrences(of: ".swift", with: "")
         //
-        var logStr = "\(stringOfDate) \(fileName)【line:\(line)】"
+        var logStr = "💰\(stringOfDate) \(fileName)【line:\(line)】💰"
         let separator = "\n"
         var raws = items
         if items.count > 1 {
-            let first = "\(JSON(items[0]))"
+            var first = "\(JSON(items[0]))"
+            if JSON(items[0]).type == .unknown {
+                first = "\(items[0])"
+            }
             logStr += first
             logStr += separator
             raws = Array(items.dropFirst())
         } else {
             logStr += separator
         }
-        logStr += raws.map { "\(JSON($0))" }.joined(separator: separator)
+        logStr += raws.map {
+            var mapStr = "\(JSON($0))"
+            if JSON($0).type == .unknown {
+                mapStr = "\($0)"
+            }
+            return mapStr
+        }.joined(separator: separator)
         //
         /*
          switch type {

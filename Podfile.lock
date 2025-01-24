@@ -3,7 +3,6 @@ PODS:
   - EmptyDataSet-Swift (4.2.0)
   - HandyJSON (5.0.0)
   - HMSegmentedControl (1.5.5)
-  - IQKeyboardManagerSwift (6.4.1)
   - Kingfisher (4.10.1)
   - LLCycleScrollView (1.5.4):
     - Kingfisher (<= 4.10.1)
@@ -35,7 +34,6 @@ DEPENDENCIES:
   - EmptyDataSet-Swift (= 4.2.0)
   - HandyJSON (= 5.0.0)
   - HMSegmentedControl (= 1.5.5)
-  - IQKeyboardManagerSwift (= 6.4.1)
   - Kingfisher (= 4.10.1)
   - LLCycleScrollView (= 1.5.4)
   - MBProgressHUD (= 1.2.0)
@@ -55,7 +53,6 @@ SPEC REPOS:
     - EmptyDataSet-Swift
     - HandyJSON
     - HMSegmentedControl
-    - IQKeyboardManagerSwift
     - Kingfisher
     - LLCycleScrollView
     - MBProgressHUD
@@ -76,7 +73,6 @@ SPEC CHECKSUMS:
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
-  IQKeyboardManagerSwift: d2df660d0b8d64a15cb2537c9ff303213fa515b2
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   LLCycleScrollView: 77f6e11980d1cd010ee9ee87e94da4e8026ccd21
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -92,6 +88,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: 34f6a42221af086252ed5b17869ec63671dd3594
+PODFILE CHECKSUM: 355a5653082bd02a7198704168c396f9317c4377
 
 COCOAPODS: 1.16.2
