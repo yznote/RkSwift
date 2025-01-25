@@ -44,7 +44,70 @@ class CombineVC: RKBaseVC {
         // ts12()
         // ts13()
         // ts14()
-        ts15()
+        // ts15()
+        // ts16()
+        ts17()
+
+        // https://juejin.cn/post/7384109433733251091#heading-28
+    }
+
+    func ts17() {
+        // multicast 操作符允许你使用指定的 Subject 将单个发布者的输出分发给多个订阅者。这对于需要多个订阅者共享相同的事件流非常有用。
+
+        // 创建 发布者、Subject
+        let publisher = PassthroughSubject<String, Never>()
+        let subject = PassthroughSubject<String, Never>()
+        // 使用 multicast 操作符将发布者与 Subject 关联，创建一个多播发布者。
+        let multicastedPublisher = publisher.multicast(subject: subject)
+
+        // 创建第一个订阅者，并使用 sink 订阅多播发布者。
+        let cancellable1 = multicastedPublisher
+            .sink { completion in
+                debug.log("muticasted1-res", completion)
+            } receiveValue: { val in
+                debug.log("muticasted1-val", val)
+            }
+        cancellable1.store(in: &cancelSet)
+
+        // 创建第二个订阅者，并使用 sink 订阅多播发布者。
+        let cancellable2 = multicastedPublisher
+            .sink { completion in
+                debug.log("muticasted2-res", completion)
+            } receiveValue: { val in
+                debug.log("muticasted2-val", val)
+            }
+        cancellable2.store(in: &cancelSet)
+        
+        // 使用 connect 方法启动多播发布者，将事件传递给订阅者。
+        let connection = multicastedPublisher.connect()
+
+        // 通过 publisher.send 发送事件，所有订阅者会接收到相同的事件。
+        publisher.send("Hello")
+        publisher.send("Combine")
+
+        // 通过 publisher.send(completion: .finished) 完成发布者，所有订阅者会接收到完成事件。
+        publisher.send(completion: .finished)
+
+        // 通过 connection.cancel 断开多播连接。
+        connection.cancel()
+    }
+
+    func ts16() {
+        // 使发布者的多个订阅者共享一个订阅。
+        let publisher = Just("hello,combine")
+        let sharePublisher = publisher.share()
+        let cancellable1 = sharePublisher
+            .print("share1")
+            .sink { val in
+                debug.log("share1-val", val)
+            }
+        cancellable1.store(in: &cancelSet)
+        let cancellable2 = sharePublisher
+            .print("share2")
+            .sink { val in
+                debug.log("share2-val", val)
+            }
+        cancellable2.store(in: &cancelSet)
     }
 
     func ts15() {
@@ -54,8 +117,7 @@ class CombineVC: RKBaseVC {
 
          scheduler: 用于计算时间间隔的调度器。通常情况下，可以使用 .main（主队列调度器）或者 .immediate（立即执行）等内置调度器。也可以传入自定义的调度器来控制时间间隔的计算行为。
 
-         主要使用场景有
-
+         主要使用场景有:
          监测数据流的速度和频率： 可以用来监测数据流中元素的发出速度，或者计算连续元素之间的时间间隔。
          性能监控和调试： 可以用来分析和优化 Combine 数据流的性能，以及查找可能存在的延迟或者频率问题。
          */
