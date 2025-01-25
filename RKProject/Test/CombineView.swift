@@ -105,12 +105,12 @@ class CombineView: UIView {
         /// combine
         phoneVer
             .receive(on: RunLoop.main)
-            .print("phoneChange")
+            // .print("phoneChange")
             .assign(to: \.isEnabled, on: sendBtn)
             .store(in: &subscription)
         // 融合三个发布者
         Publishers.CombineLatest3(phoneVer, pwdVer, $isAgree)
-            .print("three-condation")
+            // .print("three-condation")
             .map { $0 && $1 && $2 } // 筛选逻辑
             .receive(on: RunLoop.main) // 在主线程接受
             .assign(to: \.isEnabled, on: loginBtn) // 结果分配
