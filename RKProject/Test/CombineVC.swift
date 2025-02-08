@@ -73,7 +73,147 @@ class CombineVC: RKBaseVC {
 
         // bTs1()
         // bTs2()
-        bTs3()
+        // bTs3()
+
+        // cTs1()
+        // cTs2()
+
+        // dTs1()
+        dTs2()
+    }
+
+    func dTs2() {
+        //
+        let searchBar = UISearchBar()
+        searchBar.frame = CGRect(x: 100, y: 200, width: 200, height: 40)
+        searchBar.backgroundColor = .hex("#ff0000", 0.6)
+        view.addSubview(searchBar)
+
+        var viewModel = SearchViewModel()
+
+        searchBar.textDidChangePublisher
+            .debounce(for: .milliseconds(300), scheduler: DispatchQueue.main)
+            .removeDuplicates()
+            .sink { val in
+                viewModel.search(query: val)
+            }
+            .store(in: &cancelSet)
+
+        viewModel.$searchRes
+            .receive(on: DispatchQueue.main)
+            .sink { val in
+                debug.log("ui-res:", val)
+            }
+            .store(in: &cancelSet)
+    }
+
+    func dTs1() {
+        // 数据绑定
+        let user = UserModel(name: "Joy", age: 30)
+        let viewModel = UserViewModel(user: user)
+        viewModel.$displayName
+            .receive(on: DispatchQueue.main)
+            .sink { val in
+                debug.log("binddata-val:", val)
+            }
+            .store(in: &cancelSet)
+
+        viewModel.changeData()
+    }
+
+    func cTs2() {
+        // share：它是一个自动连接的多播操作符，会在第一个订阅者订阅时开始发送值，并且会保持对上游发布者的订阅直到最后一个订阅者取消订阅。当多个订阅者订阅时，所有订阅者接收相同的输出，而不是每次订阅时重新触发数据流。
+
+        // 不使用 share()
+        let publisher = PassthroughSubject<Int, Never>()
+        let randomPublisher1 = publisher
+            .map { _ in
+                Int.random(in: 1...100)
+            }
+
+        randomPublisher1
+            .sink { val in
+                debug.log("without-share1:", val)
+            }
+            .store(in: &cancelSet)
+        randomPublisher1
+            .sink { val in
+                debug.log("without-share2:", val)
+            }
+            .store(in: &cancelSet)
+        publisher.send(1)
+
+        // 使用 share()
+        let publisher2 = PassthroughSubject<Int, Never>()
+        let randomPublisher2 = publisher2
+            .map { _ in
+                Int.random(in: 1...100)
+            }
+            .share()
+
+        randomPublisher2
+            .sink { val in
+                debug.log("with-share1:", val)
+            }
+            .store(in: &cancelSet)
+        randomPublisher2
+            .sink { val in
+                debug.log("with-share2:", val)
+            }
+            .store(in: &cancelSet)
+        publisher2.send(1)
+
+        /*
+         share 和 multicast 的区别：
+         自动连接：使用 share 时，原始 Publisher 会在第一个订阅者订阅时自动连接，并在最后一个订阅者取消订阅时自动断开连接。
+         无需手动连接：无需显式调用 connect() 方法来启动数据流，share 会自动管理连接
+         */
+    }
+
+    func cTs1() {
+        // multicast：使用 multicast 操作符时，它会将原始的 Publisher 包装成一个 ConnectablePublisher，并且将所有订阅者的订阅合并为一个单一的订阅。这样，无论有多少个订阅者，原始的 Publisher 都只会收到一次 receive(_:) 调用，即对每个事件只处理一次。然后，multicast
+        // 操作符会将事件分发给所有的订阅者。
+        let publisher = PassthroughSubject<Int, Never>()
+        // 不使用 multicast
+        let randomPublisher1 = publisher
+            .map { _ in
+                Int.random(in: 1...100)
+            }
+
+        randomPublisher1
+            .sink { val in
+                debug.log("without multicase-val-1:", val)
+            }
+            .store(in: &cancelSet)
+        randomPublisher1
+            .sink { val in
+                debug.log("without multicase-val-2:", val)
+            }
+            .store(in: &cancelSet)
+        publisher.send(1)
+
+        // 使用 multicast
+        let publisher2 = PassthroughSubject<Int, Never>()
+        let randomPublisher2 = publisher2
+            .map { _ in
+                Int.random(in: 1...100)
+            }
+            .multicast(subject: PassthroughSubject<Int, Never>())
+
+        randomPublisher2
+            .sink { val in
+                debug.log("with multicast-val-1:", val)
+            }
+            .store(in: &cancelSet)
+        randomPublisher2
+            .sink { val in
+                debug.log("with muticase-val-2:", val)
+            }
+            .store(in: &cancelSet)
+        _ = randomPublisher2
+            .connect()
+            .store(in: &cancelSet)
+        publisher2.send(1)
     }
 
     func bTs3() {
@@ -979,6 +1119,107 @@ class CombineVC: RKBaseVC {
         cancellable2.cancel()
     }
 }
+
+/// 界面刷新
+extension UISearchBar {
+    var textDidChangePublisher: AnyPublisher<String, Never> {
+        let textField = value(forKey: "searchField") as? UITextField
+        return NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: textField)
+            .compactMap { $0.object as? UITextField }
+            .map { $0.text ?? "" }
+            .eraseToAnyPublisher()
+    }
+}
+
+class SearchViewModel {
+    @Published private(set) var searchRes: [String] = []
+    func search(query: String) {
+        // 模拟网络请求
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) {
+            let res = (0..<10).map { val in
+                "\(query) reslt \(val)"
+            }
+            self.searchRes = res
+        }
+    }
+}
+
+/*
+ func dTs2() {
+     //
+     let searchBar = UISearchBar()
+     searchBar.frame = CGRect(x: 100, y: 200, width: 200, height: 40)
+     searchBar.backgroundColor = .hex("#ff0000",0.6)
+     view.addSubview(searchBar)
+
+     var viewModel = SearchViewModel()
+
+     searchBar.textDidChangePublisher
+         .debounce(for: .milliseconds(300), scheduler: DispatchQueue.main)
+         .removeDuplicates()
+         .sink { val in
+             viewModel.search(query: val)
+         }
+         .store(in: &cancelSet)
+
+     viewModel.$searchRes
+         .receive(on: DispatchQueue.main)
+         .sink { val in
+             debug.log("ui-res:", val)
+         }
+         .store(in: &cancelSet)
+ }
+ */
+
+/// 数据绑定
+class UserModel {
+    @Published var name: String
+    @Published var age: Int
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+class UserViewModel {
+    @Published private(set) var displayName = ""
+    private var user: UserModel
+    private var cancellable = Set<AnyCancellable>()
+    init(user: UserModel) {
+        self.user = user
+        setupBindings()
+    }
+
+    private func setupBindings() {
+        Publishers.CombineLatest(user.$name, user.$age)
+            .map { name, age in
+                return "\(name) (\(age) years old)"
+            }
+            .assign(to: \.displayName, on: self)
+            .store(in: &cancellable)
+    }
+
+    func changeData() {
+        user.name = "xiaoming"
+        user.age = 12
+    }
+}
+
+/*
+ func dTs1() {
+     // 数据绑定
+     let user = UserModel(name: "Joy", age: 30)
+     let viewModel = UserViewModel(user: user)
+     viewModel.$displayName
+         .receive(on: DispatchQueue.main)
+         .sink { val in
+             debug.log("binddata-val:", val)
+         }
+         .store(in: &cancelSet)
+
+     viewModel.changeData()
+ }
+ */
 
 /// 自定义发布者
 struct CustomPublisher: Publisher {
