@@ -89,7 +89,7 @@ class CombineVC: RKBaseVC {
         searchBar.backgroundColor = .hex("#ff0000", 0.6)
         view.addSubview(searchBar)
 
-        var viewModel = SearchViewModel()
+        let viewModel = SearchViewModel()
 
         searchBar.textDidChangePublisher
             .debounce(for: .milliseconds(300), scheduler: DispatchQueue.main)
