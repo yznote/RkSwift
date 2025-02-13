@@ -29,8 +29,15 @@ class RKHomeVC: RKBaseVC {
             // coredata()
             // waterfall()
             // emitterable()
-            combine()
+            // combine()
+            imagepicker()
         }
+    }
+
+    /// imagepicker
+    func imagepicker() {
+        let ipVC = ImagePickerVC()
+        UIApplication.shared.pushViewController(ipVC, animated: true);
     }
 
     /// combine

@@ -46,6 +46,9 @@
 		54C83A982D36335700A6208C /* PinTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C83A972D36335700A6208C /* PinTestVC.swift */; };
 		54C83A9A2D3637B000A6208C /* PinTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C83A992D3637B000A6208C /* PinTestView.swift */; };
 		54C83A9D2D36395800A6208C /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C83A9C2D36395800A6208C /* test.png */; };
+		54EF54D22D5DD61A00CB8A05 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 54EF54D12D5DD61A00CB8A05 /* DeviceKit */; };
+		54EF54D52D5DD6A300CB8A05 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 54EF54D42D5DD6A300CB8A05 /* YPImagePicker */; };
+		54EF54D72D5DD82300CB8A05 /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EF54D62D5DD82300CB8A05 /* ImagePickerVC.swift */; };
 		939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54431DB64C044954736BEC6 /* Pods_RKProject.framework */; };
 		9C03709A256912760004D613 /* RKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C037099256912760004D613 /* RKTabBarController.swift */; };
 		9C0370B22569132A0004D613 /* tabbar_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */; };
@@ -151,6 +154,7 @@
 		54C83A972D36335700A6208C /* PinTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTestVC.swift; sourceTree = "<group>"; };
 		54C83A992D3637B000A6208C /* PinTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTestView.swift; sourceTree = "<group>"; };
 		54C83A9C2D36395800A6208C /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		54EF54D62D5DD82300CB8A05 /* ImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerVC.swift; sourceTree = "<group>"; };
 		9A7BC5A0AABE43C71C95A11A /* Pods-RKProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKProject.debug.xcconfig"; path = "Target Support Files/Pods-RKProject/Pods-RKProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C037099256912760004D613 /* RKTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTabBarController.swift; sourceTree = "<group>"; };
 		9C0370A2256913290004D613 /* tabbar_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@2x.png"; sourceTree = "<group>"; };
@@ -236,11 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5429CDE22D432E3E0062F69A /* IQKeyboardManagerSwift in Frameworks */,
+				54EF54D22D5DD61A00CB8A05 /* DeviceKit in Frameworks */,
 				549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */,
 				5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */,
 				549F6A032D16A466004C7E8E /* PinLayout in Frameworks */,
 				939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */,
 				549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */,
+				54EF54D52D5DD6A300CB8A05 /* YPImagePicker in Frameworks */,
 				549F6A002D16A44E004C7E8E /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +443,7 @@
 				548C99D52D38D67600ACDF04 /* EmitterableVC.swift */,
 				5429CDD62D421C2D0062F69A /* CombineVC.swift */,
 				5429CDDB2D431A030062F69A /* CombineView.swift */,
+				54EF54D62D5DD82300CB8A05 /* ImagePickerVC.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -725,6 +732,8 @@
 				549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */,
 				5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */,
 				5429CDE02D432E3E0062F69A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				54EF54D02D5DD61A00CB8A05 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				54EF54D32D5DD6A300CB8A05 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = 9CFA03C82568A6C3001FF834 /* Products */;
 			projectDirPath = "";
@@ -886,6 +895,7 @@
 				9C16C54E2580BC4E007B940A /* RKLinks.swift in Sources */,
 				9C16C54B2580BB11007B940A /* RKHomeModel.swift in Sources */,
 				548C99AA2D37B07F00ACDF04 /* RkWaterfallFlowLayout.swift in Sources */,
+				54EF54D72D5DD82300CB8A05 /* ImagePickerVC.swift in Sources */,
 				9C6CC418257B2AB900936284 /* RKSetVC.swift in Sources */,
 				9CFA03CD2568A6C3001FF834 /* SceneDelegate.swift in Sources */,
 				5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */,
@@ -1510,6 +1520,22 @@
 				minimumVersion = 1.10.5;
 			};
 		};
+		54EF54D02D5DD61A00CB8A05 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+		54EF54D32D5DD6A300CB8A05 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1542,6 +1568,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */;
 			productName = PinLayout;
+		};
+		54EF54D12D5DD61A00CB8A05 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54EF54D02D5DD61A00CB8A05 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
+		54EF54D42D5DD6A300CB8A05 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54EF54D32D5DD6A300CB8A05 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -1,6 +1,15 @@
 {
-  "originHash" : "bc56b0c84615f054d2bc1cf07a3901c94a446596a0ed1ccf3292df8838edc2a6",
+  "originHash" : "818cc790fc3d91b42212cb00fda30a565ac067ec47fbf4a163a70384bee4edad",
   "pins" : [
+    {
+      "identity" : "devicekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devicekit/DeviceKit.git",
+      "state" : {
+        "revision" : "7ff5331960151aec74fb422e1d45f54ef6cc086d",
+        "version" : "5.5.0"
+      }
+    },
     {
       "identity" : "flexlayout",
       "kind" : "remoteSourceControl",
@@ -92,6 +101,24 @@
       }
     },
     {
+      "identity" : "prynttrimmerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HHK1/PryntTrimmerView",
+      "state" : {
+        "revision" : "ac1b60a22c7e6a6514de7a66d2f3d5b537c956d5",
+        "version" : "4.0.2"
+      }
+    },
+    {
+      "identity" : "stevia",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/freshOS/Stevia",
+      "state" : {
+        "revision" : "cfb1a1d2159277bb553c3dc46f3f742c0275566d",
+        "version" : "5.1.2"
+      }
+    },
+    {
       "identity" : "swifterswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwifterSwift/SwifterSwift",
@@ -125,6 +152,15 @@
       "state" : {
         "revision" : "042f5013152eb81c1552dec945b88f7b95ca350f",
         "version" : "3.2.1"
+      }
+    },
+    {
+      "identity" : "ypimagepicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yummypets/YPImagePicker.git",
+      "state" : {
+        "revision" : "2db04eb020e3ef03828d3207d85250e110fa5919",
+        "version" : "5.2.2"
       }
     }
   ],
