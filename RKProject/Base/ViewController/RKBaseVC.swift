@@ -49,7 +49,7 @@ class RKBaseVC: UIViewController {
             make.width.lessThanOrEqualTo(naviSubView.snp.width).multipliedBy(0.8)
         }
         
-        leftItem.setImage(UIImage(named: "导航-返回"), for: .normal)
+        leftItem.setImage(UIImage(named: "导航-返回2"), for: .normal)
         leftItem.setTitleColor(rkNaviItemCor, for: .normal)
         leftItem.titleLabel?.font = rkNaviItemFont
         leftItem.tintColor = .gray

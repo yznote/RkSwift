@@ -280,6 +280,7 @@ extension debug {
             if JSON(items[0]).type == .unknown {
                 first = "\(items[0])"
             }
+            logStr = logStr + separator + "debug："
             logStr += first
             logStr += separator
             raws = Array(items.dropFirst())

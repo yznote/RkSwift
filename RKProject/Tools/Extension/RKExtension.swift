@@ -66,6 +66,9 @@ extension UIApplication {
             }
         }
     }
+    func push(vc viewController: UIViewController, animated: Bool){
+        rkTopVC?.navigationController?.pushViewController(viewController, animated: animated)
+    }
     func pushViewController(_ viewController: UIViewController, animated: Bool){
         rkTopVC?.navigationController?.pushViewController(viewController, animated: animated)
     }

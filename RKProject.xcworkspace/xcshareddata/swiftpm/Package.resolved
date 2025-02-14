@@ -1,5 +1,5 @@
 {
-  "originHash" : "818cc790fc3d91b42212cb00fda30a565ac067ec47fbf4a163a70384bee4edad",
+  "originHash" : "f0de285b0a6170c89a64887dd53a773f71bfd95d1a3502956b0fc1088c941b7f",
   "pins" : [
     {
       "identity" : "devicekit",
@@ -89,6 +89,15 @@
       "state" : {
         "revision" : "76f514eba5218bdf67659168ba227c77da5f75fe",
         "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "permissionskit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sparrowcode/PermissionsKit",
+      "state" : {
+        "revision" : "5e5935998cf9c44033e429c3b7d1dd176a1f55ad",
+        "version" : "11.1.0"
       }
     },
     {
