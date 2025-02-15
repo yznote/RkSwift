@@ -1,5 +1,5 @@
 {
-  "originHash" : "f0de285b0a6170c89a64887dd53a773f71bfd95d1a3502956b0fc1088c941b7f",
+  "originHash" : "b4237110297bd2495140ee7a24ad959c35be87e8536afea933952a14610fb77d",
   "pins" : [
     {
       "identity" : "devicekit",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "0ceb4f5e3da86b6f2988eed7ee7a09296a193dd9",
         "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "handyswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FlineDev/HandySwift",
+      "state" : {
+        "revision" : "20b51652a71eca85c6c5502aac870c6708fa148b",
+        "version" : "4.3.0"
       }
     },
     {
@@ -116,6 +125,15 @@
       "state" : {
         "revision" : "ac1b60a22c7e6a6514de7a66d2f3d5b537c956d5",
         "version" : "4.0.2"
+      }
+    },
+    {
+      "identity" : "skeletonview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Juanpe/SkeletonView",
+      "state" : {
+        "revision" : "2f5274827d310e32c09325dd3e0007120940988e",
+        "version" : "1.31.0"
       }
     },
     {

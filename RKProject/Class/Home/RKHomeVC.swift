@@ -31,7 +31,6 @@ class RKHomeVC: RKBaseVC {
             // emitterable()
             // combine()
             // imagepicker()
-            // ts2
             deviceVC()
         }
     }

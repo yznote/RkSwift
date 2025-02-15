@@ -46,6 +46,8 @@
 		54C83A982D36335700A6208C /* PinTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C83A972D36335700A6208C /* PinTestVC.swift */; };
 		54C83A9A2D3637B000A6208C /* PinTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C83A992D3637B000A6208C /* PinTestView.swift */; };
 		54C83A9D2D36395800A6208C /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C83A9C2D36395800A6208C /* test.png */; };
+		54D860A52D602EAA000027C3 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 54D860A42D602EAA000027C3 /* HandySwift */; };
+		54D860AD2D606271000027C3 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 54D860AC2D606271000027C3 /* SkeletonView */; };
 		54EF54D22D5DD61A00CB8A05 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 54EF54D12D5DD61A00CB8A05 /* DeviceKit */; };
 		54EF54D52D5DD6A300CB8A05 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 54EF54D42D5DD6A300CB8A05 /* YPImagePicker */; };
 		54EF54D72D5DD82300CB8A05 /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EF54D62D5DD82300CB8A05 /* ImagePickerVC.swift */; };
@@ -249,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EF54E12D5EE88A00CB8A05 /* LocationPermission in Frameworks */,
+				54D860A52D602EAA000027C3 /* HandySwift in Frameworks */,
 				5429CDE22D432E3E0062F69A /* IQKeyboardManagerSwift in Frameworks */,
 				54EF54D22D5DD61A00CB8A05 /* DeviceKit in Frameworks */,
 				549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */,
@@ -259,6 +262,7 @@
 				939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */,
 				549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */,
 				54EF54D52D5DD6A300CB8A05 /* YPImagePicker in Frameworks */,
+				54D860AD2D606271000027C3 /* SkeletonView in Frameworks */,
 				54EF54E32D5EE88A00CB8A05 /* MicrophonePermission in Frameworks */,
 				54EF54DF2D5EE88A00CB8A05 /* CameraPermission in Frameworks */,
 				549F6A002D16A44E004C7E8E /* FlexLayout in Frameworks */,
@@ -759,6 +763,8 @@
 				54EF54D02D5DD61A00CB8A05 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 				54EF54D32D5DD6A300CB8A05 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 				54EF54DD2D5EE88A00CB8A05 /* XCRemoteSwiftPackageReference "PermissionsKit" */,
+				54D860A32D602EAA000027C3 /* XCRemoteSwiftPackageReference "HandySwift" */,
+				54D860AB2D606271000027C3 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 9CFA03C82568A6C3001FF834 /* Products */;
 			projectDirPath = "";
@@ -1547,6 +1553,22 @@
 				minimumVersion = 1.10.5;
 			};
 		};
+		54D860A32D602EAA000027C3 /* XCRemoteSwiftPackageReference "HandySwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FlineDev/HandySwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+		54D860AB2D606271000027C3 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.31.0;
+			};
+		};
 		54EF54D02D5DD61A00CB8A05 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
@@ -1603,6 +1625,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */;
 			productName = PinLayout;
+		};
+		54D860A42D602EAA000027C3 /* HandySwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54D860A32D602EAA000027C3 /* XCRemoteSwiftPackageReference "HandySwift" */;
+			productName = HandySwift;
+		};
+		54D860AC2D606271000027C3 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54D860AB2D606271000027C3 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 		54EF54D12D5DD61A00CB8A05 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
