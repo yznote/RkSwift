@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5408AFBF2D9796710094DAB3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5408AFBE2D9796710094DAB3 /* IQKeyboardManagerSwift */; };
 		5429CDD72D421C2D0062F69A /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429CDD62D421C2D0062F69A /* CombineVC.swift */; };
 		5429CDDC2D431A040062F69A /* CombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429CDDB2D431A030062F69A /* CombineView.swift */; };
-		5429CDE22D432E3E0062F69A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5429CDE12D432E3E0062F69A /* IQKeyboardManagerSwift */; };
 		5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5440EE412D1BAF4F00B97ED5 /* Then */; };
 		5474B9412D3799390015F083 /* DbTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9402D3799390015F083 /* DbTestVC.swift */; };
 		5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */; };
@@ -252,7 +252,6 @@
 			files = (
 				54EF54E12D5EE88A00CB8A05 /* LocationPermission in Frameworks */,
 				54D860A52D602EAA000027C3 /* HandySwift in Frameworks */,
-				5429CDE22D432E3E0062F69A /* IQKeyboardManagerSwift in Frameworks */,
 				54EF54D22D5DD61A00CB8A05 /* DeviceKit in Frameworks */,
 				549F69FB2D16A28B004C7E8E /* SwiftyJSON in Frameworks */,
 				54EF54E72D5EE88A00CB8A05 /* PhotoLibraryPermission in Frameworks */,
@@ -260,6 +259,7 @@
 				549F6A032D16A466004C7E8E /* PinLayout in Frameworks */,
 				54EF54E52D5EE88A00CB8A05 /* NotificationPermission in Frameworks */,
 				939E67140719FA81AF1EA679 /* Pods_RKProject.framework in Frameworks */,
+				5408AFBF2D9796710094DAB3 /* IQKeyboardManagerSwift in Frameworks */,
 				549F69F82D16A26B004C7E8E /* SwifterSwift in Frameworks */,
 				54EF54D52D5DD6A300CB8A05 /* YPImagePicker in Frameworks */,
 				54D860AD2D606271000027C3 /* SkeletonView in Frameworks */,
@@ -759,12 +759,12 @@
 				549F69FE2D16A44E004C7E8E /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */,
 				5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */,
-				5429CDE02D432E3E0062F69A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				54EF54D02D5DD61A00CB8A05 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 				54EF54D32D5DD6A300CB8A05 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 				54EF54DD2D5EE88A00CB8A05 /* XCRemoteSwiftPackageReference "PermissionsKit" */,
 				54D860A32D602EAA000027C3 /* XCRemoteSwiftPackageReference "HandySwift" */,
 				54D860AB2D606271000027C3 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				5408AFBD2D9796710094DAB3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 9CFA03C82568A6C3001FF834 /* Products */;
 			projectDirPath = "";
@@ -1505,12 +1505,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5429CDE02D432E3E0062F69A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		5408AFBD2D9796710094DAB3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
+				minimumVersion = 8.0.1;
 			};
 		};
 		5440EE402D1BAF4F00B97ED5 /* XCRemoteSwiftPackageReference "Then" */ = {
@@ -1596,9 +1596,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5429CDE12D432E3E0062F69A /* IQKeyboardManagerSwift */ = {
+		5408AFBE2D9796710094DAB3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5429CDE02D432E3E0062F69A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 5408AFBD2D9796710094DAB3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
 		5440EE412D1BAF4F00B97ED5 /* Then */ = {

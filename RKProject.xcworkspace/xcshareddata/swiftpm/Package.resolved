@@ -1,5 +1,5 @@
 {
-  "originHash" : "b4237110297bd2495140ee7a24ad959c35be87e8536afea933952a14610fb77d",
+  "originHash" : "7877ab77dbf18dd7e6201542bbc901b927d44170e961792359570b96e9ae04a4",
   "pins" : [
     {
       "identity" : "devicekit",
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
       "state" : {
-        "revision" : "42e0d94355eba5448fd250f7229d150d268dc3ab",
-        "version" : "8.0.0"
+        "revision" : "555472fdb20a96127643d48d101ef981a40993b6",
+        "version" : "8.0.1"
       }
     },
     {
@@ -78,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hackiftekhar/IQKeyboardToolbarManager.git",
       "state" : {
-        "revision" : "298c128c8f58776bb72de7b0259c9a5b9b157d61",
-        "version" : "1.1.2"
+        "revision" : "ec26659062e6b9bc65e26643269f38eca46846d7",
+        "version" : "1.1.3"
       }
     },
     {
