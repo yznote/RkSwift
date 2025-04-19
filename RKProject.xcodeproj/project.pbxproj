@@ -870,9 +870,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1542,7 +1546,7 @@
 			repositoryURL = "https://github.com/layoutBox/FlexLayout";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.0;
+				minimumVersion = 2.2.0;
 			};
 		};
 		549F6A012D16A466004C7E8E /* XCRemoteSwiftPackageReference "PinLayout" */ = {
