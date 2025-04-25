@@ -29,6 +29,7 @@ class RKHomeVC: RKBaseVC {
             // coredata()
             // waterfall()
             // emitterable()
+            // emitterable2()
             // combine()
             // imagepicker()
             deviceVC()
@@ -53,6 +54,11 @@ class RKHomeVC: RKBaseVC {
     }
 
     /// emitter
+    func emitterable2() {
+        let eVC = EmitterableVC2()
+        UIApplication.shared.pushViewController(eVC, animated: true)
+    }
+
     func emitterable() {
         let eVC = EmitterableVC()
         UIApplication.shared.pushViewController(eVC, animated: true)

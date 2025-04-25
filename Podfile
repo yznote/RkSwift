@@ -26,7 +26,7 @@ pod 'RxSwift', '6.0.0'
 pod 'RxCocoa', '6.0.0'
 
 pod 'SwiftCharts', '0.6.5'
-
+pod 'ReachabilitySwift','5.0.0'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

@@ -48,6 +48,9 @@
 		54C83A9D2D36395800A6208C /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C83A9C2D36395800A6208C /* test.png */; };
 		54D860A52D602EAA000027C3 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 54D860A42D602EAA000027C3 /* HandySwift */; };
 		54D860AD2D606271000027C3 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 54D860AC2D606271000027C3 /* SkeletonView */; };
+		54DCDFEC2DBA2AF400463145 /* EmitterableVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCDFEB2DBA2AF400463145 /* EmitterableVC2.swift */; };
+		54DCDFEF2DBA392800463145 /* Ani.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCDFEE2DBA392800463145 /* Ani.swift */; };
+		54DCDFF12DBB10C700463145 /* LikeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCDFF02DBB10C700463145 /* LikeAnimation.swift */; };
 		54EF54D22D5DD61A00CB8A05 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 54EF54D12D5DD61A00CB8A05 /* DeviceKit */; };
 		54EF54D52D5DD6A300CB8A05 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 54EF54D42D5DD6A300CB8A05 /* YPImagePicker */; };
 		54EF54D72D5DD82300CB8A05 /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EF54D62D5DD82300CB8A05 /* ImagePickerVC.swift */; };
@@ -163,6 +166,10 @@
 		54C83A972D36335700A6208C /* PinTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTestVC.swift; sourceTree = "<group>"; };
 		54C83A992D3637B000A6208C /* PinTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTestView.swift; sourceTree = "<group>"; };
 		54C83A9C2D36395800A6208C /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		54DCDFEA2DB9DC9A00463145 /* RKProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RKProject.entitlements; sourceTree = "<group>"; };
+		54DCDFEB2DBA2AF400463145 /* EmitterableVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterableVC2.swift; sourceTree = "<group>"; };
+		54DCDFEE2DBA392800463145 /* Ani.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ani.swift; sourceTree = "<group>"; };
+		54DCDFF02DBB10C700463145 /* LikeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimation.swift; sourceTree = "<group>"; };
 		54EF54D62D5DD82300CB8A05 /* ImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerVC.swift; sourceTree = "<group>"; };
 		54EF54D92D5ECCFB00CB8A05 /* DeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceVC.swift; sourceTree = "<group>"; };
 		54EF54DB2D5ED4EB00CB8A05 /* 导航-返回2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航-返回2@3x.png"; sourceTree = "<group>"; };
@@ -330,9 +337,19 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		54DCDFED2DBA38FA00463145 /* ani */ = {
+			isa = PBXGroup;
+			children = (
+				54DCDFEE2DBA392800463145 /* Ani.swift */,
+				54DCDFF02DBB10C700463145 /* LikeAnimation.swift */,
+			);
+			path = ani;
+			sourceTree = "<group>";
+		};
 		54EF54D82D5ECCDD00CB8A05 /* Test2 */ = {
 			isa = PBXGroup;
 			children = (
+				54DCDFED2DBA38FA00463145 /* ani */,
 				54EF54D92D5ECCFB00CB8A05 /* DeviceVC.swift */,
 			);
 			path = Test2;
@@ -467,6 +484,7 @@
 				5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */,
 				548C99AB2D37B0CF00ACDF04 /* WaterfallVC.swift */,
 				548C99D52D38D67600ACDF04 /* EmitterableVC.swift */,
+				54DCDFEB2DBA2AF400463145 /* EmitterableVC2.swift */,
 				5429CDD62D421C2D0062F69A /* CombineVC.swift */,
 				5429CDDB2D431A030062F69A /* CombineView.swift */,
 				54EF54D62D5DD82300CB8A05 /* ImagePickerVC.swift */,
@@ -684,6 +702,7 @@
 		9CFA03C92568A6C3001FF834 /* RKProject */ = {
 			isa = PBXGroup;
 			children = (
+				54DCDFEA2DB9DC9A00463145 /* RKProject.entitlements */,
 				54EF54D82D5ECCDD00CB8A05 /* Test2 */,
 				9C16C5342580A07E007B940A /* Test */,
 				9C586B6025C0FBB500F00B0D /* Api+Model */,
@@ -902,6 +921,7 @@
 				549F69FD2D16A2F6004C7E8E /* SwiftyJsonVC.swift in Sources */,
 				9C8DDBC82576486D00E000A8 /* RKPackage.swift in Sources */,
 				9CE36597256CD3AD00E7BD6D /* RKPlugins.swift in Sources */,
+				54DCDFEF2DBA392800463145 /* Ani.swift in Sources */,
 				9C0370C9256913D10004D613 /* RKProperty.swift in Sources */,
 				9CFA03CF2568A6C3001FF834 /* ViewController.swift in Sources */,
 				547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */,
@@ -909,6 +929,7 @@
 				548C99AC2D37B0CF00ACDF04 /* WaterfallVC.swift in Sources */,
 				9CB187782584666F000FF2C9 /* RKLogs.swift in Sources */,
 				548C99D62D38D67600ACDF04 /* EmitterableVC.swift in Sources */,
+				54DCDFF12DBB10C700463145 /* LikeAnimation.swift in Sources */,
 				9C16C5452580BAE9007B940A /* RKApiConfig.swift in Sources */,
 				5429CDDC2D431A040062F69A /* CombineView.swift in Sources */,
 				9C16C5482580BAFE007B940A /* RKHomeApi.swift in Sources */,
@@ -930,6 +951,7 @@
 				9CE36582256CADCB00E7BD6D /* RkProjectTestVC.swift in Sources */,
 				9C16C54E2580BC4E007B940A /* RKLinks.swift in Sources */,
 				9C16C54B2580BB11007B940A /* RKHomeModel.swift in Sources */,
+				54DCDFEC2DBA2AF400463145 /* EmitterableVC2.swift in Sources */,
 				548C99AA2D37B07F00ACDF04 /* RkWaterfallFlowLayout.swift in Sources */,
 				54EF54D72D5DD82300CB8A05 /* ImagePickerVC.swift in Sources */,
 				9C6CC418257B2AB900936284 /* RKSetVC.swift in Sources */,
@@ -1109,6 +1131,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RKProject/RKProject.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EP9U5BJZN9;
@@ -1300,6 +1323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RKProject/RKProject.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EP9U5BJZN9;
