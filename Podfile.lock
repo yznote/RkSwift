@@ -28,6 +28,7 @@ PODS:
   - SnapKitExtend (1.0.7):
     - SnapKit
   - SwiftCharts (0.6.5)
+  - SwiftyGif (5.4.5)
   - Then (2.5.0)
   - UINavigation-SXFixSpace (1.2.4)
 
@@ -40,12 +41,13 @@ DEPENDENCIES:
   - MBProgressHUD (= 1.2.0)
   - MJRefresh (= 3.5.0)
   - Moya (= 14.0.0)
-  - ReachabilitySwift
+  - ReachabilitySwift (= 5.0.0)
   - Reusable (= 4.1.0)
   - RxCocoa (= 6.0.0)
   - RxSwift (= 6.0.0)
   - SnapKitExtend (= 1.0.7)
   - SwiftCharts (= 0.6.5)
+  - SwiftyGif (~> 5.4.5)
   - Then (= 2.5.0)
   - UINavigation-SXFixSpace (= 1.2.4)
 
@@ -68,6 +70,7 @@ SPEC REPOS:
     - SnapKit
     - SnapKitExtend
     - SwiftCharts
+    - SwiftyGif
     - Then
     - UINavigation-SXFixSpace
 
@@ -89,9 +92,10 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SnapKitExtend: 00ee4db6d1f80bee01a1e75745f2a6ae695ba662
   SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
+  SwiftyGif: 706c60cf65fa2bc5ee0313beece843c8eb8194d4
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: 2a491fd52c5e0b832e700975dd1996bf781287b8
+PODFILE CHECKSUM: 2154b28fdb938a6cba708dc527abaecad21768d1
 
 COCOAPODS: 1.16.2

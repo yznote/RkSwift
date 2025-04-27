@@ -13,6 +13,7 @@ import NotificationPermission
 import PermissionsKit
 import PhotoLibraryPermission
 import Reachability
+import SwiftyGif
 import UIKit
 
 class DeviceVC: RKBaseVC {
@@ -21,6 +22,11 @@ class DeviceVC: RKBaseVC {
     let reachability = try! Reachability()
 
     var curDev = Device.current
+
+    // gif
+    let gifIV = UIImageView()
+    let gifManager = SwiftyGifManager(memoryLimit: 60)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +37,35 @@ class DeviceVC: RKBaseVC {
         // ts5()
         // ts6()
         // ts7()
-        ts8()
+        // ts8()
+        ts9()
+    }
+
+    func ts9() {
+        /*
+         let images = [
+             "https://media.giphy.com/media/5tkEiBCurffluctzB7/giphy.gif",
+             "2.gif",
+             "https://media.giphy.com/media/5xtDarmOIekHPQSZEpq/giphy.gif",
+             "3.gif",
+             "https://media.giphy.com/media/3oEjHM2xehrp0lv6bC/giphy.gif",
+             "5.gif",
+             "https://media.giphy.com/media/l1J9qg0MqSZcQTuGk/giphy.gif",
+             "4.gif",
+         ]
+         */
+
+        gifIV.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
+        gifIV.delegate = self
+        gifIV.contentMode = .scaleAspectFit
+        view.addSubview(gifIV)
+        // 识别为静态图
+        // gifIV.setImage(UIImage(named: "2.gif")!,manager: gifManager,loopCount: -1)
+
+        // 识别为gif
+        if let image = try? UIImage(imageName: "2.gif") {
+            gifIV.setImage(image, manager: gifManager, loopCount: 3)
+        }
     }
 
     // 动画2
@@ -139,5 +173,28 @@ class DeviceVC: RKBaseVC {
         debug.log("systemVersion", curDev.systemVersion ?? "")
         debug.log("volumeTotalCapacity", Device.volumeTotalCapacity ?? 999)
         debug.log("volumeAvailableCapacity", Device.volumeAvailableCapacity ?? 999)
+    }
+}
+
+/// gif 动画
+extension DeviceVC: SwiftyGifDelegate {
+    func gifDidStart(sender: UIImageView) {
+        debug.log("gif===>[start]")
+    }
+
+    func gifDidStop(sender: UIImageView) {
+        debug.log("gif===>[stop]")
+    }
+
+    func gifDidLoop(sender: UIImageView) {
+        debug.log("gif===>[loop]")
+    }
+
+    func gifURLDidFinish(sender: UIImageView) {
+        debug.log("gif===>[finish]")
+    }
+
+    func gifURLDidFail(sender: UIImageView, url: URL, error: (any Error)?) {
+        debug.log("gif===>[fail]:\(String(describing: error))")
     }
 }

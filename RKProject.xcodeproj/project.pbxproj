@@ -15,6 +15,10 @@
 		5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */; };
 		547763D92D2E75A4007A3D22 /* LogTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547763D82D2E75A4007A3D22 /* LogTestVC.swift */; };
 		547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FACAF2D082FF100C3BB9D /* LyNetwork.swift */; };
+		54870BF32DBE0CE5001D4248 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54870BEF2DBE0CE5001D4248 /* 2.gif */; };
+		54870BF42DBE0CE5001D4248 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54870BF22DBE0CE5001D4248 /* 5.gif */; };
+		54870BF52DBE0CE5001D4248 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54870BF02DBE0CE5001D4248 /* 3.gif */; };
+		54870BF62DBE0CE5001D4248 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54870BF12DBE0CE5001D4248 /* 4.gif */; };
 		548C99AA2D37B07F00ACDF04 /* RkWaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C99A92D37B07F00ACDF04 /* RkWaterfallFlowLayout.swift */; };
 		548C99AC2D37B0CF00ACDF04 /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C99AB2D37B0CF00ACDF04 /* WaterfallVC.swift */; };
 		548C99AF2D38D4F500ACDF04 /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C99AE2D38D4F500ACDF04 /* Emitterable.swift */; };
@@ -139,6 +143,10 @@
 		5474B9432D3799B80015F083 /* RKProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RKProject.xcdatamodel; sourceTree = "<group>"; };
 		547763D82D2E75A4007A3D22 /* LogTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTestVC.swift; sourceTree = "<group>"; };
 		547FACAF2D082FF100C3BB9D /* LyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyNetwork.swift; sourceTree = "<group>"; };
+		54870BEF2DBE0CE5001D4248 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		54870BF02DBE0CE5001D4248 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		54870BF12DBE0CE5001D4248 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		54870BF22DBE0CE5001D4248 /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 5.gif; sourceTree = "<group>"; };
 		548C99A92D37B07F00ACDF04 /* RkWaterfallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RkWaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		548C99AB2D37B0CF00ACDF04 /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		548C99AE2D38D4F500ACDF04 /* Emitterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
@@ -287,6 +295,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		54870BEE2DBE0CB5001D4248 /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				54870BEF2DBE0CE5001D4248 /* 2.gif */,
+				54870BF02DBE0CE5001D4248 /* 3.gif */,
+				54870BF12DBE0CE5001D4248 /* 4.gif */,
+				54870BF22DBE0CE5001D4248 /* 5.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
 		548C99A82D37B03000ACDF04 /* WaterfallFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +368,7 @@
 		54EF54D82D5ECCDD00CB8A05 /* Test2 */ = {
 			isa = PBXGroup;
 			children = (
+				54870BEE2DBE0CB5001D4248 /* gif */,
 				54DCDFED2DBA38FA00463145 /* ani */,
 				54EF54D92D5ECCFB00CB8A05 /* DeviceVC.swift */,
 			);
@@ -810,6 +830,10 @@
 				548C99CA2D38D62300ACDF04 /* good6_30x30_@3x.png in Resources */,
 				548C99CB2D38D62300ACDF04 /* good1_30x30_@3x.png in Resources */,
 				548C99CC2D38D62300ACDF04 /* good5_30x30_@3x.png in Resources */,
+				54870BF32DBE0CE5001D4248 /* 2.gif in Resources */,
+				54870BF42DBE0CE5001D4248 /* 5.gif in Resources */,
+				54870BF52DBE0CE5001D4248 /* 3.gif in Resources */,
+				54870BF62DBE0CE5001D4248 /* 4.gif in Resources */,
 				548C99CD2D38D62300ACDF04 /* good4_30x30_@3x.png in Resources */,
 				548C99CE2D38D62300ACDF04 /* good7_30x30_@2x.png in Resources */,
 				548C99CF2D38D62300ACDF04 /* good9_30x30_@3x.png in Resources */,

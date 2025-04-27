@@ -28,6 +28,8 @@ pod 'RxCocoa', '6.0.0'
 pod 'SwiftCharts', '0.6.5'
 pod 'ReachabilitySwift','5.0.0'
 
+pod 'SwiftyGif', '~> 5.4.5'
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
