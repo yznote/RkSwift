@@ -63,8 +63,14 @@ class DeviceVC: RKBaseVC {
         // gifIV.setImage(UIImage(named: "2.gif")!,manager: gifManager,loopCount: -1)
 
         // 识别为gif
-        if let image = try? UIImage(imageName: "2.gif") {
+        let path = "https://media.giphy.com/media/5xtDarmOIekHPQSZEpq/giphy.gif"
+        if let image = try? UIImage(imageName: path) {
             gifIV.setImage(image, manager: gifManager, loopCount: 3)
+        } else if let url = URL(string: path) {
+            let loader = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+            gifIV.setGifFromURL(url, manager: gifManager, loopCount: 3, customLoader: loader)
+        } else {
+            gifIV.clear()
         }
     }
 
