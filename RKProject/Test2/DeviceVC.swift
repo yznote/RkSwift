@@ -64,15 +64,20 @@ class DeviceVC: RKBaseVC {
         // gifIV.setImage(UIImage(named: "2.gif")!,manager: gifManager,loopCount: -1)
 
         // 识别为gif
-        let path = "http://qiniu.topan.fun/admin/20250425/b931884e2f2d72cff6631a2c885086f4.gif"
-        if let image = try? UIImage(imageName: path) {
-            gifIV.setImage(image, manager: gifManager, loopCount: 3)
-        } else if let url = URL(string: path) {
-            let loader = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-            gifIV.setGifFromURL(url, manager: gifManager, loopCount: 3, customLoader: loader)
-        } else {
-            gifIV.clear()
-        }
+        /*
+         let path = "http://qiniu.topan.fun/admin/20250425/b931884e2f2d72cff6631a2c885086f4.gif"
+         if let image = try? UIImage(imageName: path) {
+             gifIV.setImage(image, manager: gifManager, loopCount: 3)
+         } else if let url = URL(string: path) {
+             let loader = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+             gifIV.setGifFromURL(url, manager: gifManager, loopCount: 3, customLoader: loader)
+         } else {
+             gifIV.clear()
+         }
+         */
+        // 使用扩展方法
+        let path = "https://media.giphy.com/media/l1J9qg0MqSZcQTuGk/giphy.gif"
+        gifIV.rk_image = path
     }
 
     // 动画2
