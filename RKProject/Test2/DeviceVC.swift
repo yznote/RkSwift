@@ -52,6 +52,7 @@ class DeviceVC: RKBaseVC {
              "5.gif",
              "https://media.giphy.com/media/l1J9qg0MqSZcQTuGk/giphy.gif",
              "4.gif",
+             "http://qiniu.topan.fun/admin/20250425/b931884e2f2d72cff6631a2c885086f4.gif", // err-gif
          ]
          */
 
@@ -63,7 +64,7 @@ class DeviceVC: RKBaseVC {
         // gifIV.setImage(UIImage(named: "2.gif")!,manager: gifManager,loopCount: -1)
 
         // 识别为gif
-        let path = "https://media.giphy.com/media/5xtDarmOIekHPQSZEpq/giphy.gif"
+        let path = "http://qiniu.topan.fun/admin/20250425/b931884e2f2d72cff6631a2c885086f4.gif"
         if let image = try? UIImage(imageName: path) {
             gifIV.setImage(image, manager: gifManager, loopCount: 3)
         } else if let url = URL(string: path) {
