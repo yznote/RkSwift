@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 import UIKit
 
 // MARK: - 栈顶VC
@@ -17,7 +18,8 @@ var rkTopVC: UIViewController? {
     }
     return resultVC
 }
-private  func _rkTopVC(_ vc: UIViewController?) -> UIViewController? {
+
+private func _rkTopVC(_ vc: UIViewController?) -> UIViewController? {
     if vc is UINavigationController {
         return _rkTopVC((vc as? UINavigationController)?.topViewController)
     } else if vc is UITabBarController {
@@ -37,65 +39,65 @@ func rkNextResponsder(currentView: UIView) -> UIViewController {
 }
 
 // MARK: - 尺寸大小转换【以 375 为基准】
-func rklayout(_ originSize:CGFloat) -> CGFloat {
+func rklayout(_ originSize: CGFloat) -> CGFloat {
     return RKLayout.layout(originSize)
 }
-private struct RKLayout {
-    static let ratio:CGFloat = UIScreen.main.bounds.width / 375.0
-    static func layout(_ number: CGFloat) -> CGFloat { return (number * ratio) }
+
+private enum RKLayout {
+    static let ratio: CGFloat = UIScreen.main.bounds.width / 375.0
+    static func layout(_ number: CGFloat) -> CGFloat { return number * ratio }
 }
 
 // MARK: - 划线
-///edge 左右边距
-func rkGetLine(edge: CGFloat,superView: UIView) -> UILabel {
+/// edge 左右边距
+func rkGetLine(edge: CGFloat, superView: UIView) -> UILabel {
     let line = UILabel()
     line.backgroundColor = rkLineCor
     superView.addSubview(line)
-    line.snp.makeConstraints { (make) in
+    line.snp.makeConstraints { make in
         make.centerX.equalTo(superView)
         make.bottom.equalTo(superView.snp.bottom)
         make.height.equalTo(0.5)
-        make.width.equalTo(superView.snp.width).offset(-edge*2)
+        make.width.equalTo(superView.snp.width).offset(-edge * 2)
     }
     return line
 }
-func rkCreateLine(edge: CGFloat,superView: UIView){
+
+func rkCreateLine(edge: CGFloat, superView: UIView) {
     let line = UILabel()
     line.backgroundColor = rkLineCor
     superView.addSubview(line)
-    line.snp.makeConstraints { (make) in
+    line.snp.makeConstraints { make in
         make.centerX.equalTo(superView)
         make.bottom.equalTo(superView.snp.bottom)
         make.height.equalTo(0.5)
-        make.width.equalTo(superView.snp.width).offset(-edge*2)
+        make.width.equalTo(superView.snp.width).offset(-edge * 2)
     }
 }
 
 // MARK: - 根据色值返回图片
-func rkImageFromColor(color: UIColor, viewSize: CGSize) -> UIImage{
-    
-    let rect: CGRect = CGRect(x: 0, y: 0, width: viewSize.width, height: viewSize.height)
+func rkImageFromColor(color: UIColor, viewSize: CGSize) -> UIImage {
+    let rect = CGRect(x: 0, y: 0, width: viewSize.width, height: viewSize.height)
     UIGraphicsBeginImageContext(rect.size)
     let context: CGContext = UIGraphicsGetCurrentContext()!
     context.setFillColor(color.cgColor)
     context.fill(rect)
     let image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsGetCurrentContext()
-    
+
     return image!
-    
 }
 
 // MARK: - 获取 bundle 数据
-/*eg.
+/* eg.
  let jsonArray = readJosnArray("config")
  debugPrint("get-data:\(jsonArray.count)")
- 
+
  let jsonDic = readJsonDic("config")
  debugPrint("get-data:\(jsonDic.keys.count)")
  */
 // get dic
-func readJsonDic(_ name:String)->Dictionary<String, Any> {
+func readJsonDic(_ name: String) -> [String: Any] {
     let path = Bundle.main.path(forResource: name, ofType: "json")
     guard let path = path else { return [:] }
     let fileUrl = URL(fileURLWithPath: path)
@@ -110,8 +112,9 @@ func readJsonDic(_ name:String)->Dictionary<String, Any> {
         return [:]
     }
 }
+
 // get array
-func readJosnArray(_ name:String)->Array<Any> {
+func readJosnArray(_ name: String) -> [Any] {
     let path = Bundle.main.path(forResource: name, ofType: "json")
     guard let path = path else { return [] }
     let fileUrl = URL(fileURLWithPath: path)
@@ -128,10 +131,11 @@ func readJosnArray(_ name:String)->Array<Any> {
 }
 
 // MARK: - 字符串
-func strFormat(_ origin:Any)->String {
-    let str = String.strFormat(origin);
+func strFormat(_ origin: Any) -> String {
+    let str = String.strFormat(origin)
     return str
 }
+
 // MARK: - 数组
 func isArray(_ origin: Any) -> Bool {
     let mirror = Mirror(reflecting: origin)
@@ -143,14 +147,54 @@ func isArray(_ origin: Any) -> Bool {
     }
     return false
 }
+
 // MARK: - 字典
 func isDic(_ origin: Any) -> Bool {
     let mirror = Mirror(reflecting: origin)
     if mirror.displayStyle == .dictionary {
         // 进一步通过类型转换判断是否为具体的字典类型
-        if let _ = origin as? [String:Any] {
+        if let _ = origin as? [String: Any] {
             return true
         }
     }
     return false
+}
+
+// MARK: 线程
+func runOnMainThread(_ block: @escaping () -> Void) {
+    if Thread.isMainThread {
+        block()
+    } else {
+        DispatchQueue.main.async {
+            block()
+        }
+    }
+}
+
+// MARK: 类型转换
+func kinfoToDic(info: Any) -> [String: Any] {
+    var infoDic: [String: Any] = [:]
+
+    let resJson = JSON(info)
+    if resJson.type == .array {
+        for subJson in resJson.arrayValue {
+            if subJson.type == .dictionary {
+                for (key, value) in subJson.dictionaryValue {
+                    infoDic[key] = value.object
+                }
+            }
+        }
+    } else if resJson.type == .dictionary {
+        infoDic = resJson.dictionaryValue
+    }
+    return infoDic
+}
+
+func kinfoToArray(info: Any) -> [JSON] {
+    var listA: [JSON] = []
+    let resJson = JSON(info)
+    if resJson.type == .array {
+        listA = resJson.arrayValue
+    }
+    return listA
 }
