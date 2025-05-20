@@ -29,6 +29,7 @@ pod 'SwiftCharts', '0.6.5'
 pod 'ReachabilitySwift','5.0.0'
 
 pod 'SwiftyGif', '~> 5.4.5'
+pod 'JKCategories', '~> 1.9.3'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

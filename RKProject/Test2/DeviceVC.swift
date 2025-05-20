@@ -38,9 +38,34 @@ class DeviceVC: RKBaseVC {
         // ts6()
         // ts7()
         // ts8()
-        ts9()
+        // ts9()
+        ts10()
     }
 
+    // net
+    func ts10() {
+        //
+        let postDic = [
+            "abc": "123",
+            "uid": "188",
+        ]
+        RKPhalapi.share.post(url: "Home.GetConfig", parameter: postDic) { code, info, msg in
+            if code == 0 {
+                rkShowHud(title: "suc")
+                /*
+                 let infoDic = kinfoToDic(info: info)
+                 let ipa_url = infoDic["copyright_url"].stringValue
+                 debug.log("ipa_url:\(ipa_url)")
+                 */
+                let list = kinfoToArray(info: info)
+                debug.log("===>", list)
+            } else {
+                rkShowHud(title: msg)
+            }
+        } fail: {}
+    }
+
+    // gif
     func ts9() {
         /*
          let images = [

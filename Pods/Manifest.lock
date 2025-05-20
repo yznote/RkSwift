@@ -3,6 +3,144 @@ PODS:
   - EmptyDataSet-Swift (4.2.0)
   - HandyJSON (5.0.0)
   - HMSegmentedControl (1.5.5)
+  - JKCategories (1.9.3):
+    - JKCategories/CoreData (= 1.9.3)
+    - JKCategories/CoreLocation (= 1.9.3)
+    - JKCategories/Foundation (= 1.9.3)
+    - JKCategories/MapKit (= 1.9.3)
+    - JKCategories/QuartzCore (= 1.9.3)
+    - JKCategories/UIKit (= 1.9.3)
+  - JKCategories/CoreData (1.9.3):
+    - JKCategories/CoreData/NSFetchRequest (= 1.9.3)
+    - JKCategories/CoreData/NSManagedObject (= 1.9.3)
+    - JKCategories/CoreData/NSManagedObjectContext (= 1.9.3)
+  - JKCategories/CoreData/NSFetchRequest (1.9.3)
+  - JKCategories/CoreData/NSManagedObject (1.9.3):
+    - JKCategories/CoreData/NSManagedObjectContext
+  - JKCategories/CoreData/NSManagedObjectContext (1.9.3):
+    - JKCategories/CoreData/NSFetchRequest
+  - JKCategories/CoreLocation (1.9.3):
+    - JKCategories/CoreLocation/CLLocation (= 1.9.3)
+  - JKCategories/CoreLocation/CLLocation (1.9.3)
+  - JKCategories/Foundation (1.9.3):
+    - JKCategories/Foundation/NSArray (= 1.9.3)
+    - JKCategories/Foundation/NSBundle (= 1.9.3)
+    - JKCategories/Foundation/NSData (= 1.9.3)
+    - JKCategories/Foundation/NSDate (= 1.9.3)
+    - JKCategories/Foundation/NSDateFormatter (= 1.9.3)
+    - JKCategories/Foundation/NSDictionary (= 1.9.3)
+    - JKCategories/Foundation/NSException (= 1.9.3)
+    - JKCategories/Foundation/NSFileHandle (= 1.9.3)
+    - JKCategories/Foundation/NSFileManager (= 1.9.3)
+    - JKCategories/Foundation/NSHTTPCookieStorage (= 1.9.3)
+    - JKCategories/Foundation/NSIndexPath (= 1.9.3)
+    - JKCategories/Foundation/NSInvocation (= 1.9.3)
+    - JKCategories/Foundation/NSNotificationCenter (= 1.9.3)
+    - JKCategories/Foundation/NSNumber (= 1.9.3)
+    - JKCategories/Foundation/NSObject (= 1.9.3)
+    - JKCategories/Foundation/NSRunLoop (= 1.9.3)
+    - JKCategories/Foundation/NSSet (= 1.9.3)
+    - JKCategories/Foundation/NSString (= 1.9.3)
+    - JKCategories/Foundation/NSTimer (= 1.9.3)
+    - JKCategories/Foundation/NSURL (= 1.9.3)
+    - JKCategories/Foundation/NSURLConnection (= 1.9.3)
+    - JKCategories/Foundation/NSURLRequest (= 1.9.3)
+    - JKCategories/Foundation/NSURLSession (= 1.9.3)
+    - JKCategories/Foundation/NSUserDefaults (= 1.9.3)
+  - JKCategories/Foundation/NSArray (1.9.3)
+  - JKCategories/Foundation/NSBundle (1.9.3)
+  - JKCategories/Foundation/NSData (1.9.3)
+  - JKCategories/Foundation/NSDate (1.9.3)
+  - JKCategories/Foundation/NSDateFormatter (1.9.3)
+  - JKCategories/Foundation/NSDictionary (1.9.3)
+  - JKCategories/Foundation/NSException (1.9.3)
+  - JKCategories/Foundation/NSFileHandle (1.9.3)
+  - JKCategories/Foundation/NSFileManager (1.9.3)
+  - JKCategories/Foundation/NSHTTPCookieStorage (1.9.3)
+  - JKCategories/Foundation/NSIndexPath (1.9.3)
+  - JKCategories/Foundation/NSInvocation (1.9.3)
+  - JKCategories/Foundation/NSNotificationCenter (1.9.3)
+  - JKCategories/Foundation/NSNumber (1.9.3)
+  - JKCategories/Foundation/NSObject (1.9.3)
+  - JKCategories/Foundation/NSRunLoop (1.9.3)
+  - JKCategories/Foundation/NSSet (1.9.3)
+  - JKCategories/Foundation/NSString (1.9.3):
+    - JKCategories/Foundation/NSData
+  - JKCategories/Foundation/NSTimer (1.9.3)
+  - JKCategories/Foundation/NSURL (1.9.3)
+  - JKCategories/Foundation/NSURLConnection (1.9.3)
+  - JKCategories/Foundation/NSURLRequest (1.9.3)
+  - JKCategories/Foundation/NSURLSession (1.9.3)
+  - JKCategories/Foundation/NSUserDefaults (1.9.3)
+  - JKCategories/MapKit (1.9.3):
+    - JKCategories/MapKit/MKMapView (= 1.9.3)
+  - JKCategories/MapKit/MKMapView (1.9.3)
+  - JKCategories/QuartzCore (1.9.3):
+    - JKCategories/QuartzCore/CAAnimation (= 1.9.3)
+    - JKCategories/QuartzCore/CALayer (= 1.9.3)
+    - JKCategories/QuartzCore/CAMediaTimingFunction (= 1.9.3)
+    - JKCategories/QuartzCore/CAShapeLayer (= 1.9.3)
+    - JKCategories/QuartzCore/CATransaction (= 1.9.3)
+  - JKCategories/QuartzCore/CAAnimation (1.9.3)
+  - JKCategories/QuartzCore/CALayer (1.9.3)
+  - JKCategories/QuartzCore/CAMediaTimingFunction (1.9.3)
+  - JKCategories/QuartzCore/CAShapeLayer (1.9.3)
+  - JKCategories/QuartzCore/CATransaction (1.9.3)
+  - JKCategories/UIKit (1.9.3):
+    - JKCategories/UIKit/UIApplication (= 1.9.3)
+    - JKCategories/UIKit/UIBarButtonItem (= 1.9.3)
+    - JKCategories/UIKit/UIBezierPath (= 1.9.3)
+    - JKCategories/UIKit/UIButton (= 1.9.3)
+    - JKCategories/UIKit/UIColor (= 1.9.3)
+    - JKCategories/UIKit/UIControl (= 1.9.3)
+    - JKCategories/UIKit/UIDevice (= 1.9.3)
+    - JKCategories/UIKit/UIFont (= 1.9.3)
+    - JKCategories/UIKit/UIImage (= 1.9.3)
+    - JKCategories/UIKit/UIImageView (= 1.9.3)
+    - JKCategories/UIKit/UILable (= 1.9.3)
+    - JKCategories/UIKit/UINavigationBar (= 1.9.3)
+    - JKCategories/UIKit/UINavigationController (= 1.9.3)
+    - JKCategories/UIKit/UINavigationItem (= 1.9.3)
+    - JKCategories/UIKit/UIPopoverController (= 1.9.3)
+    - JKCategories/UIKit/UIResponder (= 1.9.3)
+    - JKCategories/UIKit/UIScreen (= 1.9.3)
+    - JKCategories/UIKit/UIScrollView (= 1.9.3)
+    - JKCategories/UIKit/UISearchBar (= 1.9.3)
+    - JKCategories/UIKit/UISplitViewController (= 1.9.3)
+    - JKCategories/UIKit/UITableView (= 1.9.3)
+    - JKCategories/UIKit/UITableViewCell (= 1.9.3)
+    - JKCategories/UIKit/UITextField (= 1.9.3)
+    - JKCategories/UIKit/UITextView (= 1.9.3)
+    - JKCategories/UIKit/UIView (= 1.9.3)
+    - JKCategories/UIKit/UIViewController (= 1.9.3)
+    - JKCategories/UIKit/UIWindow (= 1.9.3)
+  - JKCategories/UIKit/UIApplication (1.9.3)
+  - JKCategories/UIKit/UIBarButtonItem (1.9.3)
+  - JKCategories/UIKit/UIBezierPath (1.9.3)
+  - JKCategories/UIKit/UIButton (1.9.3)
+  - JKCategories/UIKit/UIColor (1.9.3)
+  - JKCategories/UIKit/UIControl (1.9.3)
+  - JKCategories/UIKit/UIDevice (1.9.3)
+  - JKCategories/UIKit/UIFont (1.9.3)
+  - JKCategories/UIKit/UIImage (1.9.3)
+  - JKCategories/UIKit/UIImageView (1.9.3)
+  - JKCategories/UIKit/UILable (1.9.3)
+  - JKCategories/UIKit/UINavigationBar (1.9.3)
+  - JKCategories/UIKit/UINavigationController (1.9.3)
+  - JKCategories/UIKit/UINavigationItem (1.9.3)
+  - JKCategories/UIKit/UIPopoverController (1.9.3)
+  - JKCategories/UIKit/UIResponder (1.9.3)
+  - JKCategories/UIKit/UIScreen (1.9.3)
+  - JKCategories/UIKit/UIScrollView (1.9.3)
+  - JKCategories/UIKit/UISearchBar (1.9.3)
+  - JKCategories/UIKit/UISplitViewController (1.9.3)
+  - JKCategories/UIKit/UITableView (1.9.3)
+  - JKCategories/UIKit/UITableViewCell (1.9.3)
+  - JKCategories/UIKit/UITextField (1.9.3)
+  - JKCategories/UIKit/UITextView (1.9.3)
+  - JKCategories/UIKit/UIView (1.9.3)
+  - JKCategories/UIKit/UIViewController (1.9.3)
+  - JKCategories/UIKit/UIWindow (1.9.3)
   - Kingfisher (4.10.1)
   - LLCycleScrollView (1.5.4):
     - Kingfisher (<= 4.10.1)
@@ -36,6 +174,7 @@ DEPENDENCIES:
   - EmptyDataSet-Swift (= 4.2.0)
   - HandyJSON (= 5.0.0)
   - HMSegmentedControl (= 1.5.5)
+  - JKCategories (~> 1.9.3)
   - Kingfisher (= 4.10.1)
   - LLCycleScrollView (= 1.5.4)
   - MBProgressHUD (= 1.2.0)
@@ -57,6 +196,7 @@ SPEC REPOS:
     - EmptyDataSet-Swift
     - HandyJSON
     - HMSegmentedControl
+    - JKCategories
     - Kingfisher
     - LLCycleScrollView
     - MBProgressHUD
@@ -79,6 +219,7 @@ SPEC CHECKSUMS:
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
+  JKCategories: c995567f04ff98680313f56544e6cb62d3152733
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   LLCycleScrollView: 77f6e11980d1cd010ee9ee87e94da4e8026ccd21
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -96,6 +237,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: 2154b28fdb938a6cba708dc527abaecad21768d1
+PODFILE CHECKSUM: aef4c51e409c49a36649d27c0cea8221da2b6fcf
 
 COCOAPODS: 1.16.2

@@ -172,7 +172,7 @@ func runOnMainThread(_ block: @escaping () -> Void) {
 }
 
 // MARK: 类型转换
-func kinfoToDic(info: Any) -> [String: Any] {
+func kinfoToDic(info: Any) -> JSON {
     var infoDic: [String: Any] = [:]
 
     let resJson = JSON(info)
@@ -187,7 +187,7 @@ func kinfoToDic(info: Any) -> [String: Any] {
     } else if resJson.type == .dictionary {
         infoDic = resJson.dictionaryValue
     }
-    return infoDic
+    return JSON(infoDic)
 }
 
 func kinfoToArray(info: Any) -> [JSON] {

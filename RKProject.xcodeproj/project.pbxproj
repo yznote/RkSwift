@@ -15,6 +15,7 @@
 		5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */; };
 		547763D92D2E75A4007A3D22 /* LogTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547763D82D2E75A4007A3D22 /* LogTestVC.swift */; };
 		547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FACAF2D082FF100C3BB9D /* LyNetwork.swift */; };
+		5483822F2DDC10E0004C4DA5 /* RKPhalapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483822E2DDC10E0004C4DA5 /* RKPhalapi.swift */; };
 		54870BF32DBE0CE5001D4248 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54870BEF2DBE0CE5001D4248 /* 2.gif */; };
 		54870BF42DBE0CE5001D4248 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54870BF22DBE0CE5001D4248 /* 5.gif */; };
 		54870BF52DBE0CE5001D4248 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 54870BF02DBE0CE5001D4248 /* 3.gif */; };
@@ -143,6 +144,7 @@
 		5474B9432D3799B80015F083 /* RKProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RKProject.xcdatamodel; sourceTree = "<group>"; };
 		547763D82D2E75A4007A3D22 /* LogTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTestVC.swift; sourceTree = "<group>"; };
 		547FACAF2D082FF100C3BB9D /* LyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyNetwork.swift; sourceTree = "<group>"; };
+		5483822E2DDC10E0004C4DA5 /* RKPhalapi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKPhalapi.swift; sourceTree = "<group>"; };
 		54870BEF2DBE0CE5001D4248 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
 		54870BF02DBE0CE5001D4248 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
 		54870BF12DBE0CE5001D4248 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 				9CB187772584666E000FF2C9 /* RKLogs.swift */,
 				9C16C53B2580AEE3007B940A /* RKNetwork.swift */,
 				547FACAF2D082FF100C3BB9D /* LyNetwork.swift */,
+				5483822E2DDC10E0004C4DA5 /* RKPhalapi.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -913,13 +916,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -947,6 +946,7 @@
 				9CE36597256CD3AD00E7BD6D /* RKPlugins.swift in Sources */,
 				54DCDFEF2DBA392800463145 /* Ani.swift in Sources */,
 				9C0370C9256913D10004D613 /* RKProperty.swift in Sources */,
+				5483822F2DDC10E0004C4DA5 /* RKPhalapi.swift in Sources */,
 				9CFA03CF2568A6C3001FF834 /* ViewController.swift in Sources */,
 				547FACB02D082FF100C3BB9D /* LyNetwork.swift in Sources */,
 				9CE365BF256DEF0200E7BD6D /* RKNavigationController.swift in Sources */,
