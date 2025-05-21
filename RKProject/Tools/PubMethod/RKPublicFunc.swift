@@ -138,26 +138,34 @@ func strFormat(_ origin: Any) -> String {
 
 // MARK: - 数组
 func isArray(_ origin: Any) -> Bool {
+    /*
+     let mirror = Mirror(reflecting: origin)
+     if mirror.displayStyle == .collection {
+         // 进一步通过类型转换判断是否为具体的数组类型
+         if let _ = origin as? [Any] {
+             return true
+         }
+     }
+     return false
+     */
     let mirror = Mirror(reflecting: origin)
-    if mirror.displayStyle == .collection {
-        // 进一步通过类型转换判断是否为具体的数组类型
-        if let _ = origin as? [Any] {
-            return true
-        }
-    }
-    return false
+    return mirror.displayStyle == .collection
 }
 
 // MARK: - 字典
 func isDic(_ origin: Any) -> Bool {
+    /*
+     let mirror = Mirror(reflecting: origin)
+     if mirror.displayStyle == .dictionary {
+         // 进一步通过类型转换判断是否为具体的字典类型
+         if let _ = origin as? [String: Any] {
+             return true
+         }
+     }
+     return false
+     */
     let mirror = Mirror(reflecting: origin)
-    if mirror.displayStyle == .dictionary {
-        // 进一步通过类型转换判断是否为具体的字典类型
-        if let _ = origin as? [String: Any] {
-            return true
-        }
-    }
-    return false
+    return mirror.displayStyle == .dictionary
 }
 
 // MARK: 线程
@@ -200,23 +208,27 @@ func kinfoToArray(info: Any) -> [JSON] {
 }
 
 // MARK: 字典排序,手动排序
-func manualSort(rawDic: [String: Any], deep: Bool = false) -> String {
+func manualSort(rawDic: [String: Any], deep: Bool = true) -> String {
+    // 检查字典是否为空，如果为空则直接返回空字符串
     guard !rawDic.isEmpty else { return "" }
-    let result = rawDic.sorted {
-        $0.key < $1.key
-    }
-    .map { key, value in
-        if deep {
-            let processedValue = processNestedValue(value)
-            return "\(key)=\(processedValue)"
-        } else {
-            let format = strEncoding(rawVal: value)
-            return "\(key)=\(format)"
-        }
-    }
-    .joined(separator: "&")
 
-    return result
+    // 对字典的键进行排序
+    let sortedKeyValues = rawDic.sorted { $0.key < $1.key }
+
+    // 处理每个键值对
+    let processedKeyValues = sortedKeyValues.map { key, value in
+        let processedValue: String
+        if deep {
+            // 递归处理嵌套的值
+            processedValue = processNestedValue(value)
+        } else {
+            // 对值进行字符串编码
+            processedValue = strEncoding(rawVal: value)
+        }
+        return "\(key)=\(processedValue)"
+    }
+    // 将处理后的键值对用 & 连接成一个字符串
+    return processedKeyValues.joined(separator: "&")
 }
 
 // 嵌套处理

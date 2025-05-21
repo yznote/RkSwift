@@ -32,10 +32,22 @@ class RKHomeVC: RKBaseVC {
             // emitterable2()
             // combine()
             // imagepicker()
-            deviceVC()
+            // deviceVC()
+            clickNaviRightBtn()
         }
     }
 
+    override func clickNaviRightBtn() {
+        dataVer()
+    }
+
+    /// data deal
+    func dataVer() {
+        let dc = DataVerVC()
+        UIApplication.shared.push(vc: dc, animated: true)
+    }
+
+    /// animation、gif、dic sort
     func deviceVC() {
         let dvc = DeviceVC()
         UIApplication.shared.push(vc: dvc, animated: true)
@@ -100,7 +112,7 @@ class RKHomeVC: RKBaseVC {
         UIApplication.shared.pushViewController(shotVC, animated: true)
     }
 
-    override func clickNaviRightBtn() {
+    func clickNaviRightBtn1() {
         // status-bar-height
         let val = rkAppStatus
         let val2 = rkStatusBarHeight
