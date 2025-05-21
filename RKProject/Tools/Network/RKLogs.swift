@@ -13,7 +13,7 @@ import Moya
 // MARK: -
 
 // MARK: - 日志打印
-
+@available(*, deprecated, message: "此方法已经过时，请使用`debug`类代替")
 public final class RKRequestLogPlugin: PluginType {
     fileprivate let loggerID = "RKResponseLog"
     fileprivate let dateFormatString = "yy-MM-dd HH:mm:ss.SSS"
@@ -164,7 +164,7 @@ extension RKRequestLogPlugin {
 // MARK: -
 
 // MARK: - 控制台输出
-
+@available(*, deprecated, message: "此方法已经过时，请使用`debug`类代替")
 public func rkprint(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, _ line: Int = #line, time: Int = #line) {
 #if DEBUG
     let dateFormate = DateFormatter()

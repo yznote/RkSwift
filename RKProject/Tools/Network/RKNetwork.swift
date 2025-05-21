@@ -25,7 +25,8 @@ let rkprovider = MoyaProvider<RKHomeApi>(requestClosure: timeoutClosure,plugins:
     RKNetwork.rklogPlugin,      // 日志控制
 ])
 
-// MARK: - 
+// MARK: -
+@available(*, deprecated, message: "此方法已经过时，请使用`RKPhalapi`")
 public class RKNetwork {
 
     public class func rkloadData<T: TargetType, H: HandyJSON>(target: T, model: H.Type?, showHud: Bool? = nil,cache:((H?) -> Void)? = nil, success: @escaping((H?,Dictionary<String, Any>?) -> Void), failure:((Int?,String) -> Void)?){

@@ -198,3 +198,188 @@ func kinfoToArray(info: Any) -> [JSON] {
     }
     return listA
 }
+
+// MARK: 字典排序,手动排序
+func manualSort(rawDic: [String: Any], deep: Bool = false) -> String {
+    guard !rawDic.isEmpty else { return "" }
+    let result = rawDic.sorted {
+        $0.key < $1.key
+    }
+    .map { key, value in
+        if deep {
+            let processedValue = processNestedValue(value)
+            return "\(key)=\(processedValue)"
+        } else {
+            let format = strEncoding(rawVal: value)
+            return "\(key)=\(format)"
+        }
+    }
+    .joined(separator: "&")
+
+    return result
+}
+
+// 嵌套处理
+private func processNestedValue(_ value: Any) -> String {
+    // debug.log("====>将要处理：\(value)")
+    if let dict = value as? [String: Any] {
+        // debug.log("====>是字典：\(value)")
+        // 递归处理嵌套字典
+        return "{" + manualSort(rawDic: dict, deep: true) + "}"
+    } else if let array = value as? [Any] {
+        // 处理数组，递归处理每个元素
+        let sortedArray = sortArrayElements(array)
+        let arrayValues = sortedArray.map { element in
+            processNestedValue(element)
+        }
+        return "[" + arrayValues.joined(separator: ",") + "]"
+    } else if value is NSNull {
+        // 处理 nil 值
+        return "null"
+    } else if let boolValue = value as? Bool {
+        // 正确处理布尔值
+        return boolValue ? "true" : "false"
+    } else if let number = value as? NSNumber {
+        // 正确处理数值类型
+        if number.isBool {
+            return number.boolValue ? "true" : "false"
+        } else {
+            return number.stringValue
+        }
+    } else if let string = value as? String {
+        // debug.log("====>是字符串：\(value)")
+        // 处理字符串，可能需要进行 URL 编码
+        return strEncoding(rawVal: string)
+    } else {
+        // debug.log("====>是其他类型：\(value)")
+        // 其他类型使用默认描述
+        return strEncoding(rawVal: value)
+    }
+}
+
+/// ===>
+// 嵌套数组处理
+private func sortArrayElements(_ array: [Any]) -> [Any] {
+    return array.sorted { compareElements($0, $1) }
+}
+
+// 元素比较
+private func compareElements(_ element1: Any, _ element2: Any) -> Bool {
+    if let dict1 = element1 as? [String: Any], let dict2 = element2 as? [String: Any] {
+        return compareDictionaries(dict1, dict2)
+    }
+
+    if let array1 = element1 as? [Any], let array2 = element2 as? [Any] {
+        return compareArrays(array1, array2)
+    }
+
+    let str1 = stringValue(for: element1)
+    let str2 = stringValue(for: element2)
+    return str1 < str2
+}
+
+// 字典比较
+private func compareDictionaries(_ dict1: [String: Any], _ dict2: [String: Any]) -> Bool {
+    let sortedKeys1 = dict1.keys.sorted()
+    let sortedKeys2 = dict2.keys.sorted()
+
+    // 按字典序比较键列表
+    for (key1, key2) in zip(sortedKeys1, sortedKeys2) {
+        if key1 != key2 {
+            return key1 < key2
+        }
+    }
+
+    // 如果键列表长度不同，较短的字典更小
+    if sortedKeys1.count != sortedKeys2.count {
+        return sortedKeys1.count < sortedKeys2.count
+    }
+
+    // 键完全相同，比较对应的值
+    for key in sortedKeys1 {
+        let value1 = dict1[key]!
+        let value2 = dict2[key]!
+
+        if compareElements(value1, value2) {
+            return true
+        }
+
+        if compareElements(value2, value1) {
+            return false
+        }
+    }
+
+    return false
+}
+
+// 数组内是单个元素比较
+private func compareArrays(_ array1: [Any], _ array2: [Any]) -> Bool {
+    for (e1, e2) in zip(array1, array2) {
+        if compareElements(e1, e2) {
+            return true
+        }
+
+        if compareElements(e2, e1) {
+            return false
+        }
+    }
+
+    return array1.count < array2.count
+}
+
+//
+private func stringValue(for element: Any) -> String {
+    if let dict = element as? [String: Any] {
+        return manualSort(rawDic: dict, deep: true)
+    } else if let array = element as? [Any] {
+        let sortedArray = sortArrayElements(array)
+        let arrayValues = sortedArray.map { stringValue(for: $0) }
+        return "[" + arrayValues.joined(separator: ",") + "]"
+    } else if element is NSNull {
+        return "null"
+    } else if let boolValue = element as? Bool {
+        return boolValue ? "true" : "false"
+    } else if let number = element as? NSNumber {
+        if number.isBool {
+            return number.boolValue ? "true" : "false"
+        } else {
+            return number.stringValue
+        }
+    } else if let string = element as? String {
+        return string
+    } else {
+        return String(describing: element)
+    }
+}
+
+/// <===
+
+// 字符串转义
+func strEncoding(rawVal: Any, charSet: CharacterSet = .urlQueryAllowed) -> String {
+    var formatStr = ""
+    if let string = rawVal as? String {
+        formatStr = string
+    } else {
+        formatStr = String(describing: rawVal)
+    }
+    let resStr = formatStr.addingPercentEncoding(withAllowedCharacters: charSet) ?? formatStr
+    return resStr
+}
+
+// 为 NSNumber 添加扩展来检测布尔值
+extension NSNumber {
+    /*
+     fileprivate var isBool: Bool {
+         let objCType = String(cString: self.objCType)
+         return objCType == "c" || objCType == "C"
+     }
+     */
+    var isBool: Bool {
+        if let str = description as NSString? {
+            return str == "true" || str == "false"
+        }
+        return false
+    }
+}
+
+// MARK: next

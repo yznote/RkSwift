@@ -14,6 +14,7 @@ import PermissionsKit
 import PhotoLibraryPermission
 import Reachability
 import SwiftyGif
+import SwiftyJSON
 import UIKit
 
 class DeviceVC: RKBaseVC {
@@ -39,7 +40,74 @@ class DeviceVC: RKBaseVC {
         // ts7()
         // ts8()
         // ts9()
-        ts10()
+        // ts10()
+        // ts11()
+        ts12()
+    }
+
+    // 排序可行
+    func ts12() {
+        let dic: [String: Any] = [
+            "id": "10",
+            "name": "zhang san",
+            "account": [
+                "phone": 123,
+                "name": "li si",
+                "b":"bbb",
+                "a":"aaa",
+            ],
+            "skip": ["jump", "stand", "run","d","b","a"],
+            "lear":[
+                ["id":"123","name":"网名","age":10],
+                ["id":"123","nam":"网名","age":11],
+                ["id":"123","nam":"网名","age":9,"b":"b"],
+                ["id":"123","name":"网名","age":8,"a":"a"],
+            ]
+        ]
+        let sortStr = manualSort(rawDic: dic, deep: true)
+        debug.log("real-sort:\(sortStr)")
+    }
+
+    // json 此方式字典排序不可靠
+    func ts11() {
+        let dic = [
+            "id": "10",
+            "name": "zhang san",
+            "account": ["phone": 123, "name": "li si"],
+        ] as [String: Any]
+        let sortedDict = dic.sorted { $0.key > $1.key }
+        let orderedDict = Dictionary(uniqueKeysWithValues: sortedDict)
+
+        let jsonDic = JSON(dic)
+        let rawDic = JSON(orderedDict).rawString([.encoding: UTF8.self, .jsonSerialization: JSONSerialization.WritingOptions.prettyPrinted])
+        let rawDic2 = JSON(orderedDict).rawString(.utf8, options: .prettyPrinted)
+        let rawStr = JSON(rawDic2 as Any)
+        let rawDic3 = sortedJSONString(from: dic) // !!! 并不能保证顺序
+        debug.log("打印1：\(dic)")
+        print("打印2：\(dic)")
+        print("打印3：\(jsonDic.type)")
+        print("打印4：\(rawDic ?? "--")")
+        print("打印5：\(rawDic2 ?? "--")")
+        print("打印5.1：\(rawDic3 ?? "--")")
+        print("打印6：\(rawDic2 == rawDic)") // 不能保证相等，字典是无序的有可能id在前，也有可能name在前，这两者是不相等的
+        print("打印7：\(rawStr.type)")
+
+        print("打印8.1：\(sortedDict)")
+        print("打印8.2：\(sortedDict)")
+        print("打印9.1：\(orderedDict)")
+        print("打印9.2：\(orderedDict)")
+    }
+
+    // 并不能保证有序输出 ！！！
+    func sortedJSONString(from dictionary: [String: Any]) -> String? {
+        let sortedDict = dictionary.sorted { $0.key < $1.key }
+        let orderedDict = Dictionary(uniqueKeysWithValues: sortedDict)
+        do {
+            let data = try JSONSerialization.data(withJSONObject: orderedDict, options: .prettyPrinted)
+            return String(data: data, encoding: .utf8)
+        } catch {
+            return nil
+        }
     }
 
     // net
