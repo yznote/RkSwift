@@ -5,6 +5,7 @@
 //  Created by yunbao02 on 2025/5/21.
 //
 
+import ActiveLabel
 import UIKit
 
 class DataVerVC: RKBaseVC {
@@ -12,7 +13,60 @@ class DataVerVC: RKBaseVC {
         super.viewDidLoad()
 
         // data1()
-        data2()
+        // data2()
+        // active1()
+        active2()
+    }
+
+    // label custom
+    func active2() {
+        var regular = "\\sabc\\b"
+        regular = "abc"
+
+        let customType = ActiveType.custom(pattern: regular)
+        let label = ActiveLabel()
+        label.numberOfLines = 0
+        label.enabledTypes = [.mention, .hashtag, .url, customType]
+        label.text = "This is a post with abc #hashtags and a fix @userhandle. abcdef"
+        label.textColor = .black
+        label.customColor = [customType: .hex("#ff0000")]
+        label.handleCustomTap(for: customType) { custom in
+            debug.log("custom=>\(custom)")
+        }
+        label.backgroundColor = .hex("#fff000", 0.3)
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.top.equalTo(naviView.snp.bottom).offset(15)
+            make.left.equalTo(view).offset(15)
+            make.right.equalTo(view.snp.right).offset(-15)
+        }
+    }
+
+    // label nor
+    func active1() {
+        let label = ActiveLabel()
+        label.numberOfLines = 0
+        label.enabledTypes = [.mention, .hashtag, .url]
+        label.text = "This is a post with #hashtags and a fix @userhandle. http://www.  https://www.baidu.com"
+        label.textColor = .black
+        label.mentionColor = .hex("#ff0000")
+        label.URLColor = .hex("#969696")
+        label.handleHashtagTap { hastag in
+            debug.log("hastag=>\(hastag)")
+        }
+        label.handleURLTap { url in
+            debug.log("url=>\(url)")
+        }
+        label.handleMentionTap { mention in
+            debug.log("mention=>\(mention)")
+        }
+        label.backgroundColor = .hex("#fff000", 0.3)
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.top.equalTo(naviView.snp.bottom).offset(15)
+            make.left.equalTo(view).offset(15)
+            make.right.equalTo(view.snp.right).offset(-15)
+        }
     }
 
     //

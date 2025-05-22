@@ -1,4 +1,5 @@
 PODS:
+  - ActiveLabel (1.1.0)
   - Alamofire (5.4.1)
   - EmptyDataSet-Swift (4.2.0)
   - HandyJSON (5.0.0)
@@ -171,6 +172,7 @@ PODS:
   - UINavigation-SXFixSpace (1.2.4)
 
 DEPENDENCIES:
+  - ActiveLabel (~> 1.1.0)
   - EmptyDataSet-Swift (= 4.2.0)
   - HandyJSON (= 5.0.0)
   - HMSegmentedControl (= 1.5.5)
@@ -192,6 +194,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - ActiveLabel
     - Alamofire
     - EmptyDataSet-Swift
     - HandyJSON
@@ -215,6 +218,7 @@ SPEC REPOS:
     - UINavigation-SXFixSpace
 
 SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
@@ -237,6 +241,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: aef4c51e409c49a36649d27c0cea8221da2b6fcf
+PODFILE CHECKSUM: ae89ae2bb69625d0c52e526cc853126a84ce7fd7
 
 COCOAPODS: 1.16.2
