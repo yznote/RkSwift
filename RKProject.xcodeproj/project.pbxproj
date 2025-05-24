@@ -48,6 +48,7 @@
 		549F69FD2D16A2F6004C7E8E /* SwiftyJsonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */; };
 		549F6A002D16A44E004C7E8E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 549F69FF2D16A44E004C7E8E /* FlexLayout */; };
 		549F6A032D16A466004C7E8E /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 549F6A022D16A466004C7E8E /* PinLayout */; };
+		54B675F42DE16AB00081F1D6 /* DataOfJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B675F32DE16AB00081F1D6 /* DataOfJSON.swift */; };
 		54B769682D1D3AD000EE6402 /* ShotTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B769672D1D3AD000EE6402 /* ShotTestVC.swift */; };
 		54C83A982D36335700A6208C /* PinTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C83A972D36335700A6208C /* PinTestVC.swift */; };
 		54C83A9A2D3637B000A6208C /* PinTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C83A992D3637B000A6208C /* PinTestView.swift */; };
@@ -174,6 +175,7 @@
 		548C99C22D38D62300ACDF04 /* good9_30x30_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good9_30x30_@3x.png"; sourceTree = "<group>"; };
 		548C99D52D38D67600ACDF04 /* EmitterableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterableVC.swift; sourceTree = "<group>"; };
 		549F69FC2D16A2F6004C7E8E /* SwiftyJsonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJsonVC.swift; sourceTree = "<group>"; };
+		54B675F32DE16AB00081F1D6 /* DataOfJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOfJSON.swift; sourceTree = "<group>"; };
 		54B769672D1D3AD000EE6402 /* ShotTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotTestVC.swift; sourceTree = "<group>"; };
 		54C83A972D36335700A6208C /* PinTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTestVC.swift; sourceTree = "<group>"; };
 		54C83A992D3637B000A6208C /* PinTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTestView.swift; sourceTree = "<group>"; };
@@ -352,6 +354,14 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		54B675F22DE16A830081F1D6 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				54B675F32DE16AB00081F1D6 /* DataOfJSON.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		54C83A9B2D36393D00A6208C /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +382,7 @@
 		54EF54D82D5ECCDD00CB8A05 /* Test2 */ = {
 			isa = PBXGroup;
 			children = (
+				54B675F22DE16A830081F1D6 /* data */,
 				54870BEE2DBE0CB5001D4248 /* gif */,
 				54DCDFED2DBA38FA00463145 /* ani */,
 				54EF54D92D5ECCFB00CB8A05 /* DeviceVC.swift */,
@@ -919,9 +930,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -947,6 +962,7 @@
 				549F69FD2D16A2F6004C7E8E /* SwiftyJsonVC.swift in Sources */,
 				9C8DDBC82576486D00E000A8 /* RKPackage.swift in Sources */,
 				9CE36597256CD3AD00E7BD6D /* RKPlugins.swift in Sources */,
+				54B675F42DE16AB00081F1D6 /* DataOfJSON.swift in Sources */,
 				54DCDFEF2DBA392800463145 /* Ani.swift in Sources */,
 				9C0370C9256913D10004D613 /* RKProperty.swift in Sources */,
 				5483822F2DDC10E0004C4DA5 /* RKPhalapi.swift in Sources */,

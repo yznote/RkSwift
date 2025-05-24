@@ -6,6 +6,8 @@
 //
 
 import ActiveLabel
+import JKCategories
+import SwiftyJSON
 import UIKit
 
 class DataVerVC: RKBaseVC {
@@ -15,7 +17,26 @@ class DataVerVC: RKBaseVC {
         // data1()
         // data2()
         // active1()
-        active2()
+        // active2()
+        data3()
+    }
+
+    //
+    func data3() {
+        let jsonDic = JSON(parseJSON: jsonString)
+        debug.log("====>\(jsonDic.type)")
+        // print("okk:\(jsonDic)")
+
+        var email = jsonDic["contact"]["email"].stringValue
+        debug.log("raw-emial1:\(email)")
+        email.urlEncode()
+        debug.log("raw-emial2:\(email)")
+
+        var url = jsonDic["url"].stringValue
+        debug.log("raw-url1:\(url)")
+        url.urlEncode()
+        debug.log("raw-url2:\(url)")
+        debug.log("==>",url.urlDecode(),url.urlEncode())
     }
 
     // label custom
