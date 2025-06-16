@@ -30,7 +30,11 @@ pod 'ReachabilitySwift','5.0.0'
 
 pod 'SwiftyGif', '~> 5.4.5'
 pod 'JKCategories', '~> 1.9.3'
+
+# 自动识别：链接、话题、提及、自定义正则
 pod 'ActiveLabel', '~> 1.1.0'
+# 富文本【TTTATtributedLabel的替代】
+pod 'Nantes','0.1.2'
 
 
 post_install do |installer|

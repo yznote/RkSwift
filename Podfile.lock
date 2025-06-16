@@ -151,6 +151,7 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Nantes (0.1.2)
   - ReachabilitySwift (5.0.0)
   - Reusable (4.1.0):
     - Reusable/Storyboard (= 4.1.0)
@@ -182,6 +183,7 @@ DEPENDENCIES:
   - MBProgressHUD (= 1.2.0)
   - MJRefresh (= 3.5.0)
   - Moya (= 14.0.0)
+  - Nantes (= 0.1.2)
   - ReachabilitySwift (= 5.0.0)
   - Reusable (= 4.1.0)
   - RxCocoa (= 6.0.0)
@@ -205,6 +207,7 @@ SPEC REPOS:
     - MBProgressHUD
     - MJRefresh
     - Moya
+    - Nantes
     - ReachabilitySwift
     - Reusable
     - RxCocoa
@@ -229,6 +232,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nantes: 0396442578e32242223fed46050dea1850236184
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
   RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
@@ -241,6 +245,6 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: ae89ae2bb69625d0c52e526cc853126a84ce7fd7
+PODFILE CHECKSUM: 8f83041aa0432e6dbc2b36e39c5d28ef8b4b8e94
 
 COCOAPODS: 1.16.2
