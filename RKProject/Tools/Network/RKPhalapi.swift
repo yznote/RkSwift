@@ -60,8 +60,8 @@ class RKPhalapi: NSObject {
         ]
 
         // FIXME: uid、token 的补充
-        let ownID = "100000"
-        let ownToken = "abcdefghijklmn"
+        let ownID = "10000"
+        let ownToken = "b8058459867fb55e3aac1d032737083a"
         if ownID.isBlank == false, ownToken.isBlank == false {
             baseDic["uid"] = ownID
             baseDic["token"] = ownToken
@@ -105,30 +105,23 @@ class RKPhalapi: NSObject {
             }
             let dict = JSON(taskData)
             if dict.type == .dictionary {
-                //
+                // 正常数据
                 self.dataDeal(resJson: dict, success: successBlock, fail: failBlock, api: baseURL, params: pullDic)
             } else if dict.type == .string {
                 // 可能有br
                 let rawStr = dict.stringValue
-                if rawStr.contains("{\"ret\"") {
-                    if showBrLog {
-                        debug.log("出现非标准Json\(baseURL)", rawStr)
-                    }
-                    let rawRange = rawStr.range(of: "{")!
-                    let newStr = String(rawStr[rawRange.lowerBound...])
-                    let resDic = JSON(newStr)
-                    self.dataDeal(resJson: resDic, success: successBlock, fail: failBlock, api: baseURL, params: pullDic)
+                self.stringDeal(rawStr: rawStr, success: successBlock, fail: failBlock, api: baseURL, params: pullDic)
+            } else {
+                // 可能有br
+                let rawStr = String(data: taskData, encoding: .utf8)
+                if let rawStr = rawStr {
+                    self.stringDeal(rawStr: rawStr, success: successBlock, fail: failBlock, api: baseURL, params: pullDic)
                 } else {
-                    debug.log("【Api-Error】无效的返回信息", "\(baseURL)&\(self.dealWithParam(pullDic))")
+                    // 数据有问题
+                    debug.log("【Api-Error】code:", taskError?.localizedDescription as Any, "\(baseURL)&\(self.dealWithParam(pullDic))")
                     runOnMainThread {
                         failBlock()
                     }
-                }
-            } else {
-                // 报错
-                debug.log("【Api-Error】code:", taskError?.localizedDescription as Any, "\(baseURL)&\(self.dealWithParam(pullDic))")
-                runOnMainThread {
-                    failBlock()
                 }
             }
         }
@@ -171,6 +164,37 @@ class RKPhalapi: NSObject {
             result = String(result.dropLast())
         }
         return result
+    }
+
+    /// 结果为字符串的处理(可能有br)
+    func stringDeal(rawStr: String, success successBlock: @escaping NetworkSuccessClosure, fail failBlock: @escaping NetworkFailClosure, api: String, params: [String: Any]) {
+        if rawStr.contains("{\"ret\"") {
+            if showBrLog {
+                debug.log("出现非标准Json\(api)", rawStr)
+            }
+            let rawRange = rawStr.range(of: "{")!
+            let newStr = String(rawStr[rawRange.lowerBound...])
+            //
+            let newData = newStr.data(using: .utf8)
+            if let newData = newData, JSON(newData).type == .dictionary {
+                let resDic = JSON(newData)
+                dataDeal(resJson: resDic, success: successBlock, fail: failBlock, api: api, params: params)
+            } else {
+                debug.log("【Api-Error】无效的返回信息", "\(api)&\(dealWithParam(params))")
+                runOnMainThread {
+                    failBlock()
+                }
+            }
+            /*
+             let resDic = JSON(JSON(parseJSON: newStr))
+             dataDeal(resJson: resDic, success: successBlock, fail: failBlock, api: api, params: params)
+             */
+        } else {
+            debug.log("【Api-Error】无效的返回信息", "\(api)&\(dealWithParam(params))")
+            runOnMainThread {
+                failBlock()
+            }
+        }
     }
 
     /// 成功处理

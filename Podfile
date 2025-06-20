@@ -36,6 +36,7 @@ pod 'ActiveLabel', '~> 1.1.0'
 # 富文本【TTTATtributedLabel的替代】
 pod 'Nantes','0.1.2'
 
+pod 'TZImagePickerController','3.8.9'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

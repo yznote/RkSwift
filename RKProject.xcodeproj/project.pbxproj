@@ -11,6 +11,7 @@
 		5429CDD72D421C2D0062F69A /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429CDD62D421C2D0062F69A /* CombineVC.swift */; };
 		5429CDDC2D431A040062F69A /* CombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429CDDB2D431A030062F69A /* CombineView.swift */; };
 		5440EE422D1BAF4F00B97ED5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5440EE412D1BAF4F00B97ED5 /* Then */; };
+		544671552E03A8A400C27A7F /* TzImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544671542E03A8A400C27A7F /* TzImagePickerController.swift */; };
 		5474B9412D3799390015F083 /* DbTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9402D3799390015F083 /* DbTestVC.swift */; };
 		5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5474B9422D3799B80015F083 /* RKProject.xcdatamodeld */; };
 		547763D92D2E75A4007A3D22 /* LogTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547763D82D2E75A4007A3D22 /* LogTestVC.swift */; };
@@ -142,6 +143,7 @@
 /* Begin PBXFileReference section */
 		5429CDD62D421C2D0062F69A /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
 		5429CDDB2D431A030062F69A /* CombineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineView.swift; sourceTree = "<group>"; };
+		544671542E03A8A400C27A7F /* TzImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TzImagePickerController.swift; sourceTree = "<group>"; };
 		5474B9402D3799390015F083 /* DbTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbTestVC.swift; sourceTree = "<group>"; };
 		5474B9432D3799B80015F083 /* RKProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RKProject.xcdatamodel; sourceTree = "<group>"; };
 		547763D82D2E75A4007A3D22 /* LogTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTestVC.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				54DCDFED2DBA38FA00463145 /* ani */,
 				54EF54D92D5ECCFB00CB8A05 /* DeviceVC.swift */,
 				548382302DDD9E66004C4DA5 /* DataVerVC.swift */,
+				544671542E03A8A400C27A7F /* TzImagePickerController.swift */,
 			);
 			path = Test2;
 			sourceTree = "<group>";
@@ -930,9 +933,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RKProject/Pods-RKProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -999,6 +1006,7 @@
 				5474B9442D3799B80015F083 /* RKProject.xcdatamodeld in Sources */,
 				548C99AF2D38D4F500ACDF04 /* Emitterable.swift in Sources */,
 				548382312DDD9E66004C4DA5 /* DataVerVC.swift in Sources */,
+				544671552E03A8A400C27A7F /* TzImagePickerController.swift in Sources */,
 				9C16C53C2580AEE3007B940A /* RKNetwork.swift in Sources */,
 				54C83A9A2D3637B000A6208C /* PinTestView.swift in Sources */,
 				54B769682D1D3AD000EE6402 /* ShotTestVC.swift in Sources */,

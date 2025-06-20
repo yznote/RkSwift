@@ -41,8 +41,9 @@ class DeviceVC: RKBaseVC {
         // ts8()
         // ts9()
         // ts10()
+        ts10_1()
         // ts11()
-        ts12()
+        // ts12()
     }
 
     // 排序可行
@@ -53,16 +54,16 @@ class DeviceVC: RKBaseVC {
             "account": [
                 "phone": 123,
                 "name": "li si",
-                "b":"bbb",
-                "a":"aaa",
+                "b": "bbb",
+                "a": "aaa",
             ],
-            "skip": ["jump", "stand", "run","d","b","a"],
-            "lear":[
-                ["id":"123","name":"网名","age":10],
-                ["id":"123","nam":"网名","age":11],
-                ["id":"123","nam":"网名","age":9,"b":"b"],
-                ["id":"123","name":"网名","age":8,"a":"a"],
-            ]
+            "skip": ["jump", "stand", "run", "d", "b", "a"],
+            "lear": [
+                ["id": "123", "name": "网名", "age": 10],
+                ["id": "123", "nam": "网名", "age": 11],
+                ["id": "123", "nam": "网名", "age": 9, "b": "b"],
+                ["id": "123", "name": "网名", "age": 8, "a": "a"],
+            ],
         ]
         let sortStr = manualSort(rawDic: dic, deep: true)
         debug.log("real-sort:\(sortStr)")
@@ -108,6 +109,29 @@ class DeviceVC: RKBaseVC {
         } catch {
             return nil
         }
+    }
+
+    func ts10_1() {
+        //
+        let postDic = [
+            "abc": "123",
+            "uid": "188",
+            "uids": "10005,10042,10058",
+        ]
+        RKPhalapi.share.post(url: "Im.GetMultiInfo", parameter: postDic) { code, info, msg in
+            if code == 0 {
+                rkShowHud(title: "suc")
+                /*
+                 let infoDic = kinfoToDic(info: info)
+                 let ipa_url = infoDic["copyright_url"].stringValue
+                 debug.log("ipa_url:\(ipa_url)")
+                 */
+                let list = kinfoToArray(info: info)
+                debug.log("===>", list)
+            } else {
+                rkShowHud(title: msg)
+            }
+        } fail: {}
     }
 
     // net

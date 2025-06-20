@@ -170,6 +170,11 @@ PODS:
   - SwiftCharts (0.6.5)
   - SwiftyGif (5.4.5)
   - Then (2.5.0)
+  - TZImagePickerController (3.8.9):
+    - TZImagePickerController/Basic (= 3.8.9)
+    - TZImagePickerController/Location (= 3.8.9)
+  - TZImagePickerController/Basic (3.8.9)
+  - TZImagePickerController/Location (3.8.9)
   - UINavigation-SXFixSpace (1.2.4)
 
 DEPENDENCIES:
@@ -192,6 +197,7 @@ DEPENDENCIES:
   - SwiftCharts (= 0.6.5)
   - SwiftyGif (~> 5.4.5)
   - Then (= 2.5.0)
+  - TZImagePickerController
   - UINavigation-SXFixSpace (= 1.2.4)
 
 SPEC REPOS:
@@ -218,6 +224,7 @@ SPEC REPOS:
     - SwiftCharts
     - SwiftyGif
     - Then
+    - TZImagePickerController
     - UINavigation-SXFixSpace
 
 SPEC CHECKSUMS:
@@ -243,8 +250,9 @@ SPEC CHECKSUMS:
   SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   SwiftyGif: 706c60cf65fa2bc5ee0313beece843c8eb8194d4
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
+  TZImagePickerController: 456f470b5dea97b37226ec7a694994a8663340b2
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: 8f83041aa0432e6dbc2b36e39c5d28ef8b4b8e94
+PODFILE CHECKSUM: be766f45177e9f7286bc55e09faa1ce7b50f3795
 
 COCOAPODS: 1.16.2

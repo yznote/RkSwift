@@ -27,6 +27,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>mic</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>photo</string>
 	<key>RKTestKey</key>
 	<string>111</string>
 	<key>RKTestKey1</key>
@@ -76,11 +82,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>photo</string>
-	<key>NSCameraUsageDescription</key>
-	<string>camera</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>mic</string>
 </dict>
 </plist>

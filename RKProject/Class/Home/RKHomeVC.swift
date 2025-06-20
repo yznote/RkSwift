@@ -38,7 +38,18 @@ class RKHomeVC: RKBaseVC {
     }
 
     override func clickNaviRightBtn() {
-        dataVer()
+        // dataVer()
+        tzimge()
+    }
+
+    /// image picker
+    func tzimge() {
+        let tvc = TzImagePickerController()
+        push(vc: tvc)
+    }
+
+    func push(vc: RKBaseVC) {
+        UIApplication.shared.push(vc: vc, animated: true)
     }
 
     /// data deal
