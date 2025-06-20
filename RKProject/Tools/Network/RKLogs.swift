@@ -255,10 +255,11 @@ extension debug {
     /// - Parameters:
     ///   - items: 约定：当items只有一个对象时默认是打印数据,超过一个对象时默认第一个对象时标识符
     ///     items -> Examples
-    /// ========
+    ///
+    ///     ```swift
     ///     debug.log([1, 2, 3, 4, 5])
     ///     debug.log("===>flag", ["id": 1, "name": "xiaoming"], ["id": 2, "name": "xiaoli"], type: .debug)
-    /// ========
+    ///     ```
     ///   - type: 类型,参考 OutputType
     ///   - file: 用于输出文件名称
     ///   - line: 用于输出代码行号

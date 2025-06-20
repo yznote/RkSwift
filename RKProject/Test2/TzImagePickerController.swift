@@ -130,6 +130,8 @@ extension TzImagePickerController {
         UIApplication.shared.present(picker, animated: true)
     }
 
+    /// 视频沙盒地址
+    /// - Parameter asset: 视频的 asset
     func getVideoOutpath(asset: PHAsset) {
         debug.log("video lenght:", asset.duration)
         debug.log("video size: \(asset.pixelWidth),\(asset.pixelHeight)")
